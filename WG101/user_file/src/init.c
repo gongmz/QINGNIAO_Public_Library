@@ -206,13 +206,13 @@ void LPTimerInit(void)
     ///< 使能LPTIM0 外设时钟
     Sysctrl_SetPeripheralGate(SysctrlPeripheralLpTim, TRUE);
 
-    stcLptCfg.enGate   = LptimGateHigh;
+    stcLptCfg.enGate   = LptimGateLow;
     stcLptCfg.enGatep  = LptimGatePLow;
     stcLptCfg.enTcksel = LptimRcl;
     stcLptCfg.enTogen  = LptimTogEnLow;
     stcLptCfg.enCt     = LptimTimerFun;         //定时器功能
     stcLptCfg.enMd     = LptimMode2;            //自动重载16位计数器/定时器
-    stcLptCfg.u16Arr   = 0x7FFF;                //预装载寄存器值
+    stcLptCfg.u16Arr   = 0xBFFF;                //预装载寄存器值
     Lptim_Init(M0P_LPTIMER, &stcLptCfg);
 		
     Lptim_ClrItStatus(M0P_LPTIMER);   //清除中断标志位

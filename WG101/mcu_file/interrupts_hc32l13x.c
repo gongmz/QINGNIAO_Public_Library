@@ -56,6 +56,8 @@
 #include "ddl.h"
 #include "interrupts_hc32l13x.h"
 #include "lptim.h"
+#include "RTCFun.h"
+#include "FrameWork.h"
 /*******************************************************************************
  *                       IRQ WEAK DEFINE
  ******************************************************************************/
@@ -378,7 +380,6 @@ void TIM2_IRQHandler(void)
  ** 
  ** \retval
  ******************************************************************************/
-extern	uint8_t flag;
 void LPTIM_IRQHandler(void)
 {
 #if (INT_CALLBACK_ON == INT_CALLBACK_LPTIM)
@@ -387,7 +388,7 @@ void LPTIM_IRQHandler(void)
 		if (TRUE == Lptim_GetItStatus(M0P_LPTIMER))
     {
         Lptim_ClrItStatus(M0P_LPTIMER);//清除LPTimer的中断标志位
-				flag =1;
+				ThreadSet(RTC_PRIO);
     }
 }
 

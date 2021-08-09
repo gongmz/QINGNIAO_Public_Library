@@ -27,3 +27,5 @@
 .\objects\main.o: ..\driver_file\inc\rtc.h
 .\objects\main.o: ..\driver_file\inc\lptim.h
 .\objects\main.o: ..\driver_file\inc\lpm.h
+.\objects\main.o: ..\user_file\inc\RTCFun.h
+.\objects\main.o: ..\os_file\FrameWork.h

@@ -2,6 +2,7 @@
 ".\objects\interrupts_hc32l13x.o"
 ".\objects\main.o"
 ".\objects\init.o"
+".\objects\rtcfun.o"
 ".\objects\flash.o"
 ".\objects\gpio.o"
 ".\objects\lpm.o"
@@ -18,6 +19,7 @@
 ".\objects\startup_hc32l13x.o"
 ".\objects\system_hc32l13x.o"
 ".\objects\global_variable.o"
+".\objects\framework.o"
 --strict --scatter ".\Objects\WG101.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
