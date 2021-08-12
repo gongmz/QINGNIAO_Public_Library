@@ -17,22 +17,20 @@ int32_t main(void)
 
 
 	SysClockInit();
-    GPIO_Init();
+  GPIO_Init();
 	KEY_Init();
 	SPI_Init();
 	LPTimerInit();
-  	Timer3Init();
+  Timer3Init();
 	
 	Start1_1Sec();
 	
 #ifdef Printf_Enable
 	LPuart1_Init();
-	Uart0_Init();
 	printf("System Start..................\r\n");
 #endif
 	delay1ms(2000);
 	
-	Start1_1Sec();
 
 //	  RTC_InitInterface();
 //    parameter_init();

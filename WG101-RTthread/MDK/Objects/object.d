@@ -1,0 +1,10 @@
+.\objects\object.o: ..\os_file\src\object.c
+.\objects\object.o: ..\os_file\include\rtthread.h
+.\objects\object.o: ..\os_file\rtconfig.h
+.\objects\object.o: ..\os_file\include\rtthread.h
+.\objects\object.o: .\RTE\_WG101\RTE_Components.h
+.\objects\object.o: ..\os_file\include\rtdebug.h
+.\objects\object.o: ..\os_file\include\rtdef.h
+.\objects\object.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\object.o: ..\os_file\include\rtservice.h
+.\objects\object.o: ..\os_file\include\rthw.h

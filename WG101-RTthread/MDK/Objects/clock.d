@@ -1,0 +1,10 @@
+.\objects\clock.o: ..\os_file\src\clock.c
+.\objects\clock.o: ..\os_file\include\rthw.h
+.\objects\clock.o: ..\os_file\include\rtthread.h
+.\objects\clock.o: ..\os_file\rtconfig.h
+.\objects\clock.o: ..\os_file\include\rtthread.h
+.\objects\clock.o: .\RTE\_WG101\RTE_Components.h
+.\objects\clock.o: ..\os_file\include\rtdebug.h
+.\objects\clock.o: ..\os_file\include\rtdef.h
+.\objects\clock.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\clock.o: ..\os_file\include\rtservice.h

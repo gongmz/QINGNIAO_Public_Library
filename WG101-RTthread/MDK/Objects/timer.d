@@ -1,0 +1,10 @@
+.\objects\timer.o: ..\os_file\src\timer.c
+.\objects\timer.o: ..\os_file\include\rtthread.h
+.\objects\timer.o: ..\os_file\rtconfig.h
+.\objects\timer.o: ..\os_file\include\rtthread.h
+.\objects\timer.o: .\RTE\_WG101\RTE_Components.h
+.\objects\timer.o: ..\os_file\include\rtdebug.h
+.\objects\timer.o: ..\os_file\include\rtdef.h
+.\objects\timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\timer.o: ..\os_file\include\rtservice.h
+.\objects\timer.o: ..\os_file\include\rthw.h

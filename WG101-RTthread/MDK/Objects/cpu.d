@@ -1,0 +1,10 @@
+.\objects\cpu.o: ..\os_file\src\cpu.c
+.\objects\cpu.o: ..\os_file\include\rtthread.h
+.\objects\cpu.o: ..\os_file\rtconfig.h
+.\objects\cpu.o: ..\os_file\include\rtthread.h
+.\objects\cpu.o: .\RTE\_WG101\RTE_Components.h
+.\objects\cpu.o: ..\os_file\include\rtdebug.h
+.\objects\cpu.o: ..\os_file\include\rtdef.h
+.\objects\cpu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\cpu.o: ..\os_file\include\rtservice.h
+.\objects\cpu.o: ..\os_file\include\rthw.h

@@ -431,7 +431,7 @@ void LPuart1_Init( void )
     stcCfg.stcBaud.u32Sclk = Sysctrl_GetPClkFreq();  ///<PCLK获取
     stcCfg.stcBaud.enSclkDiv = LPUartMsk4Or8Div;     ///<采样分频
     stcCfg.stcBaud.u32Baud = 115200;                   ///<波特率
-    stcCfg.enRunMode = LPUartMskMode3;               ///<工作模式
+    stcCfg.enRunMode = LPUartMskMode1;               ///<工作模式
     LPUart_Init(M0P_LPUART1, &stcCfg);
 }
 /**

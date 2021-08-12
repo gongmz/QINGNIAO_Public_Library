@@ -1,0 +1,10 @@
+.\objects\memheap.o: ..\os_file\src\memheap.c
+.\objects\memheap.o: ..\os_file\include\rthw.h
+.\objects\memheap.o: ..\os_file\include\rtthread.h
+.\objects\memheap.o: ..\os_file\rtconfig.h
+.\objects\memheap.o: ..\os_file\include\rtthread.h
+.\objects\memheap.o: .\RTE\_WG101\RTE_Components.h
+.\objects\memheap.o: ..\os_file\include\rtdebug.h
+.\objects\memheap.o: ..\os_file\include\rtdef.h
+.\objects\memheap.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\memheap.o: ..\os_file\include\rtservice.h

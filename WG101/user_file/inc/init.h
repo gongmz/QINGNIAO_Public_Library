@@ -21,4 +21,5 @@ extern void LPTimerInit(void);
 extern void SPI_Init(void);
 extern void KEY_Init(void);
 extern void Timer3Init(void );
+extern void LPuart1_Init( void );
 #endif
