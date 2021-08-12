@@ -18,7 +18,7 @@
 .\objects\interrupts_hc32l13x.o: ..\mcu_file\interrupts_hc32l13x.h
 .\objects\interrupts_hc32l13x.o: ..\mcu_file\ddl_device.h
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\lptim.h
-.\objects\interrupts_hc32l13x.o: ..\user_file\inc\RTCFun.h
+.\objects\interrupts_hc32l13x.o: ..\MiddleLayer\RTCFun.h
 .\objects\interrupts_hc32l13x.o: ..\user_file\inc\init.h
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\gpio.h
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\wdt.h
@@ -28,4 +28,6 @@
 .\objects\interrupts_hc32l13x.o: ..\user_file\inc\global_variable.h
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\rtc.h
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\lpm.h
+.\objects\interrupts_hc32l13x.o: ..\driver_file\inc\timer3.h
+.\objects\interrupts_hc32l13x.o: ..\driver_file\inc\lpuart.h
 .\objects\interrupts_hc32l13x.o: ..\os_file\FrameWork.h

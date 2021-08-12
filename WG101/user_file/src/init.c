@@ -22,10 +22,12 @@ void SysClockInit(void)
     stcCfg.enPClkDiv   = SysctrlPclkDiv1;
     ///< 系统时钟初始化，并启动时钟
     Sysctrl_ClkInit(&stcCfg);//
+	//使能外部低速时钟
+	Sysctrl_ClkSourceEnable(SysctrlClkXTL, TRUE);
 	
 	//使能内部低速
-		Sysctrl_SetRCLTrim(SysctrlRclFreq32768);        ///<
-    Sysctrl_ClkSourceEnable(SysctrlClkRCL, TRUE);   ///< 使能RCL时钟
+//	Sysctrl_SetRCLTrim(SysctrlRclFreq32768);        ///<
+//    Sysctrl_ClkSourceEnable(SysctrlClkRCL, TRUE);   ///< 使能RCL时钟
 }
 
 /**************************************************************
@@ -188,9 +190,38 @@ void GPIO_Init(void)
 **************************************************************/
 void Wdt_Interface_Init(void)
 {
-	Sysctrl_SetPeripheralGate(SysctrlPeripheralWdt,TRUE);
+	  Sysctrl_SetPeripheralGate(SysctrlPeripheralWdt,TRUE);
     Wdt_Init(WdtResetEn,WdtT13s1);
     Wdt_Start();
+}
+/**************************************************************
+* 按键初始化
+*
+*
+**************************************************************/
+void KEY_Init(void)
+{
+    stc_gpio_cfg_t stcGpioCfg;
+    
+    ///< 打开GPIO外设时钟门控
+    Sysctrl_SetPeripheralGate(SysctrlPeripheralGpio, TRUE);
+    
+    ///< 端口方向配置->输入
+    stcGpioCfg.enDir = GpioDirIn;
+    ///< 端口驱动能力配置->高驱动能力
+    stcGpioCfg.enDrv = GpioDrvL;
+    ///< 端口上下拉配置->无
+    stcGpioCfg.enPu = GpioPuDisable;
+    stcGpioCfg.enPd = GpioPdDisable;
+    ///< 端口开漏输出配置->开漏输出关闭
+    stcGpioCfg.enOD = GpioOdDisable;
+    ///< 端口输入/输出值寄存器总线控制模式配置->AHB
+    stcGpioCfg.enCtrlMode = GpioAHB;
+    ///< GPIO IO USER KEY初始化
+    Gpio_Init(MENU_PORT, MENU_PIN, &stcGpioCfg); 
+	Gpio_Init(UP_PORT, UP_PIN, &stcGpioCfg); 
+	Gpio_Init(DOWN_PORT, DOWN_PIN, &stcGpioCfg); 
+	Gpio_Init(ENTER_PORT, ENTER_PIN, &stcGpioCfg); 
 }
 /**
  ******************************************************************************
@@ -208,18 +239,18 @@ void LPTimerInit(void)
 
     stcLptCfg.enGate   = LptimGateLow;
     stcLptCfg.enGatep  = LptimGatePLow;
-    stcLptCfg.enTcksel = LptimRcl;
+    stcLptCfg.enTcksel = LptimXtl;
     stcLptCfg.enTogen  = LptimTogEnLow;
     stcLptCfg.enCt     = LptimTimerFun;         //定时器功能
     stcLptCfg.enMd     = LptimMode2;            //自动重载16位计数器/定时器
-    stcLptCfg.u16Arr   = 0xBFFF;                //预装载寄存器值
+    stcLptCfg.u16Arr   = 0xBFFF;                //预装载寄存器值，0.5s一个中断
     Lptim_Init(M0P_LPTIMER, &stcLptCfg);
 		
     Lptim_ClrItStatus(M0P_LPTIMER);   //清除中断标志位
     Lptim_ConfIt(M0P_LPTIMER, TRUE);  //允许LPTIMER中断
     EnableNvic(LPTIM_IRQn, IrqLevel3, TRUE);
 	
-		Lptim_Cmd(M0P_LPTIMER,TRUE);
+	Lptim_Cmd(M0P_LPTIMER,TRUE);
 }
 /**************************************************************
 *
@@ -295,7 +326,48 @@ void TogleGpio(en_gpio_port_t enPort, en_gpio_pin_t enPin)
     }
 }
 
-#ifdef Printf_Enable
+
+/**************************************************************
+*
+*Timer3配置
+*
+**************************************************************/
+void Timer3Init(void )
+{
+    uint16_t                    u16ArrValue;
+    uint16_t                    u16CntValue;
+    stc_tim3_mode0_cfg_t     stcTim3BaseCfg;
+    
+    //结构体初始化清零
+    DDL_ZERO_STRUCT(stcTim3BaseCfg);
+    
+    Sysctrl_SetPeripheralGate(SysctrlPeripheralTim3, TRUE); //Base Timer外设时钟使能
+    
+    stcTim3BaseCfg.enWorkMode = Tim3WorkMode0;              //定时器模式
+    stcTim3BaseCfg.enCT       = Tim3Timer;                  //定时器功能，计数时钟为内部PCLK
+    stcTim3BaseCfg.enPRS      = Tim3PCLKDiv64;              //PCLK/64
+    stcTim3BaseCfg.enCntMode  = Tim316bitArrMode;           //自动重载16位计数器/定时器
+    stcTim3BaseCfg.bEnTog     = FALSE;
+    stcTim3BaseCfg.bEnGate    = FALSE;
+    stcTim3BaseCfg.enGateP    = Tim3GatePositive;
+    
+    Tim3_Mode0_Init(&stcTim3BaseCfg);                       //TIM3 的模式0功能初始化
+        
+    u16ArrValue = 0x0;
+    
+    Tim3_M0_ARRSet(u16ArrValue);                            //设置重载值(ARR = 0x10000 - 周期)
+    
+    u16CntValue = 0x0;
+    
+    Tim3_M0_Cnt16Set(u16CntValue);                          //设置计数初值
+    
+    Tim3_ClearIntFlag(Tim3UevIrq);                          //清中断标志
+    Tim3_Mode0_EnableIrq();                                 //使能TIM3中断(模式0时只有一个中断)
+    EnableNvic(TIM3_IRQn, IrqLevel3, TRUE);                 //TIM3 开中断 
+		
+		Tim3_M0_Run(); 
+}
+
 void Uart0_Init( void )
 {
 	  //引脚配置
@@ -329,6 +401,39 @@ void Uart0_Init( void )
     Uart_Init(M0P_UART0, &stcCfg);                   ///<串口初始化
 }
 
+#ifdef Printf_Enable
+void LPuart1_Init( void )
+{
+	stc_lpuart_cfg_t  stcCfg;
+	stc_gpio_cfg_t stcGpioCfg;
+    DDL_ZERO_STRUCT(stcCfg);
+	DDL_ZERO_STRUCT(stcGpioCfg);
+    
+    ///<外设模块时钟使能
+    Sysctrl_SetPeripheralGate(SysctrlPeripheralLpUart1,TRUE);    
+    Sysctrl_SetPeripheralGate(SysctrlPeripheralGpio,TRUE);
+	
+    
+    ///<TX
+    stcGpioCfg.enDir =  GpioDirOut;
+    Gpio_Init(GpioPortA,GpioPin0,&stcGpioCfg);
+    Gpio_SetAfMode(GpioPortA,GpioPin0,GpioAf2); //配置PA00为LPUART1_TX
+    
+    //<RX
+    stcGpioCfg.enDir =  GpioDirIn;
+    Gpio_Init(GpioPortA,GpioPin1,&stcGpioCfg);
+    Gpio_SetAfMode(GpioPortA,GpioPin1,GpioAf2); //配置PA01为LPUART1_RX
+	
+    ///<LPUART 初始化
+    stcCfg.enStopBit = LPUart1bit;                   ///<1停止位    
+    stcCfg.enMmdorCk = LPUartEven;                   ///<偶校验
+    stcCfg.stcBaud.enSclkSel = LPUartMskPclk;        ///<传输时钟源
+    stcCfg.stcBaud.u32Sclk = Sysctrl_GetPClkFreq();  ///<PCLK获取
+    stcCfg.stcBaud.enSclkDiv = LPUartMsk4Or8Div;     ///<采样分频
+    stcCfg.stcBaud.u32Baud = 115200;                   ///<波特率
+    stcCfg.enRunMode = LPUartMskMode3;               ///<工作模式
+    LPUart_Init(M0P_LPUART1, &stcCfg);
+}
 /**
  ******************************************************************************
  ** \brief  Re-target putchar function
@@ -338,9 +443,9 @@ int fputc(int ch, FILE *f)
 
     if (((uint8_t)ch) == '\n')
     {
-		Uart_SendDataPoll( M0P_UART0, '\r' );
+		LPUart_SendData( M0P_LPUART1, '\r' );
     }
-    Uart_SendDataPoll( M0P_UART0,ch );
+    LPUart_SendData( M0P_LPUART1,ch );
 
     return ch;
 }

@@ -27,5 +27,7 @@
 .\objects\main.o: ..\driver_file\inc\rtc.h
 .\objects\main.o: ..\driver_file\inc\lptim.h
 .\objects\main.o: ..\driver_file\inc\lpm.h
-.\objects\main.o: ..\user_file\inc\RTCFun.h
+.\objects\main.o: ..\driver_file\inc\timer3.h
+.\objects\main.o: ..\driver_file\inc\lpuart.h
+.\objects\main.o: ..\MiddleLayer\RTCFun.h
 .\objects\main.o: ..\os_file\FrameWork.h

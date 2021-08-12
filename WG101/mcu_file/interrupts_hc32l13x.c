@@ -229,6 +229,11 @@ void TIM3_IRQHandler(void)
 #if (INT_CALLBACK_ON == INT_CALLBACK_TIM3)    
     Tim3_IRQHandler();
 #endif
+	  if(TRUE == Tim3_GetIntFlag(Tim3UevIrq))
+    {
+			Tim3_ClearIntFlag(Tim3UevIrq);
+			ThreadSet(LOGIC_PRIO);
+		}
 }
 
 /**
@@ -388,7 +393,7 @@ void LPTIM_IRQHandler(void)
 		if (TRUE == Lptim_GetItStatus(M0P_LPTIMER))
     {
         Lptim_ClrItStatus(M0P_LPTIMER);//清除LPTimer的中断标志位
-				ThreadSet(RTC_PRIO);
+				ThreadSet(RTC_PRIO);//
     }
 }
 

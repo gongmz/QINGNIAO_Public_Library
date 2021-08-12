@@ -5,7 +5,7 @@
 .\objects\framework.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\framework.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\framework.o: ..\mcu_file\DATA_CPU.h
-.\objects\framework.o: ..\user_file\inc\RTCFun.h
+.\objects\framework.o: ..\MiddleLayer\RTCFun.h
 .\objects\framework.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\framework.o: ..\user_file\inc\init.h
 .\objects\framework.o: ..\driver_file\inc\gpio.h
@@ -32,4 +32,8 @@
 .\objects\framework.o: ..\driver_file\inc\rtc.h
 .\objects\framework.o: ..\driver_file\inc\lptim.h
 .\objects\framework.o: ..\driver_file\inc\lpm.h
+.\objects\framework.o: ..\driver_file\inc\timer3.h
+.\objects\framework.o: ..\driver_file\inc\lpuart.h
 .\objects\framework.o: ..\os_file\FrameWork.h
+.\objects\framework.o: ..\MiddleLayer\Logic.h
+.\objects\framework.o: ..\MiddleLayer\ScanKEY.h

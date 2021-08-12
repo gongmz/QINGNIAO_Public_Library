@@ -21,6 +21,8 @@
 //#include    "LCDDriver.h"
 #include    "RTCFun.h"
 #include    "FrameWork.h"
+#include    "Logic.h"
+#include    "ScanKEY.h"
 //#include 	"Hal_Usci_a0_spi.h"
 //#include    "ScanKEY.h"
 

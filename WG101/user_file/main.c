@@ -16,26 +16,33 @@ int32_t main(void)
 {
 
 
-	  SysClockInit();
+	SysClockInit();
     GPIO_Init();
-		SPI_Init();
-		LPTimerInit();
+	KEY_Init();
+	SPI_Init();
+	LPTimerInit();
+  	Timer3Init();
+	
+	Start1_1Sec();
+	
 #ifdef Printf_Enable
-     Uart0_Init();
-	   printf("System Start..................\r\n");
+	LPuart1_Init();
+	Uart0_Init();
+	printf("System Start..................\r\n");
 #endif
-	  delay1ms(2000);
+	delay1ms(2000);
 	
-	
-		Start1_1Sec();
+	Start1_1Sec();
+
 //	  RTC_InitInterface();
 //    parameter_init();
 //    Wdt_Interface_Init();
 //	Timer3Init();
      while(1)
-	{
-		 ThreadScheduler();
-	}
+	 {
+		ThreadScheduler();
+	 }
 
+	
 }
 

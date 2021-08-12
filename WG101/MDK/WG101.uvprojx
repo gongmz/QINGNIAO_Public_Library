@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\driver_file\inc;..\mcu_file;..\MDK;..\os_file;..\user_file\inc;..\driver_file\src;..\user_file\inc;.\RTE\RTOS</IncludePath>
+              <IncludePath>..\driver_file\inc;..\mcu_file;..\MDK;..\os_file;..\user_file\inc;..\driver_file\src;..\user_file\inc;.\RTE\RTOS;..\MiddleLayer</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -399,9 +399,9 @@
               <FilePath>..\user_file\src\init.c</FilePath>
             </File>
             <File>
-              <FileName>RTCFun.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\user_file\src\RTCFun.c</FilePath>
+              <FileName>global_variable.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\user_file\inc\global_variable.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -488,11 +488,6 @@
               <FileType>1</FileType>
               <FilePath>..\mcu_file\system_hc32l13x.c</FilePath>
             </File>
-            <File>
-              <FileName>global_variable.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\user_file\src\global_variable.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -502,6 +497,26 @@
               <FileName>FrameWork.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\os_file\FrameWork.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MiddleLayer</GroupName>
+          <Files>
+            <File>
+              <FileName>Logic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\Logic.c</FilePath>
+            </File>
+            <File>
+              <FileName>RTCFun.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\RTCFun.c</FilePath>
+            </File>
+            <File>
+              <FileName>ScanKEY.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\ScanKEY.c</FilePath>
             </File>
           </Files>
         </Group>

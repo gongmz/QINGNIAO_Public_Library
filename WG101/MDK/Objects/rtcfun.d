@@ -1,5 +1,5 @@
-.\objects\rtcfun.o: ..\user_file\src\RTCFun.c
-.\objects\rtcfun.o: ..\user_file\inc\RTCFun.h
+.\objects\rtcfun.o: ..\MiddleLayer\RTCFun.c
+.\objects\rtcfun.o: ..\MiddleLayer\RTCFun.h
 .\objects\rtcfun.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\rtcfun.o: ..\user_file\inc\init.h
 .\objects\rtcfun.o: ..\driver_file\inc\gpio.h
@@ -28,3 +28,5 @@
 .\objects\rtcfun.o: ..\driver_file\inc\rtc.h
 .\objects\rtcfun.o: ..\driver_file\inc\lptim.h
 .\objects\rtcfun.o: ..\driver_file\inc\lpm.h
+.\objects\rtcfun.o: ..\driver_file\inc\timer3.h
+.\objects\rtcfun.o: ..\driver_file\inc\lpuart.h
