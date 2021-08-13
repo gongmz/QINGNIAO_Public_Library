@@ -507,7 +507,7 @@ I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
 I (..\os_file\FrameWork.h)(0x6110C987)
 I (..\MiddleLayer\Logic.h)(0x611374EF)
 I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-F (..\MiddleLayer\LCDDriver.c)(0x611641E3)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lcddriver.o --omf_browse .\objects\lcddriver.crf --depend .\objects\lcddriver.d)
+F (..\MiddleLayer\LCDDriver.c)(0x61164A6F)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lcddriver.o --omf_browse .\objects\lcddriver.crf --depend .\objects\lcddriver.d)
 I (..\MiddleLayer\LCDDriver.h)(0x611641E3)
 I (..\mcu_file\includes.h)(0x6115CF9D)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
