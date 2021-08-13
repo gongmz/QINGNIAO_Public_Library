@@ -17,21 +17,25 @@ int32_t main(void)
 
 
 	SysClockInit();
-  GPIO_Init();
+    GPIO_Init();
 	KEY_Init();
 	SPI_Init();
 	LPTimerInit();
-  Timer3Init();
+    Timer3Init();
 	
-	Start1_1Sec();
 	
+	Init_LED();
 #ifdef Printf_Enable
 	LPuart1_Init();
 	printf("System Start..................\r\n");
 #endif
 	delay1ms(2000);
-	
 
+	
+			Spi_SetCS(M0P_SPI0, FALSE);
+			Spi_SendData(M0P_SPI0, 0);
+			Spi_SendData(M0P_SPI0, 0);
+			Spi_SetCS(M0P_SPI0, TRUE);
 //	  RTC_InitInterface();
 //    parameter_init();
 //    Wdt_Interface_Init();

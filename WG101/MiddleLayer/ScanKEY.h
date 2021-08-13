@@ -2,7 +2,7 @@
 #define __SCANKEY_H_
 
 
-void TaskKey(void);
+extern void TaskKey(void);
 
 
 #endif

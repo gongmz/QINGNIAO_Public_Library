@@ -43,7 +43,8 @@ void ThreadScheduler(void)
 			  {
 					case 8://最高优先级
 										//执行线程
-		 //               Logic();  // Logic
+					      Screen();//LED刷新程序
+						  TaskKey();
 								break;
 					case 7:
 										//执行线程

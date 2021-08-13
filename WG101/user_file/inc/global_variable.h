@@ -33,8 +33,24 @@ struct _uart
 #define DOWN_PIN    GpioPin6
 #define ENTER_PORT  GpioPortB
 #define ENTER_PIN   GpioPin7
+//LED引脚
+#define LED1_PORT   GpioPortB
+#define LED1_PIN    GpioPin8
+#define LED2_PORT   GpioPortB
+#define LED2_PIN    GpioPin9
+#define LED3_PORT   GpioPortB
+#define LED3_PIN    GpioPin10
+#define LED4_PORT   GpioPortB
+#define LED4_PIN    GpioPin11
 
-
+#define SEG1_PORT   GpioPortB
+#define SEG1_PIN    GpioPin12
+#define SEG2_PORT   GpioPortB
+#define SEG2_PIN    GpioPin13
+#define SEG3_PORT   GpioPortB
+#define SEG3_PIN    GpioPin14
+#define SEG4_PORT   GpioPortB
+#define SEG4_PIN    GpioPin15
 /**********************************变量声明************************************/
 
 extern uint16_t ErrorCode;

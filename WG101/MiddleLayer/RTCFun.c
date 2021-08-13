@@ -26,12 +26,6 @@ static void  RTCMinFunction(void);
 
 
 
-
-
-
-
-
-
 /*
  *  0.5s per time
  */
@@ -54,7 +48,6 @@ void TimerFunction(void)
 						case 1:
 											{
 												Start1_1Sec();
-												printf("Rtcfun..................\r\n");
 											}break;
 						case 2:
 											{

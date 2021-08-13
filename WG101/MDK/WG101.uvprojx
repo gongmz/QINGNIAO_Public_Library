@@ -518,6 +518,11 @@
               <FileType>1</FileType>
               <FilePath>..\MiddleLayer\ScanKEY.c</FilePath>
             </File>
+            <File>
+              <FileName>LCDDriver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\LCDDriver.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
