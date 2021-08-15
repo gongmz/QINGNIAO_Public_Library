@@ -232,7 +232,7 @@ void TIM3_IRQHandler(void)
 	  if(TRUE == Tim3_GetIntFlag(Tim3UevIrq))
     {
 			Tim3_ClearIntFlag(Tim3UevIrq);
-			ThreadSet(LOGIC_PRIO);
+			ThreadSet(LED_PRIO);
 		}
 }
 

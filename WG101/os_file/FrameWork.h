@@ -19,9 +19,9 @@
 
 // ===== TASK PRIORITIES =====
 // 优先级依次降低
-#define LOGIC_PRIO              8
+#define LED_PRIO                8
 #define RTC_PRIO                7
-#define KEY_PRIO                6
+#define LOGIC_PRIO              6
 #define MEASURE_PRIO            5
 #define NB_PRIO                 4
 #define STORAGE_PRIO            3

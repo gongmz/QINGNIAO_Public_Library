@@ -44,7 +44,7 @@ void ThreadScheduler(void)
 					case 8://最高优先级
 										//执行线程
 					      Screen();//LED刷新程序
-						  TaskKey();
+						    TaskKey();
 								break;
 					case 7:
 										//执行线程
@@ -52,7 +52,7 @@ void ThreadScheduler(void)
 								break;
 					case 6:
 										//执行线程
-		 //               JudgeKEY();
+		                Logic();
 
 								break;
 					case 5:

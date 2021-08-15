@@ -2,6 +2,7 @@
 ".\objects\interrupts_hc32l13x.o"
 ".\objects\main.o"
 ".\objects\init.o"
+".\objects\global_variable.o"
 ".\objects\flash.o"
 ".\objects\gpio.o"
 ".\objects\lpm.o"

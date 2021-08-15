@@ -34,7 +34,7 @@ void  Logic(void)
         Msg[LOGIC_PRIO - 1] &= 0xDF;
         sig = LOGIC_VALVEHANDEL_MSG;
     } 
-	else if (Msg[LOGIC_PRIO - 1] & LOGIC_ERRORHANDEL_MSG)
+	else if (Msg[LOGIC_PRIO - 1] & 	)
 	{
         Msg[LOGIC_PRIO - 1] &= 0xEF;
         sig = LOGIC_ERRORHANDEL_MSG;

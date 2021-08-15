@@ -25,25 +25,24 @@
 #define GUI_3RD          0x04
 
 #define TOTAL_NUM_2ND    4
-//π≤“ı ˝¬Îπ‹◊÷ƒ∏∫Í∂®“Â
-#define 	CHAR_A	0x77  /*A*/
-#define 	CHAR_b	0x7C  /*b*/
-#define 	CHAR_C	0x39  /*C*/
-#define 	CHAR_c	0x58  /*c*/
-#define 	CHAR_d	0x5E  /*d*/
-#define 	CHAR_E	0x79  /*E*/
-#define 	CHAR_F	0x71  /*F*/
-#define 	CHAR_H	0x76  /*H*/
-#define 	CHAR_h	0x74  /*h*/
-#define 	CHAR_L	0x38  /*L*/
-#define 	CHAR_n	0x54  /*n*/
-#define 	CHAR_N	0x37  /*N*/
-#define 	CHAR_o	0x5C  /*o*/
-#define 	CHAR_P	0x73  /*P*/
-#define 	CHAR_r	0x50  /*r*/
-#define 	CHAR_t	0x78  /*t*/
-#define 	CHAR_U	0x3E  /*U*/
-#define 	CHAR_-	0x40  /*-*/
+//Â≠óÊØç‰ª£Á†Å
+#define 	CHAR_A   0x77  //A
+#define 	CHAR_b   0x7C  //b
+#define 	CHAR_C   0x39  //C
+#define 	CHAR_c   0x58  //c
+#define 	CHAR_d   0x5E  //d
+#define 	CHAR_E   0x79  //E
+#define 	CHAR_F   0x71  //F
+#define 	CHAR_H   0x76  //H
+#define 	CHAR_h   0x74  //h
+#define 	CHAR_L   0x38  //L
+#define 	CHAR_n   0x54  //n
+#define 	CHAR_N   0x37  //N
+#define 	CHAR_o   0x5C  //o
+#define 	CHAR_P   0x73  //P
+#define 	CHAR_r   0x50  //r
+#define 	CHAR_t   0x78  //t
+#define 	CHAR_U   0x3E  //U
 
 
 
@@ -69,9 +68,11 @@
 #define RESET_SEG4	Gpio_ClrIO(SEG4_PORT, SEG4_PIN);
 
 
-#define DISP_TIME        120*2  //œ‘ æÕÀ≥ˆ ±º‰£¨µ•ŒªS°£2∑÷÷”
+#define DISP_TIME        120*2  //
 
 
 extern void Screen(void);
+extern uint16_t HEX2BCD(uint16_t hex_data);// HEXËΩ¨BCDÂ≠êÁ®ãÂ∫è 
+extern uint16_t BCD2HEX(uint16_t bcd_data); //BCDËΩ¨‰∏∫HEXÂ≠êÁ®ãÂ∫è 
 #endif
 //======================================================================================

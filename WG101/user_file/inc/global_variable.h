@@ -54,4 +54,5 @@ struct _uart
 /**********************************±äÁ¿ÉùÃ÷************************************/
 
 extern uint16_t ErrorCode;
+extern uint16_t PressureValue;
 #endif

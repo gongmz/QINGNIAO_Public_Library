@@ -403,6 +403,11 @@
               <FileType>5</FileType>
               <FilePath>..\user_file\inc\global_variable.h</FilePath>
             </File>
+            <File>
+              <FileName>global_variable.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\user_file\src\global_variable.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

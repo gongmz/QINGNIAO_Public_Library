@@ -11,7 +11,7 @@ static uint8_t upkeycnt=0;
 static uint8_t downkeycnt=0;
 static uint8_t enterkeycnt=0;
 
-
+uint16_t temp;
 /**********************************函数声明************************************/
 void TaskKey(void)//10ms调用一次
 {
@@ -23,11 +23,8 @@ void TaskKey(void)//10ms调用一次
         {
 //			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);
 			printf("long1 an..................\r\n");
-			
-												
-
         }
-			
+				PressureValue++;
 	}
 	else
 	{
@@ -35,6 +32,8 @@ void TaskKey(void)//10ms调用一次
 		{
 //			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);		
 			printf("short1 an..................\r\n");
+			PressureValue++;
+			printf("PressureValue:%d\r\n",PressureValue);
 		}
 		menukeycnt=0;
 	}

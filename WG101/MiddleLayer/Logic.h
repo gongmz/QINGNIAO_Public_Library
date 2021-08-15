@@ -41,33 +41,9 @@ enum enumWorkState {
 
 
 //======================================================================================
-#define Start0_1Sec()                 TmrSecStart(0,2) 
-#define Start0_10Sec()                TmrSecStart(0,20)       
-#define Start0_12Sec()                TmrSecStart(0,24)       
-#define Start0_14Sec()                TmrSecStart(0,28)       
-#define Start0_20Sec()                TmrSecStart(0,40)  
-#define Start0_30Sec()                TmrSecStart(0,60)
-
-#define Start1_10Sec()                TmrSecStart(1,20) 
-#define Start1_14Sec()                TmrSecStart(1,28)
-#define Start1_15Sec()                TmrSecStart(1,30)
-
-#define START_WAIT_NB_ACK()           gWaitACK = 1
-#define STOP_WAIT_NB_ACK()            gWaitACK = 0
-
-#define StartPowerOnDisp()            TmrSecStart(9,2)
-#define RunPowerOnDisp()              TmrSecStart(9,3)
-#define StopPowerOnDisp()             TmrSecStop(9)
-
-#define StartHistoryDataDisp()        TmrSecStart(12,3)
-#define StopHistoryDataDisp()         TmrSecStop(12)
 
 //======================================================================================
 LOGIC_EXT uint8_t WorkState;                 // ¹¤×÷×´Ì¬
-
-
-
-LOGIC_EXT uint8_t * DisplayState;      // ÏÔÊ¾×´Ì¬
 
 LOGIC_EXT uint16_t gErrorBuf;
 
