@@ -5,4 +5,5 @@
 /**********************************变量声明************************************/
 
 uint16_t PressureValue;//BCD码
-
+SysParameter_t  SysParameter;//系统参数
+uint32_t flashInformationAddress    = 0xfe00;

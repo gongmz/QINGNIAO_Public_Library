@@ -15,25 +15,48 @@ uint16_t temp;
 /**********************************函数声明************************************/
 void TaskKey(void)//10ms调用一次
 {
+	static uint8_t temp_2ND_NUM;
 	//menu按键
 	if(FALSE == Gpio_GetInputIO(MENU_PORT, MENU_PIN))//按下
 	{
 		if(++menukeycnt>240)menukeycnt=240;
 		if(menukeycnt == TIME_CYCLE_2000MS)//长按
         {
-//			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);
-			printf("long1 an..................\r\n");
+			switch(gGui_State)
+			{
+				case GUI_MAIN:
+				{
+					gGui_State = GUI_2ND;
+					gGui_2nd_Num = 1;
+				}break;
+				
+				case GUI_2ND:
+				case GUI_3RD:  
+				gGui_State = GUI_MAIN;
+				break;
+				
+				default:{gGui_State = GUI_MAIN;}break;
+			}
         }
-				PressureValue++;
 	}
 	else
 	{
 		if( menukeycnt>2 && menukeycnt<TIME_CYCLE_2000MS )//短按
 		{
-//			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);		
-			printf("short1 an..................\r\n");
-			PressureValue++;
-			printf("PressureValue:%d\r\n",PressureValue);
+			switch(gGui_State)
+			{
+				case GUI_MAIN:
+				break;
+				
+				case GUI_2ND:
+					gGui_2nd_Num++;
+				    if(gGui_2nd_Num>6)gGui_2nd_Num=1;
+				
+				case GUI_3RD:  
+				break;
+				
+				default:{gGui_State = GUI_MAIN;}break;
+			}
 		}
 		menukeycnt=0;
 	}
@@ -45,16 +68,15 @@ void TaskKey(void)//10ms调用一次
 		if(++upkeycnt>240)upkeycnt=240;
 		if(upkeycnt == TIME_CYCLE_2000MS)//长按
         {
-//			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);
-			printf("long2 an..................\r\n");
+			
         }
+		PressureValue++;
 	}
 	else
 	{
 		if( upkeycnt > 2 && upkeycnt<TIME_CYCLE_2000MS )//短按
 		{
-//			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);
-			printf("short2 an..................\r\n");			
+			
 		}
 		upkeycnt=0;
 	}
@@ -66,8 +88,7 @@ void TaskKey(void)//10ms调用一次
 		if(++downkeycnt>240)downkeycnt=240;
 		if(downkeycnt == TIME_CYCLE_2000MS)//长按
         {
-//			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);
-			printf("long3 an..................\r\n");
+			PressureValue=0;
         }
 
 	}
@@ -75,8 +96,7 @@ void TaskKey(void)//10ms调用一次
 	{
 		if( downkeycnt > 2 && downkeycnt<TIME_CYCLE_2000MS )//短按
 		{
-//			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);	
-			printf("short3 an..................\r\n");			
+			
 		}
 		downkeycnt=0;
 	}
@@ -88,8 +108,7 @@ void TaskKey(void)//10ms调用一次
 		if(++enterkeycnt>240)enterkeycnt=240;
 		if(enterkeycnt == TIME_CYCLE_2000MS)//长按
         {
-			printf("long4 an..................\r\n");
-//			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);
+			__NOP();
         }
         
 	}
@@ -97,8 +116,23 @@ void TaskKey(void)//10ms调用一次
 	{
 		if(enterkeycnt > 2 && enterkeycnt<TIME_CYCLE_2000MS )//短按
 		{
-			printf("short4 an..................\r\n");
-//			MsgPost(COMM_PRIO,COMM_ADDR_QUIT);		
+			switch(gGui_State)
+			{
+				case GUI_MAIN:
+				break;
+				
+				case GUI_2ND:
+					gGui_State=GUI_3RD;
+					temp_2ND_NUM=gGui_2nd_Num;
+				break;
+				
+				case GUI_3RD:  
+					gGui_State=GUI_2ND;
+					gGui_2nd_Num=temp_2ND_NUM;
+				break;
+				
+				default:{gGui_State = GUI_MAIN;}break;
+			}	
 		}
 		enterkeycnt=0;
 	}

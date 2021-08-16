@@ -30,5 +30,5 @@
 #include    "lpm.h"
 #include    "timer3.h"
 #include    "lpuart.h"
-
+#include    "flash.h"
 #endif

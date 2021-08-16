@@ -24,4 +24,5 @@ extern void Timer3Init(void );
 extern void LPuart1_Init( void );
 extern void Init_LED(void);
 extern void SPI_Send_Data(uint8_t data);
+extern void SysParameterInit(void);
 #endif

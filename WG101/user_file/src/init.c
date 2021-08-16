@@ -346,28 +346,29 @@ void SPI_Send_Data(uint8_t data)
 
 	Spi_SetCS(M0P_SPI0, TRUE);
 }
-
-void parameter_init(void)
+/**************************************************************
+*
+*恢复参数
+*
+**************************************************************/
+void  ParaInit(void)
 {
-
+     Flash_Read(flashInformationAddress,SysParameter,128);
 }
-
-
-void TogleGpio(en_gpio_port_t enPort, en_gpio_pin_t enPin)
+/**************************************************************
+*
+*系统参数初始化
+*
+**************************************************************/
+void  SysParameterInit(void)
 {
-    boolean_t Status;
-    Status= Gpio_ReadOutputIO(enPort,enPin);
-    if(Status == TRUE)
-    {
-        Gpio_WriteOutputIO(enPort,enPin,FALSE);
-    }
-    else
-    {
-        Gpio_WriteOutputIO(enPort,enPin,TRUE);
-    }
+    SysParameter.Range = 500;             			//量程，默认500（5.00Mpa）
+    SysParameter.OverPreaaureWarn = 300; 			//超压预警默认值300
+    SysParameter.OverPreaaureAlarm = 420; 			//超压报警默认值420
+    SysParameter.UnderPreaaureWarn = 250; 			//默认欠压预警值250
+    SysParameter.UnderPreaaureAlarm = 200;         	//默认欠压预警值200
+    SysParameter.DetectionMode = VoltageDetection; 	//默认检测方式为电压检测
 }
-
-
 /**************************************************************
 *
 *Timer3配置
@@ -441,6 +442,7 @@ void Uart0_Init( void )
     stcCfg.stcBaud.u32Pclk  = Sysctrl_GetPClkFreq(); ///<获得外设时钟（PCLK）频率值
     Uart_Init(M0P_UART0, &stcCfg);                   ///<串口初始化
 }
+
 
 #ifdef Printf_Enable
 void LPuart1_Init( void )

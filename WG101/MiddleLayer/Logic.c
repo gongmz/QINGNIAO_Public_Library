@@ -24,21 +24,46 @@ void  Logic(void)
 {
     uint8_t sig;
 
-    if (Msg[LOGIC_PRIO - 1] & LOGIC_ENTRY_MSG) 
+    if (Msg[LOGIC_PRIO - 1] & LOGIC_MENU_SHORT_PRESS) 
 	{
         Msg[LOGIC_PRIO - 1] &= 0x7F;
-        sig = LOGIC_ENTRY_MSG;
+        sig = LOGIC_MENU_SHORT_PRESS;
     } 
-	else if (Msg[LOGIC_PRIO - 1] & LOGIC_VALVEHANDEL_MSG) 
+	else if (Msg[LOGIC_PRIO - 1] & LOGIC_MENU_LONG_PRESS) 
     {
-        Msg[LOGIC_PRIO - 1] &= 0xDF;
-        sig = LOGIC_VALVEHANDEL_MSG;
+        Msg[LOGIC_PRIO - 1] &= 0xBF;
+        sig = LOGIC_MENU_LONG_PRESS;
     } 
-	else if (Msg[LOGIC_PRIO - 1] & 	)
+	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_UP_SHORT_PRESS)
 	{
-        Msg[LOGIC_PRIO - 1] &= 0xEF;
-        sig = LOGIC_ERRORHANDEL_MSG;
+        Msg[LOGIC_PRIO - 1] &= 0xDF;
+        sig = LOGIC_UP_SHORT_PRESS;
     } 
+	else if (Msg[LOGIC_PRIO - 1] & LOGIC_UP_LONG_PRESS) 
+    {
+        Msg[LOGIC_PRIO - 1] &= 0xEF;
+        sig = LOGIC_UP_LONG_PRESS;
+    } 
+	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_DOWN_SHORT_PRESS)
+	{
+        Msg[LOGIC_PRIO - 1] &= 0xF7;
+        sig = LOGIC_DOWN_SHORT_PRESS;
+    } 
+	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_DOWN_LONG_PRESS)
+	{
+        Msg[LOGIC_PRIO - 1] &= 0xFB;
+        sig = LOGIC_DOWN_LONG_PRESS;
+    } 
+	else if (Msg[LOGIC_PRIO - 1] & LOGIC_ENTER_SHORT_PRESS) 
+    {
+        Msg[LOGIC_PRIO - 1] &= 0xFD;
+        sig = LOGIC_ENTER_SHORT_PRESS;
+    } 
+	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_ENTER_LONG_PRESS)
+	{
+        Msg[LOGIC_PRIO - 1] &= 0xFE;
+        sig = LOGIC_ENTER_LONG_PRESS;
+    } 	
 	else
     {
         sig = Msg[LOGIC_PRIO - 1];
@@ -50,19 +75,45 @@ void  Logic(void)
 			case MODE_NORMAL_ST:
                 switch (sig) 
 				{
-					case LOGIC_ENTRY_MSG:
+					case LOGIC_MENU_SHORT_PRESS:
 					{
-						
+						printf("short menu.....");
 					}break;
                        
-					case LOGIC_ERRORHANDEL_MSG:{
-                        WorkStateTran(MODE_FAULT_ST);
+					case LOGIC_MENU_LONG_PRESS:
+					{
+						printf("long menu.....");
 					}break;
                                                
-					case LOGIC_VALVEHANDEL_MSG:{
-                        WorkStateTran(MODE_VALVE_ST);
-                    }break;
-                        
+					case LOGIC_UP_SHORT_PRESS:
+					{
+						printf("short up.....");
+					}break;
+
+					case LOGIC_UP_LONG_PRESS:
+					{
+						printf("long up.....");
+					}break;
+                       
+					case LOGIC_DOWN_SHORT_PRESS:
+					{
+						printf("short down.....");
+					}break;
+                                               
+					case LOGIC_DOWN_LONG_PRESS:
+					{
+						printf("long down.....");
+					}break;
+					
+					case LOGIC_ENTER_SHORT_PRESS:
+					{
+						printf("short enter.....");
+					}break;
+                                               
+					case LOGIC_ENTER_LONG_PRESS:
+					{
+						printf("long enter.....");
+					}break;
 					default:
                         WorkStateTran(MODE_NORMAL_ST);break;
                 }break;
@@ -92,6 +143,6 @@ void  SetLogicPrio(void)
 void  WorkStateTran(uint8_t state)
 {
     WorkState = state;
-    MsgPost(LOGIC_PRIO, LOGIC_ENTRY_MSG);
+/*    MsgPost(LOGIC_PRIO, LOGIC_ENTRY_MSG);*/
 }
 

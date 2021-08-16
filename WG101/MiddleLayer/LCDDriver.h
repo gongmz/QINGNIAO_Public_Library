@@ -24,7 +24,7 @@
 #define GUI_2ND          0x02
 #define GUI_3RD          0x04
 
-#define TOTAL_NUM_2ND    4
+#define TOTAL_NUM_2ND    6//
 //字母代码
 #define 	CHAR_A   0x77  //A
 #define 	CHAR_b   0x7C  //b
@@ -70,7 +70,9 @@
 
 #define DISP_TIME        120*2  //
 
-
+extern volatile uint8_t gGui_State;     
+extern volatile uint8_t gGui_2nd_Num;
+extern volatile uint8_t gGui_3rd_Num;	
 extern void Screen(void);
 extern uint16_t HEX2BCD(uint16_t hex_data);// HEX转BCD子程序 
 extern uint16_t BCD2HEX(uint16_t bcd_data); //BCD转为HEX子程序 

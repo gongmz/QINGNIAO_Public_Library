@@ -27,14 +27,14 @@ enum enumWorkState {
 
 
 // ===== message define =====
-#define LOGIC_ENTRY_MSG         0x80        // 
-#define LOGIC_CARDHANDEL_MSG    0x40        // 
-#define LOGIC_VALVEHANDEL_MSG   0x20        // 
-#define LOGIC_ERRORHANDEL_MSG   0x10        // 
-#define LOGIC_TIMERHANDEL_MSG   0x08        // 
-#define LOGIC_LOWVOLTAGE_MSG    0x04        //  
-#define LOGIC_SWITCHERROR_MSG   0x02        // 
-#define	LOGIC_UPDATEAMOUNT_MSG  0x01        // 
+#define LOGIC_MENU_SHORT_PRESS   0x80        // 
+#define LOGIC_MENU_LONG_PRESS    0x40        // 
+#define LOGIC_UP_SHORT_PRESS     0x20        // 
+#define LOGIC_UP_LONG_PRESS      0x10        // 
+#define LOGIC_DOWN_SHORT_PRESS   0x08        // 
+#define LOGIC_DOWN_LONG_PRESS    0x04        //  
+#define LOGIC_ENTER_SHORT_PRESS  0x02        // 
+#define	LOGIC_ENTER_LONG_PRESS   0x01        // 
 
 
 

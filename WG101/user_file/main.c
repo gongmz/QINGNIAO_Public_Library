@@ -22,7 +22,7 @@ int32_t main(void)
 	SPI_Init();
 	LPTimerInit();
     Timer3Init();
-	
+	SysParameterInit();
 	
 	Init_LED();
 #ifdef Printf_Enable
