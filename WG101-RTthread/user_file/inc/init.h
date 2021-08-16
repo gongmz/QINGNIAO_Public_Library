@@ -9,8 +9,8 @@
 #include "global_variable.h"
 #include "lptim.h"
 #include "lpm.h"
-#include "lpuart.h"
 #include "timer3.h"
+#include "lpuart.h"
 
 extern void SysClockInit(void);
 extern void GPIO_Init(void);
@@ -19,5 +19,10 @@ extern void parameter_init(void);
 extern void Uart0_Init(void);
 extern void LPTimerInit(void);
 extern void SPI_Init(void);
+extern void KEY_Init(void);
+extern void Timer3Init(void );
 extern void LPuart1_Init( void );
+extern void Init_LED(void);
+extern void SPI_Send_Data(uint8_t data);
+extern void SysParameterInit(void);
 #endif

@@ -353,7 +353,7 @@ void SPI_Send_Data(uint8_t data)
 **************************************************************/
 void  ParaInit(void)
 {
-     Flash_Read(flashInformationAddress,SysParameter,128);
+ //    Flash_Read(flashInformationAddress,SysParameter,128);
 }
 /**************************************************************
 *

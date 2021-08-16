@@ -514,11 +514,6 @@
               <FilePath>..\MiddleLayer\Logic.c</FilePath>
             </File>
             <File>
-              <FileName>RTCFun.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MiddleLayer\RTCFun.c</FilePath>
-            </File>
-            <File>
               <FileName>ScanKEY.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MiddleLayer\ScanKEY.c</FilePath>
@@ -527,6 +522,11 @@
               <FileName>LCDDriver.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MiddleLayer\LCDDriver.c</FilePath>
+            </File>
+            <File>
+              <FileName>RTCFun.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\RTCFun.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -520,8 +520,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\MiddleLayer\RTCFun.c</PathWithFileName>
-      <FilenameWithoutPath>RTCFun.c</FilenameWithoutPath>
+      <PathWithFileName>..\MiddleLayer\ScanKEY.c</PathWithFileName>
+      <FilenameWithoutPath>ScanKEY.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -532,8 +532,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\MiddleLayer\ScanKEY.c</PathWithFileName>
-      <FilenameWithoutPath>ScanKEY.c</FilenameWithoutPath>
+      <PathWithFileName>..\MiddleLayer\LCDDriver.c</PathWithFileName>
+      <FilenameWithoutPath>LCDDriver.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -544,8 +544,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\MiddleLayer\LCDDriver.c</PathWithFileName>
-      <FilenameWithoutPath>LCDDriver.c</FilenameWithoutPath>
+      <PathWithFileName>..\MiddleLayer\RTCFun.c</PathWithFileName>
+      <FilenameWithoutPath>RTCFun.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

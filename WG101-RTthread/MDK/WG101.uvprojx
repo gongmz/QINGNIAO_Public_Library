@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\driver_file\inc;..\mcu_file;..\MDK;..\os_file;..\user_file\inc;..\driver_file\src;..\user_file\inc;..\os_file\include;..\os_file\libcpu\arm\cortex-m0</IncludePath>
+              <IncludePath>..\driver_file\inc;..\mcu_file;..\MDK;..\os_file;..\user_file\inc;..\driver_file\src;..\user_file\inc;..\os_file\include;..\os_file\libcpu\arm\cortex-m0;..\MiddleLayer</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -587,6 +587,26 @@
               <FileName>cpuport.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\os_file\libcpu\arm\cortex-m0\cpuport.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MiddleLayer</GroupName>
+          <Files>
+            <File>
+              <FileName>LCDDriver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\LCDDriver.c</FilePath>
+            </File>
+            <File>
+              <FileName>Logic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\Logic.c</FilePath>
+            </File>
+            <File>
+              <FileName>ScanKEY.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\ScanKEY.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -36,5 +36,5 @@
 .\objects\board.o: ..\driver_file\inc\rtc.h
 .\objects\board.o: ..\driver_file\inc\lptim.h
 .\objects\board.o: ..\driver_file\inc\lpm.h
-.\objects\board.o: ..\driver_file\inc\lpuart.h
 .\objects\board.o: ..\driver_file\inc\timer3.h
+.\objects\board.o: ..\driver_file\inc\lpuart.h

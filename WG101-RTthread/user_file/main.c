@@ -1,8 +1,6 @@
 /**********************************Í·ÎÄ¼þ**************************************/
-#include "stdint.h"
-#include "init.h"
 #include "rtthread.h"
-
+#include "includes.h"
 //#include "rtc_app.h"
 //#include "time_app.h"
 //#include "save.h"
@@ -21,8 +19,9 @@ static void key_thread_entry(void *param)
 {   
     while (1)
     {
-		    rt_kprintf("thread2.................\r\n");
-        rt_thread_mdelay(5000);   
+		    Screen();
+//				rt_kprintf("thread1.................\r\n");
+        rt_thread_mdelay(10);   
     }
 }
 
@@ -30,7 +29,7 @@ static void key1_thread_entry(void *param)
 {   
     while (1)
     {
-		    rt_kprintf("thread3.................\r\n");
+	//	    rt_kprintf("thread3.................\r\n");
         rt_thread_mdelay(10000);   
     }
 }
@@ -55,7 +54,7 @@ int32_t main(void)
 	
     while(1)
 	{
-		rt_kprintf("main_thread.................\r\n");
+//		rt_kprintf("main_thread.................\r\n");
 		rt_thread_mdelay(1000);
 	}
 

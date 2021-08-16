@@ -36,6 +36,9 @@
 ".\objects\board.o"
 ".\objects\context_rvds.o"
 ".\objects\cpuport.o"
+".\objects\lcddriver.o"
+".\objects\logic.o"
+".\objects\scankey.o"
 --strict --scatter ".\Objects\WG101.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

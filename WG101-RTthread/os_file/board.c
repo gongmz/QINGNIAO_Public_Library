@@ -73,6 +73,10 @@ void rt_hw_board_init()
     _SysTick_Config(SystemCoreClock / RT_TICK_PER_SECOND);
 
     GPIO_Init();
+		KEY_Init();
+		SPI_Init();
+		SysParameterInit();
+	  Init_LED();
 #ifdef Printf_Enable
      LPuart1_Init();
 	   rt_kprintf("System Start..................\r\n");

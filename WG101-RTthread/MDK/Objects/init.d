@@ -27,5 +27,5 @@
 .\objects\init.o: ..\driver_file\inc\rtc.h
 .\objects\init.o: ..\driver_file\inc\lptim.h
 .\objects\init.o: ..\driver_file\inc\lpm.h
-.\objects\init.o: ..\driver_file\inc\lpuart.h
 .\objects\init.o: ..\driver_file\inc\timer3.h
+.\objects\init.o: ..\driver_file\inc\lpuart.h

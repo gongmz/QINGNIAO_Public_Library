@@ -223,6 +223,47 @@ void KEY_Init(void)
 	Gpio_Init(DOWN_PORT, DOWN_PIN, &stcGpioCfg); 
 	Gpio_Init(ENTER_PORT, ENTER_PIN, &stcGpioCfg); 
 }
+/**************************************************************
+* LED灯引脚初始化
+*
+*
+**************************************************************/
+void Init_LED(void)
+{
+    stc_gpio_cfg_t stcGpioCfg;
+    
+    ///< 打开GPIO外设时钟门控
+    Sysctrl_SetPeripheralGate(SysctrlPeripheralGpio, TRUE); 
+    
+    ///< 端口方向配置->输出(其它参数与以上（输入）配置参数一致)
+    stcGpioCfg.enDir = GpioDirOut;
+    ///< 端口上下拉配置->下拉
+    stcGpioCfg.enPu = GpioPuDisable;
+    stcGpioCfg.enPd = GpioPdDisable;
+    
+    ///< LED关闭
+    Gpio_ClrIO(LED1_PORT, LED1_PIN);
+	Gpio_ClrIO(LED2_PORT, LED2_PIN);
+	Gpio_ClrIO(LED3_PORT, LED3_PIN);
+	Gpio_ClrIO(LED4_PORT, LED4_PIN);
+	
+	Gpio_ClrIO(SEG1_PORT, SEG1_PIN);
+	Gpio_ClrIO(SEG2_PORT, SEG2_PIN);
+	Gpio_ClrIO(SEG3_PORT, SEG3_PIN);
+	Gpio_ClrIO(SEG4_PORT, SEG4_PIN);
+    
+    ///< GPIO IO LED端口初始化
+	Gpio_Init(LED1_PORT, LED1_PIN, &stcGpioCfg);
+	Gpio_Init(LED2_PORT, LED2_PIN, &stcGpioCfg);
+	Gpio_Init(LED3_PORT, LED3_PIN, &stcGpioCfg);
+	Gpio_Init(LED4_PORT, LED4_PIN, &stcGpioCfg);
+	
+	Gpio_Init(SEG1_PORT, SEG1_PIN, &stcGpioCfg);
+	Gpio_Init(SEG2_PORT, SEG2_PIN, &stcGpioCfg);
+	Gpio_Init(SEG3_PORT, SEG3_PIN, &stcGpioCfg);
+	Gpio_Init(SEG4_PORT, SEG4_PIN, &stcGpioCfg);
+	
+}
 /**
  ******************************************************************************
  ** \brief  初始化LPTIMER
@@ -282,51 +323,52 @@ void SPI_Init(void)
     Gpio_SetAfMode(GpioPortA, GpioPin5,GpioAf1);         //配置引脚PA05作为SPI0_SCK
 
 
-    ///< 端口方向配置->输入
-    GpioInitStruct.enDir = GpioDirIn;
-    ///< 端口驱动能力配置->高驱动能力
-    GpioInitStruct.enDrv = GpioDrvL;
-    ///< 端口上下拉配置->无
-    GpioInitStruct.enPu = GpioPuDisable;
-    GpioInitStruct.enPd = GpioPdDisable;
-    ///< 端口开漏输出配置->开漏输出关闭
-    GpioInitStruct.enOD = GpioOdDisable;
-    ///< 端口输入/输出值寄存器总线控制模式配置->AHB
-    GpioInitStruct.enCtrlMode = GpioAHB;
-    ///< GPIO IO USER KEY初始化
-    Gpio_Init(STK_USER_PORT, STK_USER_PIN, &GpioInitStruct);
-
     //SPI0模块配置：主机
     SpiInitStruct.enSpiMode = SpiMskMaster;   //配置位主机模式
-    SpiInitStruct.enPclkDiv = SpiClkMskDiv128;  //波特率：fsys/128
+    SpiInitStruct.enPclkDiv = SpiClkMskDiv2;  //波特率：fsys/2
     SpiInitStruct.enCPHA    = SpiMskCphafirst;//第一边沿采样
     SpiInitStruct.enCPOL    = SpiMskcpollow;  //极性为低
     Spi_Init(M0P_SPI0, &SpiInitStruct);
 		
 }
-
-
-void parameter_init(void)
+/**************************************************************
+*
+*SPI发送一个字节数据
+*
+**************************************************************/
+void SPI_Send_Data(uint8_t data)
 {
+	Spi_SetCS(M0P_SPI0, FALSE);
+	
 
+	Spi_SendData(M0P_SPI0, data);
+	while(Spi_GetStatus(M0P_SPI0, SpiTxe) == FALSE); 
+
+	Spi_SetCS(M0P_SPI0, TRUE);
 }
-
-
-void TogleGpio(en_gpio_port_t enPort, en_gpio_pin_t enPin)
+/**************************************************************
+*
+*恢复参数
+*
+**************************************************************/
+void  ParaInit(void)
 {
-    boolean_t Status;
-    Status= Gpio_ReadOutputIO(enPort,enPin);
-    if(Status == TRUE)
-    {
-        Gpio_WriteOutputIO(enPort,enPin,FALSE);
-    }
-    else
-    {
-        Gpio_WriteOutputIO(enPort,enPin,TRUE);
-    }
+//     Flash_Read(flashInformationAddress,SysParameter,128);
 }
-
-
+/**************************************************************
+*
+*系统参数初始化
+*
+**************************************************************/
+void  SysParameterInit(void)
+{
+    SysParameter.Range = 500;             			//量程，默认500（5.00Mpa）
+    SysParameter.OverPreaaureWarn = 300; 			//超压预警默认值300
+    SysParameter.OverPreaaureAlarm = 420; 			//超压报警默认值420
+    SysParameter.UnderPreaaureWarn = 250; 			//默认欠压预警值250
+    SysParameter.UnderPreaaureAlarm = 200;         	//默认欠压预警值200
+    SysParameter.DetectionMode = VoltageDetection; 	//默认检测方式为电压检测
+}
 /**************************************************************
 *
 *Timer3配置
@@ -345,7 +387,7 @@ void Timer3Init(void )
     
     stcTim3BaseCfg.enWorkMode = Tim3WorkMode0;              //定时器模式
     stcTim3BaseCfg.enCT       = Tim3Timer;                  //定时器功能，计数时钟为内部PCLK
-    stcTim3BaseCfg.enPRS      = Tim3PCLKDiv64;              //PCLK/64
+    stcTim3BaseCfg.enPRS      = Tim3PCLKDiv32;              //PCLK/64
     stcTim3BaseCfg.enCntMode  = Tim316bitArrMode;           //自动重载16位计数器/定时器
     stcTim3BaseCfg.bEnTog     = FALSE;
     stcTim3BaseCfg.bEnGate    = FALSE;
@@ -353,11 +395,11 @@ void Timer3Init(void )
     
     Tim3_Mode0_Init(&stcTim3BaseCfg);                       //TIM3 的模式0功能初始化
         
-    u16ArrValue = 0x0;
+    u16ArrValue = 0xF159;//10MS
     
     Tim3_M0_ARRSet(u16ArrValue);                            //设置重载值(ARR = 0x10000 - 周期)
     
-    u16CntValue = 0x0;
+    u16CntValue = 0xF159;
     
     Tim3_M0_Cnt16Set(u16CntValue);                          //设置计数初值
     
@@ -401,13 +443,14 @@ void Uart0_Init( void )
     Uart_Init(M0P_UART0, &stcCfg);                   ///<串口初始化
 }
 
+
 #ifdef Printf_Enable
 void LPuart1_Init( void )
 {
-		stc_lpuart_cfg_t  stcCfg;
-		stc_gpio_cfg_t stcGpioCfg;
-		DDL_ZERO_STRUCT(stcCfg);
-		DDL_ZERO_STRUCT(stcGpioCfg);
+	stc_lpuart_cfg_t  stcCfg;
+	stc_gpio_cfg_t stcGpioCfg;
+    DDL_ZERO_STRUCT(stcCfg);
+	DDL_ZERO_STRUCT(stcGpioCfg);
     
     ///<外设模块时钟使能
     Sysctrl_SetPeripheralGate(SysctrlPeripheralLpUart1,TRUE);    
@@ -433,6 +476,21 @@ void LPuart1_Init( void )
     stcCfg.stcBaud.u32Baud = 115200;                   ///<波特率
     stcCfg.enRunMode = LPUartMskMode1;               ///<工作模式
     LPUart_Init(M0P_LPUART1, &stcCfg);
+}
+/**
+ ******************************************************************************
+ ** \brief  Re-target putchar function
+ ******************************************************************************/
+int fputc(int ch, FILE *f)
+{
+
+    if (((uint8_t)ch) == '\n')
+    {
+		LPUart_SendData( M0P_LPUART1, '\r' );
+    }
+    LPUart_SendData( M0P_LPUART1,ch );
+
+    return ch;
 }
 #endif
 
