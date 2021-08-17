@@ -7,7 +7,8 @@
 volatile uint8_t gGui_State=GUI_MAIN;     
 volatile uint8_t gGui_2nd_Num = 1;
 volatile uint8_t gGui_3rd_Num = 1;
-uint8_t i;
+static uint8_t fresh_area;//数码管刷新区域
+uint8_t g_edit_area;//数码管当前编辑区域   1：个位
 
 static uint8_t table[10] ={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};
 static uint8_t table2[9] ={0x00,0x01,0x03,0x07,0xF,0x1F,0x3F,0x7F,0xFF};
@@ -83,8 +84,8 @@ void Screen(void)
 void DisplayMainInterface(void)
 {
 	static uint16_t temp;
-	  if(PressureValue>9999)PressureValue=9999;
-    switch (i) 
+	if(PressureValue>9999)PressureValue=9999;
+    switch (fresh_area) 
 	{
 		case 0://
 			SET_SEG1;
@@ -206,15 +207,15 @@ void DisplayMainInterface(void)
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
 }
 //******************************************************************************
 //二级界面
 //******************************************************************************
 void Display2NDInterface(void)
 {
-    switch (i) 
+    switch (fresh_area) 
 	{
 		case 0:
 			SET_SEG1;
@@ -264,8 +265,8 @@ void Display2NDInterface(void)
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
 }
 //******************************************************************************
 //清屏
@@ -283,9 +284,9 @@ void   ClrAllLcd(void)
 //H1界面
 //******************************************************************************
 void Display_SubpageOfH1(void)
-{   
-	static uint8_t i;
-    switch (i) 
+{ 
+	static uint8_t temp;
+    switch (fresh_area) 
 	{
 		case 0:
 			SET_SEG1;
@@ -294,11 +295,11 @@ void Display_SubpageOfH1(void)
 			RESET_SEG4;
 		
 			SPI_Send_Data(0);
-		
+			
 			if( SysParameter.Range > 999)
 				SPI_Send_Data(table[SysParameter.Range/1000]);
 			else
-				SPI_Send_Data(0);//不显示
+				SPI_Send_Data(table[0]);//不显示
 		break;
 		
 		case 1:
@@ -337,13 +338,28 @@ void Display_SubpageOfH1(void)
 			SET_SEG4;
 		
 			SPI_Send_Data(0);
-			SPI_Send_Data(table[SysParameter.Range%10]);
+		
+			if(g_edit_area == 3)
+			{
+				temp++;
+				if(temp>=80)temp=0;
+				if(temp<40)
+				{
+					SPI_Send_Data(table[SysParameter.Range%10]);
+				}
+				else
+				{
+					SPI_Send_Data(table[0]);
+				}
+			}
+			else
+				SPI_Send_Data(table[SysParameter.Range%10]);
 		break;
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
     
 }
 //******************************************************************************
@@ -351,8 +367,7 @@ void Display_SubpageOfH1(void)
 //******************************************************************************
 void Display_SubpageOfH2(void)
 {   
-	static uint8_t i;
-    switch (i) 
+    switch (fresh_area) 
 	{
 		case 0:
 			SET_SEG1;
@@ -364,7 +379,7 @@ void Display_SubpageOfH2(void)
 			if( SysParameter.OverPreaaureWarn > 999)
 				SPI_Send_Data(table[SysParameter.OverPreaaureWarn/1000]);
 			else
-				SPI_Send_Data(0);
+				SPI_Send_Data(table[0]);
 			
 		break;
 		
@@ -408,16 +423,15 @@ void Display_SubpageOfH2(void)
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
 }
 //*******************************************************************************
 //H3界面
 //******************************************************************************
 void Display_SubpageOfH3(void)
 {
-	static uint8_t i;
-    switch (i) 
+    switch (fresh_area) 
 	{
 		case 0:
 			SET_SEG1;
@@ -429,7 +443,7 @@ void Display_SubpageOfH3(void)
 			if( SysParameter.OverPreaaureAlarm > 999)
 				SPI_Send_Data(table[SysParameter.OverPreaaureAlarm/1000]);
 			else
-				SPI_Send_Data(0);
+				SPI_Send_Data(table[0]);
 		break;
 		
 		case 1:
@@ -471,16 +485,15 @@ void Display_SubpageOfH3(void)
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
 }
 //*******************************************************************************
 //H4界面
 //******************************************************************************
 void Display_SubpageOfH4(void)
 {
-	static uint8_t i;
-    switch (i) 
+    switch (fresh_area) 
 	{
 		case 0:
 			SET_SEG1;
@@ -492,7 +505,7 @@ void Display_SubpageOfH4(void)
 			if( SysParameter.UnderPreaaureAlarm > 999)
 				SPI_Send_Data(table[SysParameter.UnderPreaaureAlarm/1000]);
 			else
-				SPI_Send_Data(0);
+				SPI_Send_Data(table[0]);
 		break;
 		
 		case 1:
@@ -502,8 +515,8 @@ void Display_SubpageOfH4(void)
 			RESET_SEG4;
 		
 			SPI_Send_Data(0);
-			if( SysParameter.UnderPreaaureAlarm > 99 )
-				SPI_Send_Data(table[(SysParameter.UnderPreaaureAlarm/100)%10]|0x80);
+			if( SysParameter.UnderPreaaureWarn > 99 )
+				SPI_Send_Data(table[(SysParameter.UnderPreaaureWarn/100)%10]|0x80);
 			else
 				SPI_Send_Data(table[0]|0x80);
 		break;
@@ -515,8 +528,8 @@ void Display_SubpageOfH4(void)
 			RESET_SEG4;
 		
 			SPI_Send_Data(0);
-			if( SysParameter.UnderPreaaureAlarm >9 )
-				SPI_Send_Data(table[(SysParameter.UnderPreaaureAlarm/10)%10]);
+			if( SysParameter.UnderPreaaureWarn >9 )
+				SPI_Send_Data(table[(SysParameter.UnderPreaaureWarn/10)%10]);
 			else
 				SPI_Send_Data(table[0]);
 		break;
@@ -528,21 +541,20 @@ void Display_SubpageOfH4(void)
 			SET_SEG4;
 		
 			SPI_Send_Data(0);
-			SPI_Send_Data(table[SysParameter.UnderPreaaureAlarm%10]);
+			SPI_Send_Data(table[SysParameter.UnderPreaaureWarn%10]);
 		break;
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
 }
 //******************************************************************************
 //H5界面
 //******************************************************************************
 void Display_SubpageOfH5(void)
 {   
-	static uint8_t i;
-    switch (i) 
+    switch (fresh_area) 
 	{
 		case 0:
 			SET_SEG1;
@@ -554,7 +566,7 @@ void Display_SubpageOfH5(void)
 			if( SysParameter.UnderPreaaureAlarm > 999)
 				SPI_Send_Data(table[SysParameter.UnderPreaaureAlarm/1000]);
 			else
-				SPI_Send_Data(0);
+				SPI_Send_Data(table[0]);
 		break;
 		
 		case 1:
@@ -596,16 +608,15 @@ void Display_SubpageOfH5(void)
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
 }
 //*******************************************************************************
 //H6界面
 //******************************************************************************
 void Display_SubpageOfH6(void)
 {
-	static uint8_t i;
-    switch (i) 
+    switch (fresh_area) 
 	{
 		case 0:
 			SET_SEG1;
@@ -615,9 +626,6 @@ void Display_SubpageOfH6(void)
 		
 			SPI_Send_Data(0);
 			SPI_Send_Data(0);
-		
-
-			
 		break;
 		
 		case 1:
@@ -656,16 +664,15 @@ void Display_SubpageOfH6(void)
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
 }
 //*******************************************************************************
 //H7界面
 //******************************************************************************
 void Display_SubpageOfH7(void)
 {
-	static uint8_t i;
-    switch (i) 
+    switch (fresh_area) 
 	{
 		case 0:
 			SET_SEG1;
@@ -714,8 +721,8 @@ void Display_SubpageOfH7(void)
 		
 		default:break;
 	}
-	i++;
-	i=i%4;	
+	fresh_area++;
+	fresh_area=fresh_area%4;	
 }
 void Display_CHECK_A(void)
 { 

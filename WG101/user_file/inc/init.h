@@ -11,7 +11,7 @@
 #include "lpm.h"
 #include "timer3.h"
 #include "lpuart.h"
-
+#include "Save.h"
 extern void SysClockInit(void);
 extern void GPIO_Init(void);
 extern void Wdt_Interface_Init(void);
@@ -24,5 +24,7 @@ extern void Timer3Init(void );
 extern void LPuart1_Init( void );
 extern void Init_LED(void);
 extern void SPI_Send_Data(uint8_t data);
-extern void SysParameterInit(void);
+extern void  ParaInit(void);
+
+
 #endif

@@ -1,0 +1,10 @@
+.\objects\kservice.o: C:\Users\mengz\AppData\Local\Arm\Packs\RealThread\RT-Thread\3.1.5\src\kservice.c
+.\objects\kservice.o: C:\Users\mengz\AppData\Local\Arm\Packs\RealThread\RT-Thread\3.1.5\include\rtthread.h
+.\objects\kservice.o: ..\os_file\rtconfig.h
+.\objects\kservice.o: C:\Users\mengz\AppData\Local\Arm\Packs\RealThread\RT-Thread\3.1.5\include\rtthread.h
+.\objects\kservice.o: .\RTE\_WG101\RTE_Components.h
+.\objects\kservice.o: C:\Users\mengz\AppData\Local\Arm\Packs\RealThread\RT-Thread\3.1.5\include\rtdebug.h
+.\objects\kservice.o: C:\Users\mengz\AppData\Local\Arm\Packs\RealThread\RT-Thread\3.1.5\include\rtdef.h
+.\objects\kservice.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\kservice.o: C:\Users\mengz\AppData\Local\Arm\Packs\RealThread\RT-Thread\3.1.5\include\rtservice.h
+.\objects\kservice.o: C:\Users\mengz\AppData\Local\Arm\Packs\RealThread\RT-Thread\3.1.5\include\rthw.h

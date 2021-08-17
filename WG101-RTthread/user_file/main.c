@@ -21,7 +21,7 @@ static void key_thread_entry(void *param)
     {
 		    Screen();
 //				rt_kprintf("thread1.................\r\n");
-        rt_thread_mdelay(10);   
+        rt_thread_mdelay(1);   
     }
 }
 

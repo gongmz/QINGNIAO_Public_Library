@@ -4,6 +4,7 @@
 /**********************************结构体声明**********************************/
 /**********************************变量声明************************************/
 /**********************************函数声明************************************/
+void  SysParameterInit(void);
 void SysClockInit(void)
 {
     stc_sysctrl_clk_cfg_t stcCfg;
@@ -354,6 +355,15 @@ void SPI_Send_Data(uint8_t data)
 void  ParaInit(void)
 {
  //    Flash_Read(flashInformationAddress,SysParameter,128);
+	while(Ok!=Flash_Init(6,TRUE));//falsh初始化,时钟24M
+	Flash_Read(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
+	if(SysParameter.FrameHead!=0xAB || SysParameter.FrameEnd!=0xBA)
+	{
+		SysParameterInit();
+		Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
+	}
+	
+	
 }
 /**************************************************************
 *
@@ -362,12 +372,14 @@ void  ParaInit(void)
 **************************************************************/
 void  SysParameterInit(void)
 {
+	SysParameter.FrameHead=0xAB;
     SysParameter.Range = 500;             			//量程，默认500（5.00Mpa）
     SysParameter.OverPreaaureWarn = 300; 			//超压预警默认值300
     SysParameter.OverPreaaureAlarm = 420; 			//超压报警默认值420
     SysParameter.UnderPreaaureWarn = 250; 			//默认欠压预警值250
     SysParameter.UnderPreaaureAlarm = 200;         	//默认欠压预警值200
     SysParameter.DetectionMode = VoltageDetection; 	//默认检测方式为电压检测
+	SysParameter.FrameEnd=0xBA;
 }
 /**************************************************************
 *
@@ -442,7 +454,6 @@ void Uart0_Init( void )
     stcCfg.stcBaud.u32Pclk  = Sysctrl_GetPClkFreq(); ///<获得外设时钟（PCLK）频率值
     Uart_Init(M0P_UART0, &stcCfg);                   ///<串口初始化
 }
-
 
 #ifdef Printf_Enable
 void LPuart1_Init( void )

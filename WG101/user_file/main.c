@@ -14,22 +14,19 @@
 
 int32_t main(void)
 {
-
-
 	SysClockInit();
     GPIO_Init();
 	KEY_Init();
 	SPI_Init();
 	LPTimerInit();
     Timer3Init();
-	SysParameterInit();
-	
 	Init_LED();
+	ParaInit();
 #ifdef Printf_Enable
 	LPuart1_Init();
 	printf("System Start..................\r\n");
 #endif
-	delay1ms(2000);
+	delay1ms(1000);
 
 //	  RTC_InitInterface();
 //    parameter_init();
@@ -39,7 +36,5 @@ int32_t main(void)
 	 {
 		ThreadScheduler();
 	 }
-
-	
 }
 

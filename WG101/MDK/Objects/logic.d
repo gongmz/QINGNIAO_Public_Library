@@ -17,10 +17,10 @@
 .\objects\logic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 .\objects\logic.o: ..\mcu_file\board_stkhc32l13x.h
 .\objects\logic.o: ..\mcu_file\hc32l13x.h
-.\objects\logic.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h
-.\objects\logic.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h
-.\objects\logic.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
-.\objects\logic.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\logic.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\logic.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\logic.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\logic.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\logic.o: ..\mcu_file\system_hc32l13x.h
 .\objects\logic.o: ..\driver_file\inc\sysctrl.h
 .\objects\logic.o: ..\driver_file\inc\ddl.h
@@ -36,6 +36,7 @@
 .\objects\logic.o: ..\driver_file\inc\lpm.h
 .\objects\logic.o: ..\driver_file\inc\timer3.h
 .\objects\logic.o: ..\driver_file\inc\lpuart.h
+.\objects\logic.o: ..\MiddleLayer\Save.h
 .\objects\logic.o: ..\os_file\FrameWork.h
 .\objects\logic.o: ..\MiddleLayer\Logic.h
 .\objects\logic.o: ..\MiddleLayer\ScanKEY.h

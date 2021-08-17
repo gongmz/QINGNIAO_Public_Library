@@ -23,6 +23,7 @@
 ".\objects\scankey.o"
 ".\objects\lcddriver.o"
 ".\objects\rtcfun.o"
+".\objects\save.o"
 --strict --scatter ".\Objects\WG101.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

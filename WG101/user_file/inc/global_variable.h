@@ -28,13 +28,14 @@ struct _uart
 //系统参数
 typedef struct 
 {
+	uint8_t  FrameHead;
     uint16_t Range;  					//量程
     uint16_t OverPreaaureWarn;			//超压预警
     uint16_t OverPreaaureAlarm;         //超压报警
     uint16_t UnderPreaaureWarn;         //欠压预警
     uint16_t UnderPreaaureAlarm;        //欠压报警
     Type_t  DetectionMode;				//电压检测或电流检测
-	uint8_t  CheckSum;  				//校验和
+	uint8_t  FrameEnd;				    
 }SysParameter_t;
 
 extern SysParameter_t  SysParameter;
@@ -71,7 +72,6 @@ extern SysParameter_t  SysParameter;
 #define SEG4_PORT   GpioPortB
 #define SEG4_PIN    GpioPin15
 /**********************************变量声明************************************/
-extern uint32_t flashInformationAddress;
 extern uint16_t ErrorCode;
 extern uint16_t PressureValue;
 #endif
