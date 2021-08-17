@@ -341,16 +341,16 @@ void Display_SubpageOfH1(void)
 		
 			if(g_edit_area == 3)
 			{
-				temp++;
-				if(temp>=80)temp=0;
-				if(temp<40)
-				{
-					SPI_Send_Data(table[SysParameter.Range%10]);
-				}
-				else
-				{
-					SPI_Send_Data(table[0]);
-				}
+					temp++;
+					if(temp>=80)temp=0;
+					if(temp<40)
+					{
+						SPI_Send_Data(table[SysParameter.Range%10]);
+					}
+					else
+					{
+						SPI_Send_Data(table[0]);
+					}
 			}
 			else
 				SPI_Send_Data(table[SysParameter.Range%10]);
