@@ -1,6 +1,8 @@
 /**********************************头文件**************************************/
 #include   "LCDDriver.h"
 /**********************************宏定义声明**********************************/
+#define LEDFLASHPERIOD  80
+#define DIGITALFLASHPERIOD   80
 /**********************************结构体声明**********************************/
 /**********************************变量声明************************************/
 
@@ -83,7 +85,7 @@ void Screen(void)
 //******************************************************************************
 void DisplayMainInterface(void)
 {
-	static uint16_t temp;
+	static uint16_t LEDFlashCnt;
 	if(PressureValue>9999)PressureValue=9999;
     switch (fresh_area) 
 	{
@@ -163,9 +165,9 @@ void DisplayMainInterface(void)
 			SET_SEG3;
 			RESET_SEG4;
 		
-			temp++;
-		    if(temp>=80)temp=0;
-			if(temp<40)
+			LEDFlashCnt++;
+		    if(LEDFlashCnt>=80)LEDFlashCnt=0;
+			if(LEDFlashCnt<40)
 			{
 				SET_LED4;
 			}
@@ -285,7 +287,7 @@ void   ClrAllLcd(void)
 //******************************************************************************
 void Display_SubpageOfH1(void)
 { 
-	static uint8_t temp;
+	static uint8_t DigitalFlashCnt;
     switch (fresh_area) 
 	{
 		case 0:
@@ -295,11 +297,29 @@ void Display_SubpageOfH1(void)
 			RESET_SEG4;
 		
 			SPI_Send_Data(0);
-			
-			if( SysParameter.Range > 999)
-				SPI_Send_Data(table[SysParameter.Range/1000]);
-			else
-				SPI_Send_Data(table[0]);//不显示
+		
+			if(g_edit_area == 3)
+			{
+				DigitalFlashCnt++;
+				if(DigitalFlashCnt>=80)DigitalFlashCnt=0;
+				if(DigitalFlashCnt<40)
+				{
+					if( SysParameter.Range > 999)
+						SPI_Send_Data(table[SysParameter.Range/1000]);
+					else
+						SPI_Send_Data(table[0]);//不显示
+				}
+				else
+				{
+					SPI_Send_Data(0);
+				}
+		    }else
+			{
+				if( SysParameter.Range > 999)
+					SPI_Send_Data(table[SysParameter.Range/1000]);
+				else
+					SPI_Send_Data(table[0]);//不显示
+			}
 		break;
 		
 		case 1:
@@ -310,10 +330,28 @@ void Display_SubpageOfH1(void)
 		
 			SPI_Send_Data(0);
 		
-			if( SysParameter.Range > 99 )
-				SPI_Send_Data(table[(SysParameter.Range/100)%10]|0x80);
-			else
-				SPI_Send_Data(table[0]|0x80);//显示0
+			if(g_edit_area == 2)
+			{
+				DigitalFlashCnt++;
+				if(DigitalFlashCnt>=80)DigitalFlashCnt=0;
+				if(DigitalFlashCnt<40)
+				{
+					if( SysParameter.Range > 99 )
+						SPI_Send_Data(table[(SysParameter.Range/100)%10]|0x80);
+					else
+						SPI_Send_Data(table[0]|0x80);//显示0
+				}
+				else
+				{
+					SPI_Send_Data(0);
+				}
+		    }else
+			{
+				if( SysParameter.Range > 99 )
+					SPI_Send_Data(table[(SysParameter.Range/100)%10]|0x80);
+				else
+					SPI_Send_Data(table[0]|0x80);//显示0
+			}
 		break;
 		
 		case 2:
@@ -324,10 +362,28 @@ void Display_SubpageOfH1(void)
 		
 			SPI_Send_Data(0);
 		
-			if( SysParameter.Range >9 )
-				SPI_Send_Data(table[(SysParameter.Range/10)%10]);
-			else
-				SPI_Send_Data(table[0]);//显示0
+			if(g_edit_area == 1)
+			{
+				DigitalFlashCnt++;
+				if(DigitalFlashCnt>=80)DigitalFlashCnt=0;
+				if(DigitalFlashCnt<40)
+				{
+					if( SysParameter.Range >9 )
+						SPI_Send_Data(table[(SysParameter.Range/10)%10]);
+					else
+						SPI_Send_Data(table[0]);//显示0
+				}
+				else
+				{
+					SPI_Send_Data(0);
+				}
+		    }else
+			{
+				if( SysParameter.Range >9 )
+					SPI_Send_Data(table[(SysParameter.Range/10)%10]);
+				else
+					SPI_Send_Data(table[0]);//显示0
+			}
 			
 		break;
 		
@@ -339,18 +395,18 @@ void Display_SubpageOfH1(void)
 		
 			SPI_Send_Data(0);
 		
-			if(g_edit_area == 3)
+			if(g_edit_area == 0)
 			{
-					temp++;
-					if(temp>=80)temp=0;
-					if(temp<40)
-					{
-						SPI_Send_Data(table[SysParameter.Range%10]);
-					}
-					else
-					{
-						SPI_Send_Data(table[0]);
-					}
+				DigitalFlashCnt++;
+				if(DigitalFlashCnt>=80)DigitalFlashCnt=0;
+				if(DigitalFlashCnt<40)
+				{
+					SPI_Send_Data(table[SysParameter.Range%10]);
+				}
+				else
+				{
+					SPI_Send_Data(0);
+				}
 			}
 			else
 				SPI_Send_Data(table[SysParameter.Range%10]);

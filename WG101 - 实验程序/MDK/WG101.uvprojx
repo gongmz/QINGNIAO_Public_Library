@@ -479,14 +479,14 @@
               <FilePath>..\driver_file\src\spi.c</FilePath>
             </File>
             <File>
-              <FileName>adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\WG101\driver_file\src\adc.c</FilePath>
-            </File>
-            <File>
               <FileName>bgr.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\WG101\driver_file\src\bgr.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver_file\src\adc.c</FilePath>
             </File>
           </Files>
         </Group>

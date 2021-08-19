@@ -40,3 +40,7 @@
 .\objects\lcddriver.o: ..\os_file\FrameWork.h
 .\objects\lcddriver.o: ..\MiddleLayer\Logic.h
 .\objects\lcddriver.o: ..\MiddleLayer\ScanKEY.h
+.\objects\lcddriver.o: ..\MiddleLayer\ADCDriver.h
+.\objects\lcddriver.o: ..\mcu_file\includes.h
+.\objects\lcddriver.o: ..\driver_file\inc\adc.h
+.\objects\lcddriver.o: ..\driver_file\inc\bgr.h

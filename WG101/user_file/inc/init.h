@@ -1,3 +1,12 @@
+/*
+       /_/_/_/_/   /_/_/_/     /_/_/_/_/
+           /_/    /_/    _/   /_/
+          /_/    /_/_/_/_    /_/_/_/_/
+   /_/   /_/    /_/     _/  /_/
+    /_/_/_/    /_/_/_/_/   /_/
+
+    Copyright (c) 2020 Jade Bird Fire Co., Ltd, All right reserved.
+*/
 #ifndef _init_h
 #define _init_h
 #include "gpio.h"

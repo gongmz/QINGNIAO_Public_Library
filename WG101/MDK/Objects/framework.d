@@ -40,3 +40,6 @@
 .\objects\framework.o: ..\os_file\FrameWork.h
 .\objects\framework.o: ..\MiddleLayer\Logic.h
 .\objects\framework.o: ..\MiddleLayer\ScanKEY.h
+.\objects\framework.o: ..\MiddleLayer\ADCDriver.h
+.\objects\framework.o: ..\driver_file\inc\adc.h
+.\objects\framework.o: ..\driver_file\inc\bgr.h

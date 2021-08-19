@@ -32,4 +32,7 @@
 #include    "lpuart.h"
 #include    "flash.h"
 #include    "Save.h"
+#include    "ADCDriver.h"
+#include    "adc.h"
+#include    "bgr.h"
 #endif

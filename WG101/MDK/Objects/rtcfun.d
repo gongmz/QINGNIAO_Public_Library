@@ -31,3 +31,16 @@
 .\objects\rtcfun.o: ..\driver_file\inc\timer3.h
 .\objects\rtcfun.o: ..\driver_file\inc\lpuart.h
 .\objects\rtcfun.o: ..\MiddleLayer\Save.h
+.\objects\rtcfun.o: ..\MiddleLayer\LCDDriver.h
+.\objects\rtcfun.o: ..\mcu_file\includes.h
+.\objects\rtcfun.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\rtcfun.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\rtcfun.o: ..\mcu_file\DATA_CPU.h
+.\objects\rtcfun.o: ..\MiddleLayer\LCDDriver.h
+.\objects\rtcfun.o: ..\os_file\FrameWork.h
+.\objects\rtcfun.o: ..\MiddleLayer\Logic.h
+.\objects\rtcfun.o: ..\MiddleLayer\ScanKEY.h
+.\objects\rtcfun.o: ..\MiddleLayer\ADCDriver.h
+.\objects\rtcfun.o: ..\mcu_file\includes.h
+.\objects\rtcfun.o: ..\driver_file\inc\adc.h
+.\objects\rtcfun.o: ..\driver_file\inc\bgr.h

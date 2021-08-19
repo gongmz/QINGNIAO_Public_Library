@@ -40,3 +40,6 @@
 .\objects\global_variable.o: ..\os_file\FrameWork.h
 .\objects\global_variable.o: ..\MiddleLayer\Logic.h
 .\objects\global_variable.o: ..\MiddleLayer\ScanKEY.h
+.\objects\global_variable.o: ..\MiddleLayer\ADCDriver.h
+.\objects\global_variable.o: ..\driver_file\inc\adc.h
+.\objects\global_variable.o: ..\driver_file\inc\bgr.h

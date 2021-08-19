@@ -43,6 +43,7 @@ void TaskKey(void)//10ms调用一次
 	{
 		if( menukeycnt>2 && menukeycnt<TIME_CYCLE_2000MS )//短按
 		{
+			Start2_120Sec();
 			switch(gGui_State)
 			{
 				case GUI_MAIN:
@@ -52,7 +53,9 @@ void TaskKey(void)//10ms调用一次
 					gGui_2nd_Num++;
 				    if(gGui_2nd_Num>6)gGui_2nd_Num=1;
 				
-				case GUI_3RD:  
+				case GUI_3RD: 
+					g_edit_area++;
+				    if(g_edit_area>3)g_edit_area=0;	
 				break;
 				
 				default:{gGui_State = GUI_MAIN;}break;
@@ -68,15 +71,15 @@ void TaskKey(void)//10ms调用一次
 		if(++upkeycnt>240)upkeycnt=240;
 		if(upkeycnt == TIME_CYCLE_2000MS)//长按
         {
-			
+			;
         }
-		PressureValue++;
 	}
 	else
 	{
 		if( upkeycnt > 2 && upkeycnt<TIME_CYCLE_2000MS )//短按
 		{
-			
+			Start2_120Sec();
+
 		}
 		upkeycnt=0;
 	}
@@ -96,7 +99,20 @@ void TaskKey(void)//10ms调用一次
 	{
 		if( downkeycnt > 2 && downkeycnt<TIME_CYCLE_2000MS )//短按
 		{
-			
+			Start2_120Sec();
+			switch(gGui_State)
+			{
+				case GUI_MAIN:
+				break;
+				
+				case GUI_2ND:
+				break;
+				
+				case GUI_3RD: 
+				break;
+				
+				default:{gGui_State = GUI_MAIN;}break;
+			}
 		}
 		downkeycnt=0;
 	}
@@ -108,7 +124,7 @@ void TaskKey(void)//10ms调用一次
 		if(++enterkeycnt>240)enterkeycnt=240;
 		if(enterkeycnt == TIME_CYCLE_2000MS)//长按
         {
-			__NOP();
+			;
         }
         
 	}
@@ -124,6 +140,7 @@ void TaskKey(void)//10ms调用一次
 				case GUI_2ND:
 					gGui_State=GUI_3RD;
 					temp_2ND_NUM=gGui_2nd_Num;
+					g_edit_area=0;	
 				break;
 				
 				case GUI_3RD:  

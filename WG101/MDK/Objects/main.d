@@ -32,3 +32,16 @@
 .\objects\main.o: ..\MiddleLayer\Save.h
 .\objects\main.o: ..\MiddleLayer\RTCFun.h
 .\objects\main.o: ..\os_file\FrameWork.h
+.\objects\main.o: ..\MiddleLayer\ADCDriver.h
+.\objects\main.o: ..\mcu_file\includes.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\main.o: ..\mcu_file\DATA_CPU.h
+.\objects\main.o: ..\MiddleLayer\LCDDriver.h
+.\objects\main.o: ..\mcu_file\includes.h
+.\objects\main.o: ..\os_file\FrameWork.h
+.\objects\main.o: ..\MiddleLayer\Logic.h
+.\objects\main.o: ..\MiddleLayer\ScanKEY.h
+.\objects\main.o: ..\MiddleLayer\ADCDriver.h
+.\objects\main.o: ..\driver_file\inc\adc.h
+.\objects\main.o: ..\driver_file\inc\bgr.h

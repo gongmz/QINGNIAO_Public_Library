@@ -1,12 +1,11 @@
 /*
-@--------------------------------------------------------------------------------------------------
-@
-@   File Name  :    RTCFun.h
-@
-@   Description:
-@
-@   Date       :
-@--------------------------------------------------------------------------------------------------
+       /_/_/_/_/   /_/_/_/     /_/_/_/_/
+           /_/    /_/    _/   /_/
+          /_/    /_/_/_/_    /_/_/_/_/
+   /_/   /_/    /_/     _/  /_/
+    /_/_/_/    /_/_/_/_/   /_/
+
+    Copyright (c) 2020 Jade Bird Fire Co., Ltd, All right reserved.
 */
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -15,6 +14,7 @@
 
 #include "stdint.h"
 #include "init.h"
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -34,14 +34,12 @@ extern uint8_t TmrMinTab[TMR_MIN_MAX_TMR];
 #define TmrMinStop(n) (TmrMinTab[n] = 0)
 
 //====================================================================================================
-#define Start0_1Sec()                 TmrSecStart(0,2) 
-#define Start0_48Sec()                TmrSecStart(0,48)
-#define Start0_80Sec()                TmrSecStart(0,80)
+#define Start0_1Sec()                 TmrSecStart(0,2)
 #define Stop0_Sec_Timer()             TmrSecStop(0)
 
 #define Start1_1Sec()                 TmrSecStart(1,2) 
 
-#define Start2_2Sec()                 TmrSecStart(2,2) 
+#define Start2_120Sec()               TmrSecStart(2,240) 
 
 #define Start3_3Sec()                 TmrSecStart(3,3) 
  

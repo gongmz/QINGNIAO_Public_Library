@@ -40,3 +40,6 @@
 .\objects\scankey.o: ..\os_file\FrameWork.h
 .\objects\scankey.o: ..\MiddleLayer\Logic.h
 .\objects\scankey.o: ..\MiddleLayer\ScanKEY.h
+.\objects\scankey.o: ..\MiddleLayer\ADCDriver.h
+.\objects\scankey.o: ..\driver_file\inc\adc.h
+.\objects\scankey.o: ..\driver_file\inc\bgr.h

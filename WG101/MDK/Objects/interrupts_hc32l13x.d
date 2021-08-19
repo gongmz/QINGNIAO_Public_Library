@@ -32,3 +32,4 @@
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\lpuart.h
 .\objects\interrupts_hc32l13x.o: ..\MiddleLayer\Save.h
 .\objects\interrupts_hc32l13x.o: ..\os_file\FrameWork.h
+.\objects\interrupts_hc32l13x.o: ..\driver_file\inc\adc.h

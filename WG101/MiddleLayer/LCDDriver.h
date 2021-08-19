@@ -73,6 +73,7 @@
 extern volatile uint8_t gGui_State;     
 extern volatile uint8_t gGui_2nd_Num;
 extern volatile uint8_t gGui_3rd_Num;	
+extern uint8_t g_edit_area;//数码管当前编辑区域   1：个位
 extern void Screen(void);
 extern uint16_t HEX2BCD(uint16_t hex_data);// HEX转BCD子程序 
 extern uint16_t BCD2HEX(uint16_t bcd_data); //BCD转为HEX子程序 

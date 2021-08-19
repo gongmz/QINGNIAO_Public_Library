@@ -58,6 +58,8 @@
 #include "lptim.h"
 #include "RTCFun.h"
 #include "FrameWork.h"
+#include "global_variable.h"
+#include "adc.h"
 /*******************************************************************************
  *                       IRQ WEAK DEFINE
  ******************************************************************************/
@@ -487,6 +489,10 @@ void ADC_IRQHandler(void)
 #if (INT_CALLBACK_ON == INT_CALLBACK_ADC)
     Adc_IRQHandler();
 #endif
+	Adc_ClrIrqStatus(AdcMskIrqSqr);       ///< 清除中断标志位
+	PressureValue = Adc_GetSqrResult(AdcSQRCH0MUX);
+//	u32AdcRestult2 = Adc_GetSqrResult(AdcSQRCH1MUX);
+	Adc_SQR_Stop();    
 }
 
 /**

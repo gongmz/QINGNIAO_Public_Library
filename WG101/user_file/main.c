@@ -3,6 +3,7 @@
 #include "init.h"
 #include "RTCFun.h"
 #include "FrameWork.h"
+#include  "ADCDriver.h"
 //#include "rtc_app.h"
 //#include "time_app.h"
 //#include "save.h"
@@ -22,12 +23,13 @@ int32_t main(void)
     Timer3Init();
 	Init_LED();
 	ParaInit();
+	AdcInit();
 #ifdef Printf_Enable
 	LPuart1_Init();
 	printf("System Start..................\r\n");
 #endif
 	delay1ms(1000);
-
+	Start1_1Sec();
 //	  RTC_InitInterface();
 //    parameter_init();
 //    Wdt_Interface_Init();
