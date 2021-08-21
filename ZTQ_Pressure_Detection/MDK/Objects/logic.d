@@ -1,5 +1,5 @@
 .\objects\logic.o: ..\MiddleLayer\Logic.c
-.\objects\logic.o: ..\mcu_file\Includes.h
+.\objects\logic.o: ..\mcu_file\includes.h
 .\objects\logic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\logic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\logic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

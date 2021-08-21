@@ -48,6 +48,4 @@ void AdcInit(void)
     ///< ADC 中断使能
     Adc_EnableIrq();
     EnableNvic(ADC_IRQn, IrqLevel3, TRUE);
-    
-
 }

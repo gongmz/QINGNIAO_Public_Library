@@ -57,9 +57,7 @@ void TimerFunction(void)
 						
 						case 2://2分钟自动回主窗口
 						{
-							gGui_State = GUI_MAIN;
-							g_edit_area = 0;
-							gGui_2nd_Num =1;
+							MsgPost(LOGIC_PRIO, LOGIC_ENTER_MAIN);
 						}break;
 						
 						case 3:

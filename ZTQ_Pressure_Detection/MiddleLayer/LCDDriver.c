@@ -176,7 +176,7 @@ void DisplayMainInterface(void)
 			{
 				RESET_LED4;
 			}
-		
+			//条形数码管
 		    if(PressureValue<144)
 				SPI_Send_Data(table2[PressureValue/16]);
 			else if(PressureValue>=144&&PressureValue<160)
@@ -190,7 +190,7 @@ void DisplayMainInterface(void)
 			    SET_LED1;
 				SET_LED2;
 			}
-			
+			//数字数码管
 			if( PressureValue >9 )
 				SPI_Send_Data(table[(PressureValue/10)%10]);
 			else
@@ -304,10 +304,7 @@ void Display_SubpageOfH1(void)
 				if(DigitalFlashCnt>=DIGITALFLASHPERIOD*2)DigitalFlashCnt=0;
 				if(DigitalFlashCnt<DIGITALFLASHPERIOD)
 				{
-					if( SysParameter.Range > 999)
-						SPI_Send_Data(table[SysParameter.Range/1000]);
-					else
-						SPI_Send_Data(table[0]);//不显示
+					SPI_Send_Data(table[EditData.thousand]);
 				}
 				else
 				{
@@ -336,14 +333,11 @@ void Display_SubpageOfH1(void)
 				if(DigitalFlashCnt>=DIGITALFLASHPERIOD*2)DigitalFlashCnt=0;
 				if(DigitalFlashCnt<DIGITALFLASHPERIOD)
 				{
-					if( SysParameter.Range > 99 )
-						SPI_Send_Data(table[(SysParameter.Range/100)%10]|0x80);
-					else
-						SPI_Send_Data(table[0]|0x80);//显示0
+					SPI_Send_Data(table[EditData.hundred]);
 				}
 				else
 				{
-					SPI_Send_Data(0);
+					SPI_Send_Data(0x80);
 				}
 		    }else
 			{
@@ -368,10 +362,7 @@ void Display_SubpageOfH1(void)
 				if(DigitalFlashCnt>=DIGITALFLASHPERIOD*2)DigitalFlashCnt=0;
 				if(DigitalFlashCnt<DIGITALFLASHPERIOD)
 				{
-					if( SysParameter.Range >9 )
-						SPI_Send_Data(table[(SysParameter.Range/10)%10]);
-					else
-						SPI_Send_Data(table[0]);//显示0
+					SPI_Send_Data(table[EditData.decade]);
 				}
 				else
 				{
@@ -401,7 +392,7 @@ void Display_SubpageOfH1(void)
 				if(DigitalFlashCnt>=DIGITALFLASHPERIOD*2)DigitalFlashCnt=0;
 				if(DigitalFlashCnt<DIGITALFLASHPERIOD)
 				{
-					SPI_Send_Data(table[SysParameter.Range%10]);
+					SPI_Send_Data(table[EditData.uint]);
 				}
 				else
 				{

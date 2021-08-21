@@ -35,4 +35,5 @@
 #include    "ADCDriver.h"
 #include    "adc.h"
 #include    "bgr.h"
+#include    <math.h>
 #endif
