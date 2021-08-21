@@ -519,6 +519,11 @@
           <GroupName>MiddleLayer</GroupName>
           <Files>
             <File>
+              <FileName>ADCDriver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiddleLayer\ADCDriver.c</FilePath>
+            </File>
+            <File>
               <FileName>Logic.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MiddleLayer\Logic.c</FilePath>
@@ -543,10 +548,15 @@
               <FileType>1</FileType>
               <FilePath>..\MiddleLayer\Save.c</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ReadMe</GroupName>
+          <Files>
             <File>
-              <FileName>ADCDriver.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MiddleLayer\ADCDriver.c</FilePath>
+              <FileName>Readme.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Readme.txt</FilePath>
             </File>
           </Files>
         </Group>

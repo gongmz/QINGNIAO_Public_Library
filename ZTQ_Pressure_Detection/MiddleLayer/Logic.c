@@ -138,28 +138,38 @@ void  Logic(void)
 							break;
 							
 							case GUI_3RD: 
-								switch(g_edit_area)
+								if(gGui_2nd_Num==6)
 								{
-									case 0:
-										if(++EditData.uint>9)
-											EditData.uint=0;
-									break;
-										
-									case 1:
-										if(++EditData.decade>9)
-											EditData.decade=0;
-									break;
-										
-									case 2:
-										if(++EditData.hundred>9)
-											EditData.hundred=0;
-									break;
-										
-									case 3:
-										if(++EditData.thousand>9)
-											EditData.thousand=0;
-									break;									
+									 if(SysParameter.DetectionMode == VoltageDetection)
+										 SysParameter.DetectionMode = CurrentDetection;
+									 else
+										 SysParameter.DetectionMode = VoltageDetection;
 								}
+								else
+								{
+									switch(g_edit_area)
+									{
+										case 0:
+											if(++EditData.uint>9)
+												EditData.uint=0;
+										break;
+											
+										case 1:
+											if(++EditData.decade>9)
+												EditData.decade=0;
+										break;
+											
+										case 2:
+											if(++EditData.hundred>9)
+												EditData.hundred=0;
+										break;
+											
+										case 3:
+											if(++EditData.thousand>9)
+												EditData.thousand=0;
+										break;									
+									}
+							  }
 							break;
 							
 							default:{gGui_State = GUI_MAIN;}break;
@@ -178,35 +188,45 @@ void  Logic(void)
 							break;
 							
 							case GUI_3RD: 
-								switch(g_edit_area)
+								if(gGui_2nd_Num==6)
 								{
-									case 0:
-										if(EditData.uint)
-											EditData.uint--;
-										else
-											EditData.uint=9;
-									break;
-										
-									case 1:
-										if(EditData.decade)
-											EditData.decade--;
-										else
-											EditData.decade=9;
-									break;
-										
-									case 2:
-										if(EditData.hundred)
-											EditData.hundred--;
-										else
-											EditData.hundred=9;
-									break;
-										
-									case 3:
-										if(EditData.thousand)
-											EditData.thousand--;
-										else
-											EditData.thousand=9;
-									break;									
+									 if(SysParameter.DetectionMode == VoltageDetection)
+										 SysParameter.DetectionMode = CurrentDetection;
+									 else
+										 SysParameter.DetectionMode = VoltageDetection;
+								}
+								else
+								{
+									switch(g_edit_area)
+									{
+										case 0:
+											if(EditData.uint)
+												EditData.uint--;
+											else
+												EditData.uint=9;
+										break;
+											
+										case 1:
+											if(EditData.decade)
+												EditData.decade--;
+											else
+												EditData.decade=9;
+										break;
+											
+										case 2:
+											if(EditData.hundred)
+												EditData.hundred--;
+											else
+												EditData.hundred=9;
+										break;
+											
+										case 3:
+											if(EditData.thousand)
+												EditData.thousand--;
+											else
+												EditData.thousand=9;
+										break;									
+									}
 								}
 							break;
 							
@@ -292,9 +312,6 @@ void  Logic(void)
 					
  					case LOGIC_ENTER_MAIN:
 					{
-							gGui_State = GUI_MAIN;
-							g_edit_area = 0;
-							gGui_2nd_Num =1;
 							switch(gGui_2nd_Num)
 							{
 								case 1:
@@ -314,6 +331,10 @@ void  Logic(void)
 								break;		
 								default:break;	
 							}
+								gGui_State = GUI_MAIN;
+								g_edit_area = 0;
+								gGui_2nd_Num =1;
+								Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
 					}break;  
 					default:
                         WorkStateTran(MODE_NORMAL_ST);break;

@@ -474,7 +474,6 @@ en_result_t Adc_CfgSqrChannel(en_adc_sqr_chmux_t enstcAdcSqrChMux, en_adc_samp_c
             M0P_ADC->SQR2_f.CH15MUX = enstcAdcSampCh;
         break;
         default:return ErrorInvalidParameter;
-        break;
 
     }
     return Ok;
@@ -507,7 +506,6 @@ en_result_t Adc_CfgJqrChannel(en_adc_jqr_chmux_t enstcAdcJqrChMux, en_adc_samp_c
         break;
         default:
             return ErrorInvalidParameter;
-        break;
     }
     return Ok;
 }

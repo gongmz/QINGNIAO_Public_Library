@@ -20,12 +20,8 @@ void ClrAllLcd(void);
 void DisplayMainInterface(void);
 void Display2NDInterface(void);
 void Display3NDInterface(void);
-void Display_SubpageOfH1(void);
-void Display_SubpageOfH2(void);
-void Display_SubpageOfH3(void);
-void Display_SubpageOfH4(void);
-void Display_SubpageOfH5(void);
-void Display_SubpageOfH6(void);
+void Display_SubpageOfHx(void);//H1~H5界面
+void Display_SubpageOfH6(void);//H6界面
 uint16_t HEX2BCD(uint16_t hex_data);// HEX转BCD子程序 
 uint16_t BCD2HEX(uint16_t bcd_data); //BCD转为HEX子程序 
 
@@ -46,36 +42,10 @@ void Screen(void)
 		break;
 		
 		case GUI_3RD://三级界面
-            switch(gGui_2nd_Num)
-            {
-                case 1:
-                {
-                    Display_SubpageOfH1();   
-                }break;
-                case 2:
-                {
-                    Display_SubpageOfH2();
-                }break;
-                case 3:
-                {
-                    Display_SubpageOfH3();
-                }break;
- 
-                case 4:
-                {
-                    Display_SubpageOfH4();
-                }break;
-                case 5:
-                {
-                    Display_SubpageOfH5();   
-                }break;
-                case 6:
-                {
-                    Display_SubpageOfH6();
-                }break;
-				      
-                default: break;
-			}
+			if(gGui_2nd_Num==6)
+				Display_SubpageOfH6();
+			else
+				Display_SubpageOfHx();
 		break;
 		
 		default:break;
@@ -283,9 +253,9 @@ void   ClrAllLcd(void)
 	RESET_LED4;
 }
 //******************************************************************************
-//H1界面
+//Hx界面
 //******************************************************************************
-void Display_SubpageOfH1(void)
+void Display_SubpageOfHx(void)
 { 
 	static uint8_t DigitalFlashCnt;
     switch (SegSelect) 
@@ -312,10 +282,7 @@ void Display_SubpageOfH1(void)
 				}
 		    }else
 			{
-				if( SysParameter.Range > 999)
-					SPI_Send_Data(table[SysParameter.Range/1000]);
-				else
-					SPI_Send_Data(table[0]);//不显示
+				SPI_Send_Data(table[EditData.thousand]);
 			}
 		break;
 		
@@ -333,7 +300,7 @@ void Display_SubpageOfH1(void)
 				if(DigitalFlashCnt>=DIGITALFLASHPERIOD*2)DigitalFlashCnt=0;
 				if(DigitalFlashCnt<DIGITALFLASHPERIOD)
 				{
-					SPI_Send_Data(table[EditData.hundred]);
+					SPI_Send_Data(table[EditData.hundred]|0x80);
 				}
 				else
 				{
@@ -341,10 +308,7 @@ void Display_SubpageOfH1(void)
 				}
 		    }else
 			{
-				if( SysParameter.Range > 99 )
-					SPI_Send_Data(table[(SysParameter.Range/100)%10]|0x80);
-				else
-					SPI_Send_Data(table[0]|0x80);//显示0
+				SPI_Send_Data(table[EditData.hundred]|0x80);
 			}
 		break;
 		
@@ -370,10 +334,7 @@ void Display_SubpageOfH1(void)
 				}
 		    }else
 			{
-				if( SysParameter.Range >9 )
-					SPI_Send_Data(table[(SysParameter.Range/10)%10]);
-				else
-					SPI_Send_Data(table[0]);//显示0
+				SPI_Send_Data(table[EditData.decade]);
 			}
 			
 		break;
@@ -400,195 +361,7 @@ void Display_SubpageOfH1(void)
 				}
 			}
 			else
-				SPI_Send_Data(table[SysParameter.Range%10]);
-		break;
-		
-		default:break;
-	}
-	SegSelect++;
-	SegSelect=SegSelect%4;	
-    
-}
-//******************************************************************************
-//H2界面
-//******************************************************************************
-void Display_SubpageOfH2(void)
-{   
-    switch (SegSelect) 
-	{
-		case 0:
-			SET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.OverPreaaureWarn > 999)
-				SPI_Send_Data(table[SysParameter.OverPreaaureWarn/1000]);
-			else
-				SPI_Send_Data(table[0]);
-			
-		break;
-		
-		case 1:
-			RESET_SEG1;
-			SET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.OverPreaaureWarn > 99 )
-				SPI_Send_Data(table[(SysParameter.OverPreaaureWarn/100)%10]|0x80);
-			else
-				SPI_Send_Data(table[0]|0x80);
-		break;
-		
-		case 2:
-			RESET_SEG1;
-			RESET_SEG2;
-			SET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-		
-			if( SysParameter.OverPreaaureWarn >9 )
-				SPI_Send_Data(table[(SysParameter.OverPreaaureWarn/10)%10]);
-			else
-				SPI_Send_Data(table[0]);
-			
-		break;
-		
-		case 3:
-			RESET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			SET_SEG4;
-		
-			SPI_Send_Data(0);
-			SPI_Send_Data(table[SysParameter.OverPreaaureWarn%10]);
-		break;
-		
-		default:break;
-	}
-	SegSelect++;
-	SegSelect=SegSelect%4;	
-}
-//*******************************************************************************
-//H3界面
-//******************************************************************************
-void Display_SubpageOfH3(void)
-{
-    switch (SegSelect) 
-	{
-		case 0:
-			SET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.OverPreaaureAlarm > 999)
-				SPI_Send_Data(table[SysParameter.OverPreaaureAlarm/1000]);
-			else
-				SPI_Send_Data(table[0]);
-		break;
-		
-		case 1:
-			RESET_SEG1;
-			SET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.OverPreaaureAlarm > 99 )
-				SPI_Send_Data(table[(SysParameter.OverPreaaureAlarm/100)%10]|0x80);
-			else
-				SPI_Send_Data(table[0]|0x80);
-		break;
-		
-		case 2:
-			RESET_SEG1;
-			RESET_SEG2;
-			SET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.OverPreaaureAlarm >9 )
-				SPI_Send_Data(table[(SysParameter.OverPreaaureAlarm/10)%10]);
-			else
-				SPI_Send_Data(table[0]);
-			
-		break;
-		
-		case 3:
-			RESET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			SET_SEG4;
-		
-			SPI_Send_Data(0);
-			SPI_Send_Data(table[SysParameter.OverPreaaureAlarm%10]);
-		break;
-		
-		default:break;
-	}
-	SegSelect++;
-	SegSelect=SegSelect%4;	
-}
-//*******************************************************************************
-//H4界面
-//******************************************************************************
-void Display_SubpageOfH4(void)
-{
-    switch (SegSelect) 
-	{
-		case 0:
-			SET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.UnderPreaaureAlarm > 999)
-				SPI_Send_Data(table[SysParameter.UnderPreaaureAlarm/1000]);
-			else
-				SPI_Send_Data(table[0]);
-		break;
-		
-		case 1:
-			RESET_SEG1;
-			SET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.UnderPreaaureWarn > 99 )
-				SPI_Send_Data(table[(SysParameter.UnderPreaaureWarn/100)%10]|0x80);
-			else
-				SPI_Send_Data(table[0]|0x80);
-		break;
-		
-		case 2:
-			RESET_SEG1;
-			RESET_SEG2;
-			SET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.UnderPreaaureWarn >9 )
-				SPI_Send_Data(table[(SysParameter.UnderPreaaureWarn/10)%10]);
-			else
-				SPI_Send_Data(table[0]);
-		break;
-		
-		case 3:
-			RESET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			SET_SEG4;
-		
-			SPI_Send_Data(0);
-			SPI_Send_Data(table[SysParameter.UnderPreaaureWarn%10]);
+				SPI_Send_Data(table[EditData.uint]);
 		break;
 		
 		default:break;
@@ -597,72 +370,11 @@ void Display_SubpageOfH4(void)
 	SegSelect=SegSelect%4;	
 }
 //******************************************************************************
-//H5界面
-//******************************************************************************
-void Display_SubpageOfH5(void)
-{   
-    switch (SegSelect) 
-	{
-		case 0:
-			SET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.UnderPreaaureAlarm > 999)
-				SPI_Send_Data(table[SysParameter.UnderPreaaureAlarm/1000]);
-			else
-				SPI_Send_Data(table[0]);
-		break;
-		
-		case 1:
-			RESET_SEG1;
-			SET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.UnderPreaaureAlarm > 99 )
-				SPI_Send_Data(table[(SysParameter.UnderPreaaureAlarm/100)%10]|0x80);
-			else
-				SPI_Send_Data(table[0]|0x80);
-		break;
-		
-		case 2:
-			RESET_SEG1;
-			RESET_SEG2;
-			SET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			if( SysParameter.UnderPreaaureAlarm >9 )
-				SPI_Send_Data(table[(SysParameter.UnderPreaaureAlarm/10)%10]);
-			else
-				SPI_Send_Data(table[0]);
-			
-		break;
-		
-		case 3:
-			RESET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			SET_SEG4;
-		
-			SPI_Send_Data(0);
-			SPI_Send_Data(table[SysParameter.UnderPreaaureAlarm%10]);
-		break;
-		
-		default:break;
-	}
-	SegSelect++;
-	SegSelect=SegSelect%4;	
-}
-//*******************************************************************************
 //H6界面
 //******************************************************************************
 void Display_SubpageOfH6(void)
-{
+{ 
+	static uint8_t DigitalFlashCnt;
     switch (SegSelect) 
 	{
 		case 0:
@@ -671,67 +383,10 @@ void Display_SubpageOfH6(void)
 			RESET_SEG3;
 			RESET_SEG4;
 		
-			SPI_Send_Data(0);
-			SPI_Send_Data(0);
-		break;
-		
-		case 1:
-			RESET_SEG1;
-			SET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-			SPI_Send_Data(0);
-		break;
-		
-		case 2:
-			RESET_SEG1;
-			RESET_SEG2;
-			SET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
-		    if(SysParameter.DetectionMode == VoltageDetection)
-			    SPI_Send_Data(CHAR_U);
-			else
-				SPI_Send_Data(CHAR_A);
-			
-		break;
-		
-		case 3:
-			RESET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			SET_SEG4;
-		
-			SPI_Send_Data(0);
-			SPI_Send_Data(0);
-		break;
-		
-		default:break;
-	}
-	SegSelect++;
-	SegSelect=SegSelect%4;	
-}
-//*******************************************************************************
-//H7界面
-//******************************************************************************
-void Display_SubpageOfH7(void)
-{
-    switch (SegSelect) 
-	{
-		case 0:
-			SET_SEG1;
-			RESET_SEG2;
-			RESET_SEG3;
-			RESET_SEG4;
-		
-			SPI_Send_Data(0);
 			SPI_Send_Data(0);
 		
 
-			
+			SPI_Send_Data(0);
 		break;
 		
 		case 1:
@@ -742,7 +397,9 @@ void Display_SubpageOfH7(void)
 		
 			SPI_Send_Data(0);
 		
+
 			SPI_Send_Data(0);
+
 		break;
 		
 		case 2:
@@ -752,8 +409,20 @@ void Display_SubpageOfH7(void)
 			RESET_SEG4;
 		
 			SPI_Send_Data(0);
-			SPI_Send_Data(CHAR_H);
-			
+		  
+			DigitalFlashCnt++;
+			if(DigitalFlashCnt>=DIGITALFLASHPERIOD*2)DigitalFlashCnt=0;
+			if(DigitalFlashCnt<DIGITALFLASHPERIOD)
+			{
+				if(SysParameter.DetectionMode == VoltageDetection)
+					SPI_Send_Data(CHAR_U);
+				else 
+					SPI_Send_Data(CHAR_A);
+			}
+			else
+			{
+				SPI_Send_Data(0);
+			}
 		break;
 		
 		case 3:
@@ -763,7 +432,8 @@ void Display_SubpageOfH7(void)
 			SET_SEG4;
 		
 			SPI_Send_Data(0);
-			SPI_Send_Data(table[gGui_2nd_Num]);
+		
+		  SPI_Send_Data(0);
 		break;
 		
 		default:break;

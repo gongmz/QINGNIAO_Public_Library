@@ -489,10 +489,13 @@ void ADC_IRQHandler(void)
 #if (INT_CALLBACK_ON == INT_CALLBACK_ADC)
     Adc_IRQHandler();
 #endif
-	Adc_ClrIrqStatus(AdcMskIrqSqr);       ///< 清除中断标志位
-	PressureValue = Adc_GetSqrResult(AdcSQRCH0MUX);
-//	u32AdcRestult2 = Adc_GetSqrResult(AdcSQRCH1MUX);
-	Adc_SQR_Stop();    
+	  Adc_ClrIrqStatus(AdcMskIrqSqr);       ///< 清除中断标志位
+	
+	 if(SysParameter.DetectionMode == VoltageDetection)
+			PressureValue = Adc_GetSqrResult(AdcSQRCH0MUX);
+	 else
+			PressureValue = Adc_GetSqrResult(AdcSQRCH1MUX);
+	 Adc_SQR_Stop();    
 }
 
 /**
