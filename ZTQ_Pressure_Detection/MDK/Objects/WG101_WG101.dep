@@ -1,744 +1,744 @@
 Dependencies for Project 'WG101', Target 'WG101': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
-F (..\mcu_file\interrupts_hc32l13x.c)(0x612368A9)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\interrupts_hc32l13x.o --omf_browse .\objects\interrupts_hc32l13x.crf --depend .\objects\interrupts_hc32l13x.d)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+F (..\mcu_file\interrupts_hc32l13x.c)(0x612383D0)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\interrupts_hc32l13x.o --omf_browse .\objects\interrupts_hc32l13x.crf --depend .\objects\interrupts_hc32l13x.d)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\mcu_file\includes.h)(0x6120B43C)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\mcu_file\includes.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\user_file\main.c)(0x61233BE3)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\user_file\main.c)(0x612383D0)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\mcu_file\includes.h)(0x6120B43C)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\mcu_file\includes.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\user_file\src\init.c)(0x611B15A4)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\init.o --omf_browse .\objects\init.crf --depend .\objects\init.d)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\user_file\src\init.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\init.o --omf_browse .\objects\init.crf --depend .\objects\init.d)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-F (..\user_file\src\global_variable.c)(0x611B100F)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\global_variable.o --omf_browse .\objects\global_variable.crf --depend .\objects\global_variable.d)
-I (..\mcu_file\Includes.h)(0x6120B43C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\user_file\inc\global_variable.h)(0x611DBDBF)()
-F (..\driver_file\src\flash.c)(0x5D132CED)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\flash.o --omf_browse .\objects\flash.crf --depend .\objects\flash.d)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\gpio.c)(0x5D11F199)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\lpm.c)(0x5D11FE34)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lpm.o --omf_browse .\objects\lpm.crf --depend .\objects\lpm.d)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\lptim.c)(0x5D1434D6)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lptim.o --omf_browse .\objects\lptim.crf --depend .\objects\lptim.d)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\lpuart.c)(0x5ECCF6EB)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lpuart.o --omf_browse .\objects\lpuart.crf --depend .\objects\lpuart.d)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\reset.c)(0x5D12E26C)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\reset.o --omf_browse .\objects\reset.crf --depend .\objects\reset.d)
-I (..\driver_file\inc\reset.h)(0x5D12E287)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\rtc.c)(0x5D12C48E)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\rtc.o --omf_browse .\objects\rtc.crf --depend .\objects\rtc.d)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\sysctrl.c)(0x610CCAFF)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\sysctrl.o --omf_browse .\objects\sysctrl.crf --depend .\objects\sysctrl.d)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\timer3.c)(0x5D12E42F)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\timer3.o --omf_browse .\objects\timer3.crf --depend .\objects\timer3.d)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\uart.c)(0x5ECCF6D3)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\wdt.c)(0x5D12DF7F)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\wdt.o --omf_browse .\objects\wdt.crf --depend .\objects\wdt.d)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\ddl.c)(0x610CDB51)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\ddl.o --omf_browse .\objects\ddl.crf --depend .\objects\ddl.d)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\spi.c)(0x5D12C57C)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\bgr.c)(0x5D11DF1D)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\bgr.o --omf_browse .\objects\bgr.crf --depend .\objects\bgr.d)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\driver_file\src\adc.c)(0x6122F646)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (.\startup_hc32l13x.s)(0x5D18B90E)(--cpu Cortex-M0+ -g --apcs=interwork -I ..\driver_file\src -I ..\MDK -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\user_file\inc-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include--pd "__UVISION_VERSION SETA 530" --pd "_RTE_ SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_hc32l13x.lst --xref -o .\objects\startup_hc32l13x.o --depend .\objects\startup_hc32l13x.d)
-F (..\mcu_file\system_hc32l13x.c)(0x610CCAA5)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\system_hc32l13x.o --omf_browse .\objects\system_hc32l13x.crf --depend .\objects\system_hc32l13x.d)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\os_file\FrameWork.c)(0x6119BD1A)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\framework.o --omf_browse .\objects\framework.crf --depend .\objects\framework.d)
-I (..\mcu_file\Includes.h)(0x6120B43C)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+F (..\user_file\src\global_variable.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\global_variable.o --omf_browse .\objects\global_variable.crf --depend .\objects\global_variable.d)
+I (..\mcu_file\Includes.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\MiddleLayer\ADCDriver.c)(0x61236AF2)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\adcdriver.o --omf_browse .\objects\adcdriver.crf --depend .\objects\adcdriver.d)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\mcu_file\includes.h)(0x6120B43C)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\user_file\inc\global_variable.h)(0x611F8E60)()
+F (..\driver_file\src\flash.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\flash.o --omf_browse .\objects\flash.crf --depend .\objects\flash.d)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\gpio.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\lpm.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lpm.o --omf_browse .\objects\lpm.crf --depend .\objects\lpm.d)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\lptim.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lptim.o --omf_browse .\objects\lptim.crf --depend .\objects\lptim.d)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\lpuart.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lpuart.o --omf_browse .\objects\lpuart.crf --depend .\objects\lpuart.d)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\reset.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\reset.o --omf_browse .\objects\reset.crf --depend .\objects\reset.d)
+I (..\driver_file\inc\reset.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\rtc.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\rtc.o --omf_browse .\objects\rtc.crf --depend .\objects\rtc.d)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\sysctrl.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\sysctrl.o --omf_browse .\objects\sysctrl.crf --depend .\objects\sysctrl.d)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\timer3.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\timer3.o --omf_browse .\objects\timer3.crf --depend .\objects\timer3.d)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\uart.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\wdt.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\wdt.o --omf_browse .\objects\wdt.crf --depend .\objects\wdt.d)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\ddl.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\ddl.o --omf_browse .\objects\ddl.crf --depend .\objects\ddl.d)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\spi.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\bgr.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\bgr.o --omf_browse .\objects\bgr.crf --depend .\objects\bgr.d)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\driver_file\src\adc.c)(0x61210937)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (.\startup_hc32l13x.s)(0x611F8E60)(--cpu Cortex-M0+ -g --apcs=interwork -I ..\driver_file\src -I ..\MDK -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\user_file\inc-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include--pd "__UVISION_VERSION SETA 530" --pd "_RTE_ SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_hc32l13x.lst --xref -o .\objects\startup_hc32l13x.o --depend .\objects\startup_hc32l13x.d)
+F (..\mcu_file\system_hc32l13x.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\system_hc32l13x.o --omf_browse .\objects\system_hc32l13x.crf --depend .\objects\system_hc32l13x.d)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\os_file\FrameWork.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\framework.o --omf_browse .\objects\framework.crf --depend .\objects\framework.d)
+I (..\mcu_file\Includes.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\MiddleLayer\Logic.c)(0x612367E8)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\logic.o --omf_browse .\objects\logic.crf --depend .\objects\logic.d)
-I (..\mcu_file\includes.h)(0x6120B43C)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\MiddleLayer\ADCDriver.c)(0x6123891D)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\adcdriver.o --omf_browse .\objects\adcdriver.crf --depend .\objects\adcdriver.d)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\mcu_file\includes.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\MiddleLayer\ScanKEY.c)(0x61209611)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\scankey.o --omf_browse .\objects\scankey.crf --depend .\objects\scankey.d)
-I (..\mcu_file\includes.h)(0x6120B43C)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\MiddleLayer\Logic.c)(0x612383D0)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\logic.o --omf_browse .\objects\logic.crf --depend .\objects\logic.d)
+I (..\mcu_file\includes.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\MiddleLayer\LCDDriver.c)(0x6122F646)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lcddriver.o --omf_browse .\objects\lcddriver.crf --depend .\objects\lcddriver.d)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\mcu_file\includes.h)(0x6120B43C)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\MiddleLayer\ScanKEY.c)(0x6120F4F5)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\scankey.o --omf_browse .\objects\scankey.crf --depend .\objects\scankey.d)
+I (..\mcu_file\includes.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\MiddleLayer\RTCFun.c)(0x612097C9)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\rtcfun.o --omf_browse .\objects\rtcfun.crf --depend .\objects\rtcfun.d)
-I (..\MiddleLayer\RTCFun.h)(0x61208FA1)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (..\user_file\inc\init.h)(0x611DBDBF)
-I (..\driver_file\inc\gpio.h)(0x5D11EFDB)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\MiddleLayer\LCDDriver.c)(0x6123850F)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\lcddriver.o --omf_browse .\objects\lcddriver.crf --depend .\objects\lcddriver.d)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\mcu_file\includes.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-I (..\driver_file\inc\wdt.h)(0x5D12DF57)
-I (..\driver_file\inc\spi.h)(0x5D12C53E)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\uart.h)(0x5D12D7E6)
-I (..\user_file\inc\global_variable.h)(0x611DBDBF)
-I (..\driver_file\inc\rtc.h)(0x5D12C282)
-I (..\driver_file\inc\lptim.h)(0x5D11FFE0)
-I (..\driver_file\inc\lpm.h)(0x5D11FE42)
-I (..\driver_file\inc\timer3.h)(0x5D12E31F)
-I (..\driver_file\inc\lpuart.h)(0x5D1200F8)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
-I (..\MiddleLayer\LCDDriver.h)(0x611CC889)
-I (..\mcu_file\includes.h)(0x6120B43C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
-I (..\mcu_file\DATA_CPU.h)(0x6110C340)
-I (..\os_file\FrameWork.h)(0x6119BD1A)
-I (..\MiddleLayer\Logic.h)(0x612367E8)
-I (..\MiddleLayer\ScanKEY.h)(0x6115C637)
-I (..\MiddleLayer\ADCDriver.h)(0x6123685D)
-I (..\driver_file\inc\adc.h)(0x6108D2B7)
-I (..\driver_file\inc\bgr.h)(0x5D11DF04)
-F (..\MiddleLayer\Save.c)(0x611B1119)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\save.o --omf_browse .\objects\save.crf --depend .\objects\save.d)
-I (..\MiddleLayer\Save.h)(0x611DBDBF)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\MiddleLayer\RTCFun.c)(0x6120F4F5)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\rtcfun.o --omf_browse .\objects\rtcfun.crf --depend .\objects\rtcfun.d)
+I (..\MiddleLayer\RTCFun.h)(0x6120F4F5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
-I (..\driver_file\inc\flash.h)(0x5D142E9C)
-I (..\driver_file\inc\ddl.h)(0x5D131F39)
-I (..\mcu_file\base_types.h)(0x5D11C241)
+I (..\user_file\inc\init.h)(0x611F8E60)
+I (..\driver_file\inc\gpio.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
-I (..\mcu_file\board_stkhc32l13x.h)(0x6108D022)
-I (..\mcu_file\hc32l13x.h)(0x5D1892E0)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
-I (C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
-I (..\mcu_file\system_hc32l13x.h)(0x5ED6414F)
-I (..\driver_file\inc\sysctrl.h)(0x5D130324)
-I (..\mcu_file\interrupts_hc32l13x.h)(0x610CF7FC)
-I (..\mcu_file\ddl_device.h)(0x5DC6785E)
-F (..\Readme.txt)(0x611E0ADF)()
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+I (..\driver_file\inc\wdt.h)(0x611F8E60)
+I (..\driver_file\inc\spi.h)(0x611F8E60)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\uart.h)(0x611F8E60)
+I (..\user_file\inc\global_variable.h)(0x611F8E60)
+I (..\driver_file\inc\rtc.h)(0x611F8E60)
+I (..\driver_file\inc\lptim.h)(0x611F8E60)
+I (..\driver_file\inc\lpm.h)(0x611F8E60)
+I (..\driver_file\inc\timer3.h)(0x611F8E60)
+I (..\driver_file\inc\lpuart.h)(0x611F8E60)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (..\MiddleLayer\LCDDriver.h)(0x611F8E60)
+I (..\mcu_file\includes.h)(0x6120F4F5)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E53505A)
+I (..\mcu_file\DATA_CPU.h)(0x611F8E60)
+I (..\os_file\FrameWork.h)(0x611F8E60)
+I (..\MiddleLayer\Logic.h)(0x612383D0)
+I (..\MiddleLayer\ScanKEY.h)(0x611F8E60)
+I (..\MiddleLayer\ADCDriver.h)(0x612383D0)
+I (..\driver_file\inc\adc.h)(0x611F8E60)
+I (..\driver_file\inc\bgr.h)(0x611F8E60)
+F (..\MiddleLayer\Save.c)(0x611F8E60)(-c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\driver_file\inc -I ..\mcu_file -I ..\MDK -I ..\os_file -I ..\user_file\inc -I ..\driver_file\src -I ..\user_file\inc -I .\RTE\RTOS -I ..\MiddleLayer-I.\RTE\_WG101-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\暴力鸟\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1\Device\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_-o .\objects\save.o --omf_browse .\objects\save.crf --depend .\objects\save.d)
+I (..\MiddleLayer\Save.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
+I (..\driver_file\inc\flash.h)(0x611F8E60)
+I (..\driver_file\inc\ddl.h)(0x611F8E60)
+I (..\mcu_file\base_types.h)(0x611F8E60)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E53505C)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5E53505A)
+I (..\mcu_file\board_stkhc32l13x.h)(0x611F8E60)
+I (..\mcu_file\hc32l13x.h)(0x611F8E60)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x00000000)
+I (C:\Users\鏆村姏楦焅AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x00000000)
+I (..\mcu_file\system_hc32l13x.h)(0x611F8E60)
+I (..\driver_file\inc\sysctrl.h)(0x611F8E60)
+I (..\mcu_file\interrupts_hc32l13x.h)(0x611F8E60)
+I (..\mcu_file\ddl_device.h)(0x611F8E60)
+F (..\Readme.txt)(0x611F8E60)()

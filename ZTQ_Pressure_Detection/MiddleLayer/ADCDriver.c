@@ -59,6 +59,6 @@ void AdcInit(void)
 void AdcCalculate(void)
 {
 	float temp;
-	temp=(curADC/4095)*2500*2;
+	temp=(curADC*250*2)/4095;
 	PressureValue=temp;
 }

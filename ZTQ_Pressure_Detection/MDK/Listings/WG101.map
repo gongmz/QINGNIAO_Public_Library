@@ -931,152 +931,152 @@ Image Symbol Table
     i.$Sub$$main                             0x000006bc   Section        0  system_hc32l13x.o(i.$Sub$$main)
     i.ADC_IRQHandler                         0x000006cc   Section        0  interrupts_hc32l13x.o(i.ADC_IRQHandler)
     i.AdcCalculate                           0x00000708   Section        0  adcdriver.o(i.AdcCalculate)
-    i.AdcInit                                0x00000740   Section        0  adcdriver.o(i.AdcInit)
-    i.Adc_CfgSqrChannel                      0x000007c0   Section        0  adc.o(i.Adc_CfgSqrChannel)
-    i.Adc_ClrIrqStatus                       0x00000978   Section        0  adc.o(i.Adc_ClrIrqStatus)
-    i.Adc_EnableIrq                          0x00000988   Section        0  adc.o(i.Adc_EnableIrq)
-    i.Adc_GetSqrResult                       0x000009a0   Section        0  adc.o(i.Adc_GetSqrResult)
-    i.Adc_Init                               0x000009b0   Section        0  adc.o(i.Adc_Init)
-    i.Adc_SQR_Start                          0x00000a1c   Section        0  adc.o(i.Adc_SQR_Start)
-    i.Adc_SQR_Stop                           0x00000a28   Section        0  adc.o(i.Adc_SQR_Stop)
-    i.Adc_SqrModeCfg                         0x00000a34   Section        0  adc.o(i.Adc_SqrModeCfg)
-    i.Bgr_BgrEnable                          0x00000aa8   Section        0  bgr.o(i.Bgr_BgrEnable)
-    i.CLKTRIM_IRQHandler                     0x00000ac4   Section        0  interrupts_hc32l13x.o(i.CLKTRIM_IRQHandler)
-    i.ClrAllLcd                              0x00000ac6   Section        0  lcddriver.o(i.ClrAllLcd)
-    i.DMAC_IRQHandler                        0x00000af6   Section        0  interrupts_hc32l13x.o(i.DMAC_IRQHandler)
-    i.Display2NDInterface                    0x00000af8   Section        0  lcddriver.o(i.Display2NDInterface)
-    i.DisplayMainInterface                   0x00000bfc   Section        0  lcddriver.o(i.DisplayMainInterface)
-    i.Display_SubpageOfH6                    0x00000ec0   Section        0  lcddriver.o(i.Display_SubpageOfH6)
-    i.Display_SubpageOfHx                    0x00000ff8   Section        0  lcddriver.o(i.Display_SubpageOfHx)
-    i.EnableNvic                             0x00001218   Section        0  interrupts_hc32l13x.o(i.EnableNvic)
-    i.FLASH_RAM_IRQHandler                   0x00001288   Section        0  interrupts_hc32l13x.o(i.FLASH_RAM_IRQHandler)
-    i.Flash_Init                             0x0000128c   Section        0  flash.o(i.Flash_Init)
-    i.Flash_LockAll                          0x00001358   Section        0  flash.o(i.Flash_LockAll)
-    i.Flash_SectorErase                      0x00001374   Section        0  flash.o(i.Flash_SectorErase)
-    i.Flash_UnlockAll                        0x00001424   Section        0  flash.o(i.Flash_UnlockAll)
-    i.Flash_WaitCycle                        0x00001444   Section        0  flash.o(i.Flash_WaitCycle)
-    i.Flash_WriteByte                        0x00001478   Section        0  flash.o(i.Flash_WriteByte)
-    i.GPIO_Init                              0x00001528   Section        0  init.o(i.GPIO_Init)
-    i.GetBit                                 0x00001986   Section        0  ddl.o(i.GetBit)
-    i.Gpio_ClrIO                             0x00001994   Section        0  gpio.o(i.Gpio_ClrIO)
-    i.Gpio_GetInputIO                        0x000019b0   Section        0  gpio.o(i.Gpio_GetInputIO)
-    i.Gpio_Init                              0x000019c8   Section        0  gpio.o(i.Gpio_Init)
-    i.Gpio_SetAfMode                         0x00001a58   Section        0  gpio.o(i.Gpio_SetAfMode)
-    i.Gpio_SetAnalogMode                     0x00001a6c   Section        0  gpio.o(i.Gpio_SetAnalogMode)
-    i.Gpio_SetIO                             0x00001a88   Section        0  gpio.o(i.Gpio_SetIO)
-    i.HardFault_Handler                      0x00001aa4   Section        0  interrupts_hc32l13x.o(i.HardFault_Handler)
-    i.I2C0_IRQHandler                        0x00001ab4   Section        0  interrupts_hc32l13x.o(i.I2C0_IRQHandler)
-    i.I2C1_IRQHandler                        0x00001ab6   Section        0  interrupts_hc32l13x.o(i.I2C1_IRQHandler)
-    i.Init_LED                               0x00001ab8   Section        0  init.o(i.Init_LED)
-    i.KEY_Init                               0x00001b5e   Section        0  init.o(i.KEY_Init)
-    i.LCD_IRQHandler                         0x00001ba6   Section        0  interrupts_hc32l13x.o(i.LCD_IRQHandler)
-    i.LPTIM_IRQHandler                       0x00001ba8   Section        0  interrupts_hc32l13x.o(i.LPTIM_IRQHandler)
-    i.LPTimerInit                            0x00001bd0   Section        0  init.o(i.LPTimerInit)
-    i.LPUART0_IRQHandler                     0x00001c30   Section        0  interrupts_hc32l13x.o(i.LPUART0_IRQHandler)
-    i.LPUART1_IRQHandler                     0x00001c32   Section        0  interrupts_hc32l13x.o(i.LPUART1_IRQHandler)
-    i.LPUart_ClrStatus                       0x00001c34   Section        0  lpuart.o(i.LPUart_ClrStatus)
-    i.LPUart_EnableFunc                      0x00001c4a   Section        0  lpuart.o(i.LPUart_EnableFunc)
-    i.LPUart_GetStatus                       0x00001c5e   Section        0  lpuart.o(i.LPUart_GetStatus)
-    i.LPUart_Init                            0x00001c78   Section        0  lpuart.o(i.LPUart_Init)
-    i.LPUart_SendData                        0x00001d10   Section        0  lpuart.o(i.LPUart_SendData)
-    i.LPuart1_Init                           0x00001d4c   Section        0  init.o(i.LPuart1_Init)
-    i.LVD_IRQHandler                         0x00001dd8   Section        0  interrupts_hc32l13x.o(i.LVD_IRQHandler)
-    i.Logic                                  0x00001ddc   Section        0  logic.o(i.Logic)
-    i.Lptim_ClrItStatus                      0x000025e8   Section        0  lptim.o(i.Lptim_ClrItStatus)
-    i.Lptim_Cmd                              0x000025fa   Section        0  lptim.o(i.Lptim_Cmd)
-    i.Lptim_ConfIt                           0x0000260e   Section        0  lptim.o(i.Lptim_ConfIt)
-    i.Lptim_GetItStatus                      0x00002622   Section        0  lptim.o(i.Lptim_GetItStatus)
-    i.Lptim_Init                             0x00002632   Section        0  lptim.o(i.Lptim_Init)
-    i.MsgPost                                0x000026dc   Section        0  framework.o(i.MsgPost)
-    i.PCA_IRQHandler                         0x00002708   Section        0  interrupts_hc32l13x.o(i.PCA_IRQHandler)
-    i.PCNT_IRQHandler                        0x0000270a   Section        0  interrupts_hc32l13x.o(i.PCNT_IRQHandler)
-    i.PORTA_IRQHandler                       0x0000270c   Section        0  interrupts_hc32l13x.o(i.PORTA_IRQHandler)
-    i.PORTB_IRQHandler                       0x0000270e   Section        0  interrupts_hc32l13x.o(i.PORTB_IRQHandler)
-    i.PORTC_IRQHandler                       0x00002710   Section        0  interrupts_hc32l13x.o(i.PORTC_IRQHandler)
-    i.PORTD_IRQHandler                       0x00002712   Section        0  interrupts_hc32l13x.o(i.PORTD_IRQHandler)
-    i.ParaInit                               0x00002714   Section        0  init.o(i.ParaInit)
-    i.RTC_IRQHandler                         0x0000275c   Section        0  interrupts_hc32l13x.o(i.RTC_IRQHandler)
-    i.SPI0_IRQHandler                        0x0000275e   Section        0  interrupts_hc32l13x.o(i.SPI0_IRQHandler)
-    i.SPI1_IRQHandler                        0x00002760   Section        0  interrupts_hc32l13x.o(i.SPI1_IRQHandler)
-    i.SPI_Init                               0x00002764   Section        0  init.o(i.SPI_Init)
-    i.SPI_Send_Data                          0x000027e0   Section        0  init.o(i.SPI_Send_Data)
-    i.Screen                                 0x00002810   Section        0  lcddriver.o(i.Screen)
-    i.SetBit                                 0x00002858   Section        0  ddl.o(i.SetBit)
-    i.SetLogicPrio                           0x00002878   Section        0  logic.o(i.SetLogicPrio)
-    i.Spi_GetStatus                          0x0000289c   Section        0  spi.o(i.Spi_GetStatus)
-    i.Spi_Init                               0x000028ae   Section        0  spi.o(i.Spi_Init)
-    i.Spi_SendData                           0x000028ce   Section        0  spi.o(i.Spi_SendData)
-    i.Spi_SetCS                              0x000028d6   Section        0  spi.o(i.Spi_SetCS)
-    i.SysClockInit                           0x000028da   Section        0  init.o(i.SysClockInit)
-    i.SysParameterInit                       0x00002908   Section        0  init.o(i.SysParameterInit)
-    i.SysTick_Handler                        0x00002938   Section        0  interrupts_hc32l13x.o(i.SysTick_Handler)
-    i.Sysctrl_ClkInit                        0x00002940   Section        0  sysctrl.o(i.Sysctrl_ClkInit)
-    i.Sysctrl_ClkSourceEnable                0x000029ac   Section        0  sysctrl.o(i.Sysctrl_ClkSourceEnable)
-    i.Sysctrl_GetHClkFreq                    0x00002b18   Section        0  sysctrl.o(i.Sysctrl_GetHClkFreq)
-    i.Sysctrl_GetPClkFreq                    0x00002c8c   Section        0  sysctrl.o(i.Sysctrl_GetPClkFreq)
-    i.Sysctrl_SetHCLKDiv                     0x00002cac   Section        0  sysctrl.o(i.Sysctrl_SetHCLKDiv)
-    i.Sysctrl_SetPCLKDiv                     0x00002cd4   Section        0  sysctrl.o(i.Sysctrl_SetPCLKDiv)
-    i.Sysctrl_SetPLLStableTime               0x00002cfc   Section        0  sysctrl.o(i.Sysctrl_SetPLLStableTime)
-    i.Sysctrl_SetPeripheralGate              0x00002d20   Section        0  sysctrl.o(i.Sysctrl_SetPeripheralGate)
-    i.Sysctrl_SetRCHTrim                     0x00002d38   Section        0  sysctrl.o(i.Sysctrl_SetRCHTrim)
-    i.Sysctrl_SetRCLStableTime               0x00002d60   Section        0  sysctrl.o(i.Sysctrl_SetRCLStableTime)
-    i.Sysctrl_SetRTCAdjustClkFreq            0x00002d84   Section        0  sysctrl.o(i.Sysctrl_SetRTCAdjustClkFreq)
-    i.Sysctrl_SetXTHStableTime               0x00002dac   Section        0  sysctrl.o(i.Sysctrl_SetXTHStableTime)
-    i.Sysctrl_SetXTLStableTime               0x00002dcc   Section        0  sysctrl.o(i.Sysctrl_SetXTLStableTime)
-    i.Sysctrl_SysClkSwitch                   0x00002dec   Section        0  sysctrl.o(i.Sysctrl_SysClkSwitch)
-    i.Sysctrl_XTHDriverCfg                   0x00002e18   Section        0  sysctrl.o(i.Sysctrl_XTHDriverCfg)
-    i.Sysctrl_XTLDriverCfg                   0x00002e34   Section        0  sysctrl.o(i.Sysctrl_XTLDriverCfg)
-    i.SystemCoreClockUpdate                  0x00002e68   Section        0  system_hc32l13x.o(i.SystemCoreClockUpdate)
-    i.SystemInit                             0x00002e78   Section        0  system_hc32l13x.o(i.SystemInit)
-    i.TIM0_IRQHandler                        0x00002eb8   Section        0  interrupts_hc32l13x.o(i.TIM0_IRQHandler)
-    i.TIM1_IRQHandler                        0x00002eba   Section        0  interrupts_hc32l13x.o(i.TIM1_IRQHandler)
-    i.TIM2_IRQHandler                        0x00002ebc   Section        0  interrupts_hc32l13x.o(i.TIM2_IRQHandler)
-    i.TIM3_IRQHandler                        0x00002ec0   Section        0  interrupts_hc32l13x.o(i.TIM3_IRQHandler)
-    i.TIM4_IRQHandler                        0x00002ee4   Section        0  interrupts_hc32l13x.o(i.TIM4_IRQHandler)
-    i.TIM5_IRQHandler                        0x00002ee6   Section        0  interrupts_hc32l13x.o(i.TIM5_IRQHandler)
-    i.TIM6_IRQHandler                        0x00002ee8   Section        0  interrupts_hc32l13x.o(i.TIM6_IRQHandler)
-    i.TaskKey                                0x00002eec   Section        0  scankey.o(i.TaskKey)
-    i.ThreadScheduler                        0x00003030   Section        0  framework.o(i.ThreadScheduler)
-    i.Tim3_ClearIntFlag                      0x000030b4   Section        0  timer3.o(i.Tim3_ClearIntFlag)
-    i.Tim3_GetIntFlag                        0x000030c8   Section        0  timer3.o(i.Tim3_GetIntFlag)
-    i.Tim3_M0_ARRSet                         0x000030e0   Section        0  timer3.o(i.Tim3_M0_ARRSet)
-    i.Tim3_M0_Cnt16Set                       0x000030fc   Section        0  timer3.o(i.Tim3_M0_Cnt16Set)
-    i.Tim3_M0_Run                            0x00003118   Section        0  timer3.o(i.Tim3_M0_Run)
-    i.Tim3_Mode0_EnableIrq                   0x00003130   Section        0  timer3.o(i.Tim3_Mode0_EnableIrq)
-    i.Tim3_Mode0_Init                        0x00003148   Section        0  timer3.o(i.Tim3_Mode0_Init)
-    i.Timer3Init                             0x000031f4   Section        0  init.o(i.Timer3Init)
-    i.TimerFunction                          0x00003250   Section        0  rtcfun.o(i.TimerFunction)
-    i.UART0_IRQHandler                       0x000032ac   Section        0  interrupts_hc32l13x.o(i.UART0_IRQHandler)
-    i.UART1_IRQHandler                       0x000032ae   Section        0  interrupts_hc32l13x.o(i.UART1_IRQHandler)
-    i.VC0_IRQHandler                         0x000032b0   Section        0  interrupts_hc32l13x.o(i.VC0_IRQHandler)
-    i.VC1_IRQHandler                         0x000032b2   Section        0  interrupts_hc32l13x.o(i.VC1_IRQHandler)
-    i.WDT_IRQHandler                         0x000032b4   Section        0  interrupts_hc32l13x.o(i.WDT_IRQHandler)
-    i.Wdt_Feed                               0x000032b8   Section        0  wdt.o(i.Wdt_Feed)
-    i.WorkStateTran                          0x000032c8   Section        0  logic.o(i.WorkStateTran)
-    i._HidePinInit                           0x000032d4   Section        0  system_hc32l13x.o(i._HidePinInit)
-    _HidePinInit                             0x000032d5   Thumb Code    24  system_hc32l13x.o(i._HidePinInit)
-    i._SysctrlUnlock                         0x000032f0   Section        0  sysctrl.o(i._SysctrlUnlock)
-    _SysctrlUnlock                           0x000032f1   Thumb Code    12  sysctrl.o(i._SysctrlUnlock)
-    i.__ARM_common_switch8                   0x00003308   Section        0  sysctrl.o(i.__ARM_common_switch8)
-    i.__NVIC_SetPriority                     0x00003324   Section        0  interrupts_hc32l13x.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x00003325   Thumb Code   110  interrupts_hc32l13x.o(i.__NVIC_SetPriority)
-    i._sys_exit                              0x0000339c   Section        0  ddl.o(i._sys_exit)
-    i.ddl_memclr                             0x000033a0   Section        0  ddl.o(i.ddl_memclr)
-    i.delay10us                              0x000033c0   Section        0  ddl.o(i.delay10us)
-    i.delay1ms                               0x0000341c   Section        0  ddl.o(i.delay1ms)
-    i.fputc                                  0x00003474   Section        0  init.o(i.fputc)
-    i.main                                   0x00003498   Section        0  main.o(i.main)
-    x$fpl$fadd                               0x00003504   Section      140  faddsub.o(x$fpl$fadd)
-    _fadd1                                   0x00003511   Thumb Code     0  faddsub.o(x$fpl$fadd)
-    x$fpl$fsub                               0x00003590   Section      208  faddsub.o(x$fpl$fsub)
-    _fsub1                                   0x0000359d   Thumb Code     0  faddsub.o(x$fpl$fsub)
-    .constdata                               0x00003660   Section       32  flash.o(.constdata)
-    x$fpl$usenofp                            0x00003660   Section        0  usenofp.o(x$fpl$usenofp)
-    .constdata                               0x00003680   Section       12  lpuart.o(.constdata)
-    .constdata                               0x0000368c   Section       24  sysctrl.o(.constdata)
-    .constdata                               0x000036a4   Section       25  framework.o(.constdata)
-    .constdata                               0x000036bd   Section       64  fdiv.o(.constdata)
-    fdiv_tab                                 0x000036bd   Data          64  fdiv.o(.constdata)
+    i.AdcInit                                0x0000073c   Section        0  adcdriver.o(i.AdcInit)
+    i.Adc_CfgSqrChannel                      0x000007bc   Section        0  adc.o(i.Adc_CfgSqrChannel)
+    i.Adc_ClrIrqStatus                       0x00000974   Section        0  adc.o(i.Adc_ClrIrqStatus)
+    i.Adc_EnableIrq                          0x00000984   Section        0  adc.o(i.Adc_EnableIrq)
+    i.Adc_GetSqrResult                       0x0000099c   Section        0  adc.o(i.Adc_GetSqrResult)
+    i.Adc_Init                               0x000009ac   Section        0  adc.o(i.Adc_Init)
+    i.Adc_SQR_Start                          0x00000a18   Section        0  adc.o(i.Adc_SQR_Start)
+    i.Adc_SQR_Stop                           0x00000a24   Section        0  adc.o(i.Adc_SQR_Stop)
+    i.Adc_SqrModeCfg                         0x00000a30   Section        0  adc.o(i.Adc_SqrModeCfg)
+    i.Bgr_BgrEnable                          0x00000aa4   Section        0  bgr.o(i.Bgr_BgrEnable)
+    i.CLKTRIM_IRQHandler                     0x00000ac0   Section        0  interrupts_hc32l13x.o(i.CLKTRIM_IRQHandler)
+    i.ClrAllLcd                              0x00000ac2   Section        0  lcddriver.o(i.ClrAllLcd)
+    i.DMAC_IRQHandler                        0x00000af2   Section        0  interrupts_hc32l13x.o(i.DMAC_IRQHandler)
+    i.Display2NDInterface                    0x00000af4   Section        0  lcddriver.o(i.Display2NDInterface)
+    i.DisplayMainInterface                   0x00000bf8   Section        0  lcddriver.o(i.DisplayMainInterface)
+    i.Display_SubpageOfH6                    0x00000ebc   Section        0  lcddriver.o(i.Display_SubpageOfH6)
+    i.Display_SubpageOfHx                    0x00000ff4   Section        0  lcddriver.o(i.Display_SubpageOfHx)
+    i.EnableNvic                             0x00001214   Section        0  interrupts_hc32l13x.o(i.EnableNvic)
+    i.FLASH_RAM_IRQHandler                   0x00001284   Section        0  interrupts_hc32l13x.o(i.FLASH_RAM_IRQHandler)
+    i.Flash_Init                             0x00001288   Section        0  flash.o(i.Flash_Init)
+    i.Flash_LockAll                          0x00001354   Section        0  flash.o(i.Flash_LockAll)
+    i.Flash_SectorErase                      0x00001370   Section        0  flash.o(i.Flash_SectorErase)
+    i.Flash_UnlockAll                        0x00001420   Section        0  flash.o(i.Flash_UnlockAll)
+    i.Flash_WaitCycle                        0x00001440   Section        0  flash.o(i.Flash_WaitCycle)
+    i.Flash_WriteByte                        0x00001474   Section        0  flash.o(i.Flash_WriteByte)
+    i.GPIO_Init                              0x00001524   Section        0  init.o(i.GPIO_Init)
+    i.GetBit                                 0x00001982   Section        0  ddl.o(i.GetBit)
+    i.Gpio_ClrIO                             0x00001990   Section        0  gpio.o(i.Gpio_ClrIO)
+    i.Gpio_GetInputIO                        0x000019ac   Section        0  gpio.o(i.Gpio_GetInputIO)
+    i.Gpio_Init                              0x000019c4   Section        0  gpio.o(i.Gpio_Init)
+    i.Gpio_SetAfMode                         0x00001a54   Section        0  gpio.o(i.Gpio_SetAfMode)
+    i.Gpio_SetAnalogMode                     0x00001a68   Section        0  gpio.o(i.Gpio_SetAnalogMode)
+    i.Gpio_SetIO                             0x00001a84   Section        0  gpio.o(i.Gpio_SetIO)
+    i.HardFault_Handler                      0x00001aa0   Section        0  interrupts_hc32l13x.o(i.HardFault_Handler)
+    i.I2C0_IRQHandler                        0x00001ab0   Section        0  interrupts_hc32l13x.o(i.I2C0_IRQHandler)
+    i.I2C1_IRQHandler                        0x00001ab2   Section        0  interrupts_hc32l13x.o(i.I2C1_IRQHandler)
+    i.Init_LED                               0x00001ab4   Section        0  init.o(i.Init_LED)
+    i.KEY_Init                               0x00001b5a   Section        0  init.o(i.KEY_Init)
+    i.LCD_IRQHandler                         0x00001ba2   Section        0  interrupts_hc32l13x.o(i.LCD_IRQHandler)
+    i.LPTIM_IRQHandler                       0x00001ba4   Section        0  interrupts_hc32l13x.o(i.LPTIM_IRQHandler)
+    i.LPTimerInit                            0x00001bcc   Section        0  init.o(i.LPTimerInit)
+    i.LPUART0_IRQHandler                     0x00001c2c   Section        0  interrupts_hc32l13x.o(i.LPUART0_IRQHandler)
+    i.LPUART1_IRQHandler                     0x00001c2e   Section        0  interrupts_hc32l13x.o(i.LPUART1_IRQHandler)
+    i.LPUart_ClrStatus                       0x00001c30   Section        0  lpuart.o(i.LPUart_ClrStatus)
+    i.LPUart_EnableFunc                      0x00001c46   Section        0  lpuart.o(i.LPUart_EnableFunc)
+    i.LPUart_GetStatus                       0x00001c5a   Section        0  lpuart.o(i.LPUart_GetStatus)
+    i.LPUart_Init                            0x00001c74   Section        0  lpuart.o(i.LPUart_Init)
+    i.LPUart_SendData                        0x00001d0c   Section        0  lpuart.o(i.LPUart_SendData)
+    i.LPuart1_Init                           0x00001d48   Section        0  init.o(i.LPuart1_Init)
+    i.LVD_IRQHandler                         0x00001dd4   Section        0  interrupts_hc32l13x.o(i.LVD_IRQHandler)
+    i.Logic                                  0x00001dd8   Section        0  logic.o(i.Logic)
+    i.Lptim_ClrItStatus                      0x000025e4   Section        0  lptim.o(i.Lptim_ClrItStatus)
+    i.Lptim_Cmd                              0x000025f6   Section        0  lptim.o(i.Lptim_Cmd)
+    i.Lptim_ConfIt                           0x0000260a   Section        0  lptim.o(i.Lptim_ConfIt)
+    i.Lptim_GetItStatus                      0x0000261e   Section        0  lptim.o(i.Lptim_GetItStatus)
+    i.Lptim_Init                             0x0000262e   Section        0  lptim.o(i.Lptim_Init)
+    i.MsgPost                                0x000026d8   Section        0  framework.o(i.MsgPost)
+    i.PCA_IRQHandler                         0x00002704   Section        0  interrupts_hc32l13x.o(i.PCA_IRQHandler)
+    i.PCNT_IRQHandler                        0x00002706   Section        0  interrupts_hc32l13x.o(i.PCNT_IRQHandler)
+    i.PORTA_IRQHandler                       0x00002708   Section        0  interrupts_hc32l13x.o(i.PORTA_IRQHandler)
+    i.PORTB_IRQHandler                       0x0000270a   Section        0  interrupts_hc32l13x.o(i.PORTB_IRQHandler)
+    i.PORTC_IRQHandler                       0x0000270c   Section        0  interrupts_hc32l13x.o(i.PORTC_IRQHandler)
+    i.PORTD_IRQHandler                       0x0000270e   Section        0  interrupts_hc32l13x.o(i.PORTD_IRQHandler)
+    i.ParaInit                               0x00002710   Section        0  init.o(i.ParaInit)
+    i.RTC_IRQHandler                         0x00002758   Section        0  interrupts_hc32l13x.o(i.RTC_IRQHandler)
+    i.SPI0_IRQHandler                        0x0000275a   Section        0  interrupts_hc32l13x.o(i.SPI0_IRQHandler)
+    i.SPI1_IRQHandler                        0x0000275c   Section        0  interrupts_hc32l13x.o(i.SPI1_IRQHandler)
+    i.SPI_Init                               0x00002760   Section        0  init.o(i.SPI_Init)
+    i.SPI_Send_Data                          0x000027dc   Section        0  init.o(i.SPI_Send_Data)
+    i.Screen                                 0x0000280c   Section        0  lcddriver.o(i.Screen)
+    i.SetBit                                 0x00002854   Section        0  ddl.o(i.SetBit)
+    i.SetLogicPrio                           0x00002874   Section        0  logic.o(i.SetLogicPrio)
+    i.Spi_GetStatus                          0x00002898   Section        0  spi.o(i.Spi_GetStatus)
+    i.Spi_Init                               0x000028aa   Section        0  spi.o(i.Spi_Init)
+    i.Spi_SendData                           0x000028ca   Section        0  spi.o(i.Spi_SendData)
+    i.Spi_SetCS                              0x000028d2   Section        0  spi.o(i.Spi_SetCS)
+    i.SysClockInit                           0x000028d6   Section        0  init.o(i.SysClockInit)
+    i.SysParameterInit                       0x00002904   Section        0  init.o(i.SysParameterInit)
+    i.SysTick_Handler                        0x00002934   Section        0  interrupts_hc32l13x.o(i.SysTick_Handler)
+    i.Sysctrl_ClkInit                        0x0000293c   Section        0  sysctrl.o(i.Sysctrl_ClkInit)
+    i.Sysctrl_ClkSourceEnable                0x000029a8   Section        0  sysctrl.o(i.Sysctrl_ClkSourceEnable)
+    i.Sysctrl_GetHClkFreq                    0x00002b14   Section        0  sysctrl.o(i.Sysctrl_GetHClkFreq)
+    i.Sysctrl_GetPClkFreq                    0x00002c88   Section        0  sysctrl.o(i.Sysctrl_GetPClkFreq)
+    i.Sysctrl_SetHCLKDiv                     0x00002ca8   Section        0  sysctrl.o(i.Sysctrl_SetHCLKDiv)
+    i.Sysctrl_SetPCLKDiv                     0x00002cd0   Section        0  sysctrl.o(i.Sysctrl_SetPCLKDiv)
+    i.Sysctrl_SetPLLStableTime               0x00002cf8   Section        0  sysctrl.o(i.Sysctrl_SetPLLStableTime)
+    i.Sysctrl_SetPeripheralGate              0x00002d1c   Section        0  sysctrl.o(i.Sysctrl_SetPeripheralGate)
+    i.Sysctrl_SetRCHTrim                     0x00002d34   Section        0  sysctrl.o(i.Sysctrl_SetRCHTrim)
+    i.Sysctrl_SetRCLStableTime               0x00002d5c   Section        0  sysctrl.o(i.Sysctrl_SetRCLStableTime)
+    i.Sysctrl_SetRTCAdjustClkFreq            0x00002d80   Section        0  sysctrl.o(i.Sysctrl_SetRTCAdjustClkFreq)
+    i.Sysctrl_SetXTHStableTime               0x00002da8   Section        0  sysctrl.o(i.Sysctrl_SetXTHStableTime)
+    i.Sysctrl_SetXTLStableTime               0x00002dc8   Section        0  sysctrl.o(i.Sysctrl_SetXTLStableTime)
+    i.Sysctrl_SysClkSwitch                   0x00002de8   Section        0  sysctrl.o(i.Sysctrl_SysClkSwitch)
+    i.Sysctrl_XTHDriverCfg                   0x00002e14   Section        0  sysctrl.o(i.Sysctrl_XTHDriverCfg)
+    i.Sysctrl_XTLDriverCfg                   0x00002e30   Section        0  sysctrl.o(i.Sysctrl_XTLDriverCfg)
+    i.SystemCoreClockUpdate                  0x00002e64   Section        0  system_hc32l13x.o(i.SystemCoreClockUpdate)
+    i.SystemInit                             0x00002e74   Section        0  system_hc32l13x.o(i.SystemInit)
+    i.TIM0_IRQHandler                        0x00002eb4   Section        0  interrupts_hc32l13x.o(i.TIM0_IRQHandler)
+    i.TIM1_IRQHandler                        0x00002eb6   Section        0  interrupts_hc32l13x.o(i.TIM1_IRQHandler)
+    i.TIM2_IRQHandler                        0x00002eb8   Section        0  interrupts_hc32l13x.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x00002ebc   Section        0  interrupts_hc32l13x.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x00002ee0   Section        0  interrupts_hc32l13x.o(i.TIM4_IRQHandler)
+    i.TIM5_IRQHandler                        0x00002ee2   Section        0  interrupts_hc32l13x.o(i.TIM5_IRQHandler)
+    i.TIM6_IRQHandler                        0x00002ee4   Section        0  interrupts_hc32l13x.o(i.TIM6_IRQHandler)
+    i.TaskKey                                0x00002ee8   Section        0  scankey.o(i.TaskKey)
+    i.ThreadScheduler                        0x0000302c   Section        0  framework.o(i.ThreadScheduler)
+    i.Tim3_ClearIntFlag                      0x000030b0   Section        0  timer3.o(i.Tim3_ClearIntFlag)
+    i.Tim3_GetIntFlag                        0x000030c4   Section        0  timer3.o(i.Tim3_GetIntFlag)
+    i.Tim3_M0_ARRSet                         0x000030dc   Section        0  timer3.o(i.Tim3_M0_ARRSet)
+    i.Tim3_M0_Cnt16Set                       0x000030f8   Section        0  timer3.o(i.Tim3_M0_Cnt16Set)
+    i.Tim3_M0_Run                            0x00003114   Section        0  timer3.o(i.Tim3_M0_Run)
+    i.Tim3_Mode0_EnableIrq                   0x0000312c   Section        0  timer3.o(i.Tim3_Mode0_EnableIrq)
+    i.Tim3_Mode0_Init                        0x00003144   Section        0  timer3.o(i.Tim3_Mode0_Init)
+    i.Timer3Init                             0x000031f0   Section        0  init.o(i.Timer3Init)
+    i.TimerFunction                          0x0000324c   Section        0  rtcfun.o(i.TimerFunction)
+    i.UART0_IRQHandler                       0x000032a8   Section        0  interrupts_hc32l13x.o(i.UART0_IRQHandler)
+    i.UART1_IRQHandler                       0x000032aa   Section        0  interrupts_hc32l13x.o(i.UART1_IRQHandler)
+    i.VC0_IRQHandler                         0x000032ac   Section        0  interrupts_hc32l13x.o(i.VC0_IRQHandler)
+    i.VC1_IRQHandler                         0x000032ae   Section        0  interrupts_hc32l13x.o(i.VC1_IRQHandler)
+    i.WDT_IRQHandler                         0x000032b0   Section        0  interrupts_hc32l13x.o(i.WDT_IRQHandler)
+    i.Wdt_Feed                               0x000032b4   Section        0  wdt.o(i.Wdt_Feed)
+    i.WorkStateTran                          0x000032c4   Section        0  logic.o(i.WorkStateTran)
+    i._HidePinInit                           0x000032d0   Section        0  system_hc32l13x.o(i._HidePinInit)
+    _HidePinInit                             0x000032d1   Thumb Code    24  system_hc32l13x.o(i._HidePinInit)
+    i._SysctrlUnlock                         0x000032ec   Section        0  sysctrl.o(i._SysctrlUnlock)
+    _SysctrlUnlock                           0x000032ed   Thumb Code    12  sysctrl.o(i._SysctrlUnlock)
+    i.__ARM_common_switch8                   0x00003304   Section        0  sysctrl.o(i.__ARM_common_switch8)
+    i.__NVIC_SetPriority                     0x00003320   Section        0  interrupts_hc32l13x.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x00003321   Thumb Code   110  interrupts_hc32l13x.o(i.__NVIC_SetPriority)
+    i._sys_exit                              0x00003398   Section        0  ddl.o(i._sys_exit)
+    i.ddl_memclr                             0x0000339c   Section        0  ddl.o(i.ddl_memclr)
+    i.delay10us                              0x000033bc   Section        0  ddl.o(i.delay10us)
+    i.delay1ms                               0x00003418   Section        0  ddl.o(i.delay1ms)
+    i.fputc                                  0x00003470   Section        0  init.o(i.fputc)
+    i.main                                   0x00003494   Section        0  main.o(i.main)
+    x$fpl$fadd                               0x00003500   Section      140  faddsub.o(x$fpl$fadd)
+    _fadd1                                   0x0000350d   Thumb Code     0  faddsub.o(x$fpl$fadd)
+    x$fpl$fsub                               0x0000358c   Section      208  faddsub.o(x$fpl$fsub)
+    _fsub1                                   0x00003599   Thumb Code     0  faddsub.o(x$fpl$fsub)
+    .constdata                               0x0000365c   Section       32  flash.o(.constdata)
+    x$fpl$usenofp                            0x0000365c   Section        0  usenofp.o(x$fpl$usenofp)
+    .constdata                               0x0000367c   Section       12  lpuart.o(.constdata)
+    .constdata                               0x00003688   Section       24  sysctrl.o(.constdata)
+    .constdata                               0x000036a0   Section       25  framework.o(.constdata)
+    .constdata                               0x000036b9   Section       64  fdiv.o(.constdata)
+    fdiv_tab                                 0x000036b9   Data          64  fdiv.o(.constdata)
     .data                                    0x20000000   Section        2  global_variable.o(.data)
     .data                                    0x20000004   Section        4  ddl.o(.data)
     .data                                    0x20000008   Section        4  system_hc32l13x.o(.data)
@@ -1244,145 +1244,145 @@ Image Symbol Table
     main                                     0x000006bd   Thumb Code    14  system_hc32l13x.o(i.$Sub$$main)
     ADC_IRQHandler                           0x000006cd   Thumb Code    50  interrupts_hc32l13x.o(i.ADC_IRQHandler)
     AdcCalculate                             0x00000709   Thumb Code    38  adcdriver.o(i.AdcCalculate)
-    AdcInit                                  0x00000741   Thumb Code   128  adcdriver.o(i.AdcInit)
-    Adc_CfgSqrChannel                        0x000007c1   Thumb Code   436  adc.o(i.Adc_CfgSqrChannel)
-    Adc_ClrIrqStatus                         0x00000979   Thumb Code    12  adc.o(i.Adc_ClrIrqStatus)
-    Adc_EnableIrq                            0x00000989   Thumb Code    18  adc.o(i.Adc_EnableIrq)
-    Adc_GetSqrResult                         0x000009a1   Thumb Code    10  adc.o(i.Adc_GetSqrResult)
-    Adc_Init                                 0x000009b1   Thumb Code   102  adc.o(i.Adc_Init)
-    Adc_SQR_Start                            0x00000a1d   Thumb Code     8  adc.o(i.Adc_SQR_Start)
-    Adc_SQR_Stop                             0x00000a29   Thumb Code     8  adc.o(i.Adc_SQR_Stop)
-    Adc_SqrModeCfg                           0x00000a35   Thumb Code   112  adc.o(i.Adc_SqrModeCfg)
-    Bgr_BgrEnable                            0x00000aa9   Thumb Code    22  bgr.o(i.Bgr_BgrEnable)
-    CLKTRIM_IRQHandler                       0x00000ac5   Thumb Code     2  interrupts_hc32l13x.o(i.CLKTRIM_IRQHandler)
-    ClrAllLcd                                0x00000ac7   Thumb Code    48  lcddriver.o(i.ClrAllLcd)
-    DMAC_IRQHandler                          0x00000af7   Thumb Code     2  interrupts_hc32l13x.o(i.DMAC_IRQHandler)
-    Display2NDInterface                      0x00000af9   Thumb Code   248  lcddriver.o(i.Display2NDInterface)
-    DisplayMainInterface                     0x00000bfd   Thumb Code   674  lcddriver.o(i.DisplayMainInterface)
-    Display_SubpageOfH6                      0x00000ec1   Thumb Code   298  lcddriver.o(i.Display_SubpageOfH6)
-    Display_SubpageOfHx                      0x00000ff9   Thumb Code   522  lcddriver.o(i.Display_SubpageOfHx)
-    EnableNvic                               0x00001219   Thumb Code   104  interrupts_hc32l13x.o(i.EnableNvic)
-    FLASH_RAM_IRQHandler                     0x00001289   Thumb Code     2  interrupts_hc32l13x.o(i.FLASH_RAM_IRQHandler)
-    Flash_Init                               0x0000128d   Thumb Code   188  flash.o(i.Flash_Init)
-    Flash_LockAll                            0x00001359   Thumb Code    16  flash.o(i.Flash_LockAll)
-    Flash_SectorErase                        0x00001375   Thumb Code   158  flash.o(i.Flash_SectorErase)
-    Flash_UnlockAll                          0x00001425   Thumb Code    18  flash.o(i.Flash_UnlockAll)
-    Flash_WaitCycle                          0x00001445   Thumb Code    38  flash.o(i.Flash_WaitCycle)
-    Flash_WriteByte                          0x00001479   Thumb Code   158  flash.o(i.Flash_WriteByte)
-    GPIO_Init                                0x00001529   Thumb Code  1118  init.o(i.GPIO_Init)
-    GetBit                                   0x00001987   Thumb Code    12  ddl.o(i.GetBit)
-    Gpio_ClrIO                               0x00001995   Thumb Code    22  gpio.o(i.Gpio_ClrIO)
-    Gpio_GetInputIO                          0x000019b1   Thumb Code    18  gpio.o(i.Gpio_GetInputIO)
-    Gpio_Init                                0x000019c9   Thumb Code   130  gpio.o(i.Gpio_Init)
-    Gpio_SetAfMode                           0x00001a59   Thumb Code    16  gpio.o(i.Gpio_SetAfMode)
-    Gpio_SetAnalogMode                       0x00001a6d   Thumb Code    22  gpio.o(i.Gpio_SetAnalogMode)
-    Gpio_SetIO                               0x00001a89   Thumb Code    22  gpio.o(i.Gpio_SetIO)
-    HardFault_Handler                        0x00001aa5   Thumb Code    16  interrupts_hc32l13x.o(i.HardFault_Handler)
-    I2C0_IRQHandler                          0x00001ab5   Thumb Code     2  interrupts_hc32l13x.o(i.I2C0_IRQHandler)
-    I2C1_IRQHandler                          0x00001ab7   Thumb Code     2  interrupts_hc32l13x.o(i.I2C1_IRQHandler)
-    Init_LED                                 0x00001ab9   Thumb Code   166  init.o(i.Init_LED)
-    KEY_Init                                 0x00001b5f   Thumb Code    72  init.o(i.KEY_Init)
-    LCD_IRQHandler                           0x00001ba7   Thumb Code     2  interrupts_hc32l13x.o(i.LCD_IRQHandler)
-    LPTIM_IRQHandler                         0x00001ba9   Thumb Code    32  interrupts_hc32l13x.o(i.LPTIM_IRQHandler)
-    LPTimerInit                              0x00001bd1   Thumb Code    86  init.o(i.LPTimerInit)
-    LPUART0_IRQHandler                       0x00001c31   Thumb Code     2  interrupts_hc32l13x.o(i.LPUART0_IRQHandler)
-    LPUART1_IRQHandler                       0x00001c33   Thumb Code     2  interrupts_hc32l13x.o(i.LPUART1_IRQHandler)
-    LPUart_ClrStatus                         0x00001c35   Thumb Code    22  lpuart.o(i.LPUart_ClrStatus)
-    LPUart_EnableFunc                        0x00001c4b   Thumb Code    20  lpuart.o(i.LPUart_EnableFunc)
-    LPUart_GetStatus                         0x00001c5f   Thumb Code    24  lpuart.o(i.LPUart_GetStatus)
-    LPUart_Init                              0x00001c79   Thumb Code   148  lpuart.o(i.LPUart_Init)
-    LPUart_SendData                          0x00001d11   Thumb Code    58  lpuart.o(i.LPUart_SendData)
-    LPuart1_Init                             0x00001d4d   Thumb Code   136  init.o(i.LPuart1_Init)
-    LVD_IRQHandler                           0x00001dd9   Thumb Code     2  interrupts_hc32l13x.o(i.LVD_IRQHandler)
-    Logic                                    0x00001ddd   Thumb Code  2032  logic.o(i.Logic)
-    Lptim_ClrItStatus                        0x000025e9   Thumb Code    18  lptim.o(i.Lptim_ClrItStatus)
-    Lptim_Cmd                                0x000025fb   Thumb Code    20  lptim.o(i.Lptim_Cmd)
-    Lptim_ConfIt                             0x0000260f   Thumb Code    20  lptim.o(i.Lptim_ConfIt)
-    Lptim_GetItStatus                        0x00002623   Thumb Code    16  lptim.o(i.Lptim_GetItStatus)
-    Lptim_Init                               0x00002633   Thumb Code   170  lptim.o(i.Lptim_Init)
-    MsgPost                                  0x000026dd   Thumb Code    36  framework.o(i.MsgPost)
-    PCA_IRQHandler                           0x00002709   Thumb Code     2  interrupts_hc32l13x.o(i.PCA_IRQHandler)
-    PCNT_IRQHandler                          0x0000270b   Thumb Code     2  interrupts_hc32l13x.o(i.PCNT_IRQHandler)
-    PORTA_IRQHandler                         0x0000270d   Thumb Code     2  interrupts_hc32l13x.o(i.PORTA_IRQHandler)
-    PORTB_IRQHandler                         0x0000270f   Thumb Code     2  interrupts_hc32l13x.o(i.PORTB_IRQHandler)
-    PORTC_IRQHandler                         0x00002711   Thumb Code     2  interrupts_hc32l13x.o(i.PORTC_IRQHandler)
-    PORTD_IRQHandler                         0x00002713   Thumb Code     2  interrupts_hc32l13x.o(i.PORTD_IRQHandler)
-    ParaInit                                 0x00002715   Thumb Code    62  init.o(i.ParaInit)
-    RTC_IRQHandler                           0x0000275d   Thumb Code     2  interrupts_hc32l13x.o(i.RTC_IRQHandler)
-    SPI0_IRQHandler                          0x0000275f   Thumb Code     2  interrupts_hc32l13x.o(i.SPI0_IRQHandler)
-    SPI1_IRQHandler                          0x00002761   Thumb Code     2  interrupts_hc32l13x.o(i.SPI1_IRQHandler)
-    SPI_Init                                 0x00002765   Thumb Code   118  init.o(i.SPI_Init)
-    SPI_Send_Data                            0x000027e1   Thumb Code    44  init.o(i.SPI_Send_Data)
-    Screen                                   0x00002811   Thumb Code    62  lcddriver.o(i.Screen)
-    SetBit                                   0x00002859   Thumb Code    30  ddl.o(i.SetBit)
-    SetLogicPrio                             0x00002879   Thumb Code    26  logic.o(i.SetLogicPrio)
-    Spi_GetStatus                            0x0000289d   Thumb Code    18  spi.o(i.Spi_GetStatus)
-    Spi_Init                                 0x000028af   Thumb Code    32  spi.o(i.Spi_Init)
-    Spi_SendData                             0x000028cf   Thumb Code     8  spi.o(i.Spi_SendData)
-    Spi_SetCS                                0x000028d7   Thumb Code     4  spi.o(i.Spi_SetCS)
-    SysClockInit                             0x000028db   Thumb Code    44  init.o(i.SysClockInit)
-    SysParameterInit                         0x00002909   Thumb Code    42  init.o(i.SysParameterInit)
-    SysTick_Handler                          0x00002939   Thumb Code     8  interrupts_hc32l13x.o(i.SysTick_Handler)
-    Sysctrl_ClkInit                          0x00002941   Thumb Code   106  sysctrl.o(i.Sysctrl_ClkInit)
-    Sysctrl_ClkSourceEnable                  0x000029ad   Thumb Code   352  sysctrl.o(i.Sysctrl_ClkSourceEnable)
-    Sysctrl_GetHClkFreq                      0x00002b19   Thumb Code   354  sysctrl.o(i.Sysctrl_GetHClkFreq)
-    Sysctrl_GetPClkFreq                      0x00002c8d   Thumb Code    28  sysctrl.o(i.Sysctrl_GetPClkFreq)
-    Sysctrl_SetHCLKDiv                       0x00002cad   Thumb Code    36  sysctrl.o(i.Sysctrl_SetHCLKDiv)
-    Sysctrl_SetPCLKDiv                       0x00002cd5   Thumb Code    36  sysctrl.o(i.Sysctrl_SetPCLKDiv)
-    Sysctrl_SetPLLStableTime                 0x00002cfd   Thumb Code    32  sysctrl.o(i.Sysctrl_SetPLLStableTime)
-    Sysctrl_SetPeripheralGate                0x00002d21   Thumb Code    20  sysctrl.o(i.Sysctrl_SetPeripheralGate)
-    Sysctrl_SetRCHTrim                       0x00002d39   Thumb Code    32  sysctrl.o(i.Sysctrl_SetRCHTrim)
-    Sysctrl_SetRCLStableTime                 0x00002d61   Thumb Code    32  sysctrl.o(i.Sysctrl_SetRCLStableTime)
-    Sysctrl_SetRTCAdjustClkFreq              0x00002d85   Thumb Code    36  sysctrl.o(i.Sysctrl_SetRTCAdjustClkFreq)
-    Sysctrl_SetXTHStableTime                 0x00002dad   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTHStableTime)
-    Sysctrl_SetXTLStableTime                 0x00002dcd   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTLStableTime)
-    Sysctrl_SysClkSwitch                     0x00002ded   Thumb Code    40  sysctrl.o(i.Sysctrl_SysClkSwitch)
-    Sysctrl_XTHDriverCfg                     0x00002e19   Thumb Code    24  sysctrl.o(i.Sysctrl_XTHDriverCfg)
-    Sysctrl_XTLDriverCfg                     0x00002e35   Thumb Code    46  sysctrl.o(i.Sysctrl_XTLDriverCfg)
-    SystemCoreClockUpdate                    0x00002e69   Thumb Code    12  system_hc32l13x.o(i.SystemCoreClockUpdate)
-    SystemInit                               0x00002e79   Thumb Code    56  system_hc32l13x.o(i.SystemInit)
-    TIM0_IRQHandler                          0x00002eb9   Thumb Code     2  interrupts_hc32l13x.o(i.TIM0_IRQHandler)
-    TIM1_IRQHandler                          0x00002ebb   Thumb Code     2  interrupts_hc32l13x.o(i.TIM1_IRQHandler)
-    TIM2_IRQHandler                          0x00002ebd   Thumb Code     2  interrupts_hc32l13x.o(i.TIM2_IRQHandler)
-    TIM3_IRQHandler                          0x00002ec1   Thumb Code    32  interrupts_hc32l13x.o(i.TIM3_IRQHandler)
-    TIM4_IRQHandler                          0x00002ee5   Thumb Code     2  interrupts_hc32l13x.o(i.TIM4_IRQHandler)
-    TIM5_IRQHandler                          0x00002ee7   Thumb Code     2  interrupts_hc32l13x.o(i.TIM5_IRQHandler)
-    TIM6_IRQHandler                          0x00002ee9   Thumb Code     2  interrupts_hc32l13x.o(i.TIM6_IRQHandler)
-    TaskKey                                  0x00002eed   Thumb Code   306  scankey.o(i.TaskKey)
-    ThreadScheduler                          0x00003031   Thumb Code   118  framework.o(i.ThreadScheduler)
-    Tim3_ClearIntFlag                        0x000030b5   Thumb Code    16  timer3.o(i.Tim3_ClearIntFlag)
-    Tim3_GetIntFlag                          0x000030c9   Thumb Code    18  timer3.o(i.Tim3_GetIntFlag)
-    Tim3_M0_ARRSet                           0x000030e1   Thumb Code    22  timer3.o(i.Tim3_M0_ARRSet)
-    Tim3_M0_Cnt16Set                         0x000030fd   Thumb Code    22  timer3.o(i.Tim3_M0_Cnt16Set)
-    Tim3_M0_Run                              0x00003119   Thumb Code    18  timer3.o(i.Tim3_M0_Run)
-    Tim3_Mode0_EnableIrq                     0x00003131   Thumb Code    20  timer3.o(i.Tim3_Mode0_EnableIrq)
-    Tim3_Mode0_Init                          0x00003149   Thumb Code   168  timer3.o(i.Tim3_Mode0_Init)
-    Timer3Init                               0x000031f5   Thumb Code    88  init.o(i.Timer3Init)
-    TimerFunction                            0x00003251   Thumb Code    88  rtcfun.o(i.TimerFunction)
-    UART0_IRQHandler                         0x000032ad   Thumb Code     2  interrupts_hc32l13x.o(i.UART0_IRQHandler)
-    UART1_IRQHandler                         0x000032af   Thumb Code     2  interrupts_hc32l13x.o(i.UART1_IRQHandler)
-    VC0_IRQHandler                           0x000032b1   Thumb Code     2  interrupts_hc32l13x.o(i.VC0_IRQHandler)
-    VC1_IRQHandler                           0x000032b3   Thumb Code     2  interrupts_hc32l13x.o(i.VC1_IRQHandler)
-    WDT_IRQHandler                           0x000032b5   Thumb Code     2  interrupts_hc32l13x.o(i.WDT_IRQHandler)
-    Wdt_Feed                                 0x000032b9   Thumb Code    12  wdt.o(i.Wdt_Feed)
-    WorkStateTran                            0x000032c9   Thumb Code     6  logic.o(i.WorkStateTran)
-    __ARM_common_switch8                     0x00003309   Thumb Code    28  sysctrl.o(i.__ARM_common_switch8)
-    _sys_exit                                0x0000339d   Thumb Code     4  ddl.o(i._sys_exit)
-    ddl_memclr                               0x000033a1   Thumb Code    32  ddl.o(i.ddl_memclr)
-    delay10us                                0x000033c1   Thumb Code    74  ddl.o(i.delay10us)
-    delay1ms                                 0x0000341d   Thumb Code    76  ddl.o(i.delay1ms)
-    fputc                                    0x00003475   Thumb Code    32  init.o(i.fputc)
-    $Super$$main                             0x00003499   Thumb Code    68  main.o(i.main)
-    __aeabi_fadd                             0x00003505   Thumb Code     0  faddsub.o(x$fpl$fadd)
-    _fadd                                    0x00003505   Thumb Code   134  faddsub.o(x$fpl$fadd)
-    __aeabi_fsub                             0x00003591   Thumb Code     0  faddsub.o(x$fpl$fsub)
-    _fsub                                    0x00003591   Thumb Code   204  faddsub.o(x$fpl$fsub)
-    __I$use$fp                               0x00003660   Number         0  usenofp.o(x$fpl$usenofp)
-    pu32PcgTimer4M                           0x00003660   Data          32  flash.o(.constdata)
-    PRIORITY_TABLE                           0x000036a4   Data          16  framework.o(.constdata)
-    READY_CLR_AND                            0x000036b4   Data           9  framework.o(.constdata)
-    Region$$Table$$Base                      0x00003700   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00003720   Number         0  anon$$obj.o(Region$$Table)
+    AdcInit                                  0x0000073d   Thumb Code   128  adcdriver.o(i.AdcInit)
+    Adc_CfgSqrChannel                        0x000007bd   Thumb Code   436  adc.o(i.Adc_CfgSqrChannel)
+    Adc_ClrIrqStatus                         0x00000975   Thumb Code    12  adc.o(i.Adc_ClrIrqStatus)
+    Adc_EnableIrq                            0x00000985   Thumb Code    18  adc.o(i.Adc_EnableIrq)
+    Adc_GetSqrResult                         0x0000099d   Thumb Code    10  adc.o(i.Adc_GetSqrResult)
+    Adc_Init                                 0x000009ad   Thumb Code   102  adc.o(i.Adc_Init)
+    Adc_SQR_Start                            0x00000a19   Thumb Code     8  adc.o(i.Adc_SQR_Start)
+    Adc_SQR_Stop                             0x00000a25   Thumb Code     8  adc.o(i.Adc_SQR_Stop)
+    Adc_SqrModeCfg                           0x00000a31   Thumb Code   112  adc.o(i.Adc_SqrModeCfg)
+    Bgr_BgrEnable                            0x00000aa5   Thumb Code    22  bgr.o(i.Bgr_BgrEnable)
+    CLKTRIM_IRQHandler                       0x00000ac1   Thumb Code     2  interrupts_hc32l13x.o(i.CLKTRIM_IRQHandler)
+    ClrAllLcd                                0x00000ac3   Thumb Code    48  lcddriver.o(i.ClrAllLcd)
+    DMAC_IRQHandler                          0x00000af3   Thumb Code     2  interrupts_hc32l13x.o(i.DMAC_IRQHandler)
+    Display2NDInterface                      0x00000af5   Thumb Code   248  lcddriver.o(i.Display2NDInterface)
+    DisplayMainInterface                     0x00000bf9   Thumb Code   674  lcddriver.o(i.DisplayMainInterface)
+    Display_SubpageOfH6                      0x00000ebd   Thumb Code   298  lcddriver.o(i.Display_SubpageOfH6)
+    Display_SubpageOfHx                      0x00000ff5   Thumb Code   522  lcddriver.o(i.Display_SubpageOfHx)
+    EnableNvic                               0x00001215   Thumb Code   104  interrupts_hc32l13x.o(i.EnableNvic)
+    FLASH_RAM_IRQHandler                     0x00001285   Thumb Code     2  interrupts_hc32l13x.o(i.FLASH_RAM_IRQHandler)
+    Flash_Init                               0x00001289   Thumb Code   188  flash.o(i.Flash_Init)
+    Flash_LockAll                            0x00001355   Thumb Code    16  flash.o(i.Flash_LockAll)
+    Flash_SectorErase                        0x00001371   Thumb Code   158  flash.o(i.Flash_SectorErase)
+    Flash_UnlockAll                          0x00001421   Thumb Code    18  flash.o(i.Flash_UnlockAll)
+    Flash_WaitCycle                          0x00001441   Thumb Code    38  flash.o(i.Flash_WaitCycle)
+    Flash_WriteByte                          0x00001475   Thumb Code   158  flash.o(i.Flash_WriteByte)
+    GPIO_Init                                0x00001525   Thumb Code  1118  init.o(i.GPIO_Init)
+    GetBit                                   0x00001983   Thumb Code    12  ddl.o(i.GetBit)
+    Gpio_ClrIO                               0x00001991   Thumb Code    22  gpio.o(i.Gpio_ClrIO)
+    Gpio_GetInputIO                          0x000019ad   Thumb Code    18  gpio.o(i.Gpio_GetInputIO)
+    Gpio_Init                                0x000019c5   Thumb Code   130  gpio.o(i.Gpio_Init)
+    Gpio_SetAfMode                           0x00001a55   Thumb Code    16  gpio.o(i.Gpio_SetAfMode)
+    Gpio_SetAnalogMode                       0x00001a69   Thumb Code    22  gpio.o(i.Gpio_SetAnalogMode)
+    Gpio_SetIO                               0x00001a85   Thumb Code    22  gpio.o(i.Gpio_SetIO)
+    HardFault_Handler                        0x00001aa1   Thumb Code    16  interrupts_hc32l13x.o(i.HardFault_Handler)
+    I2C0_IRQHandler                          0x00001ab1   Thumb Code     2  interrupts_hc32l13x.o(i.I2C0_IRQHandler)
+    I2C1_IRQHandler                          0x00001ab3   Thumb Code     2  interrupts_hc32l13x.o(i.I2C1_IRQHandler)
+    Init_LED                                 0x00001ab5   Thumb Code   166  init.o(i.Init_LED)
+    KEY_Init                                 0x00001b5b   Thumb Code    72  init.o(i.KEY_Init)
+    LCD_IRQHandler                           0x00001ba3   Thumb Code     2  interrupts_hc32l13x.o(i.LCD_IRQHandler)
+    LPTIM_IRQHandler                         0x00001ba5   Thumb Code    32  interrupts_hc32l13x.o(i.LPTIM_IRQHandler)
+    LPTimerInit                              0x00001bcd   Thumb Code    86  init.o(i.LPTimerInit)
+    LPUART0_IRQHandler                       0x00001c2d   Thumb Code     2  interrupts_hc32l13x.o(i.LPUART0_IRQHandler)
+    LPUART1_IRQHandler                       0x00001c2f   Thumb Code     2  interrupts_hc32l13x.o(i.LPUART1_IRQHandler)
+    LPUart_ClrStatus                         0x00001c31   Thumb Code    22  lpuart.o(i.LPUart_ClrStatus)
+    LPUart_EnableFunc                        0x00001c47   Thumb Code    20  lpuart.o(i.LPUart_EnableFunc)
+    LPUart_GetStatus                         0x00001c5b   Thumb Code    24  lpuart.o(i.LPUart_GetStatus)
+    LPUart_Init                              0x00001c75   Thumb Code   148  lpuart.o(i.LPUart_Init)
+    LPUart_SendData                          0x00001d0d   Thumb Code    58  lpuart.o(i.LPUart_SendData)
+    LPuart1_Init                             0x00001d49   Thumb Code   136  init.o(i.LPuart1_Init)
+    LVD_IRQHandler                           0x00001dd5   Thumb Code     2  interrupts_hc32l13x.o(i.LVD_IRQHandler)
+    Logic                                    0x00001dd9   Thumb Code  2032  logic.o(i.Logic)
+    Lptim_ClrItStatus                        0x000025e5   Thumb Code    18  lptim.o(i.Lptim_ClrItStatus)
+    Lptim_Cmd                                0x000025f7   Thumb Code    20  lptim.o(i.Lptim_Cmd)
+    Lptim_ConfIt                             0x0000260b   Thumb Code    20  lptim.o(i.Lptim_ConfIt)
+    Lptim_GetItStatus                        0x0000261f   Thumb Code    16  lptim.o(i.Lptim_GetItStatus)
+    Lptim_Init                               0x0000262f   Thumb Code   170  lptim.o(i.Lptim_Init)
+    MsgPost                                  0x000026d9   Thumb Code    36  framework.o(i.MsgPost)
+    PCA_IRQHandler                           0x00002705   Thumb Code     2  interrupts_hc32l13x.o(i.PCA_IRQHandler)
+    PCNT_IRQHandler                          0x00002707   Thumb Code     2  interrupts_hc32l13x.o(i.PCNT_IRQHandler)
+    PORTA_IRQHandler                         0x00002709   Thumb Code     2  interrupts_hc32l13x.o(i.PORTA_IRQHandler)
+    PORTB_IRQHandler                         0x0000270b   Thumb Code     2  interrupts_hc32l13x.o(i.PORTB_IRQHandler)
+    PORTC_IRQHandler                         0x0000270d   Thumb Code     2  interrupts_hc32l13x.o(i.PORTC_IRQHandler)
+    PORTD_IRQHandler                         0x0000270f   Thumb Code     2  interrupts_hc32l13x.o(i.PORTD_IRQHandler)
+    ParaInit                                 0x00002711   Thumb Code    62  init.o(i.ParaInit)
+    RTC_IRQHandler                           0x00002759   Thumb Code     2  interrupts_hc32l13x.o(i.RTC_IRQHandler)
+    SPI0_IRQHandler                          0x0000275b   Thumb Code     2  interrupts_hc32l13x.o(i.SPI0_IRQHandler)
+    SPI1_IRQHandler                          0x0000275d   Thumb Code     2  interrupts_hc32l13x.o(i.SPI1_IRQHandler)
+    SPI_Init                                 0x00002761   Thumb Code   118  init.o(i.SPI_Init)
+    SPI_Send_Data                            0x000027dd   Thumb Code    44  init.o(i.SPI_Send_Data)
+    Screen                                   0x0000280d   Thumb Code    62  lcddriver.o(i.Screen)
+    SetBit                                   0x00002855   Thumb Code    30  ddl.o(i.SetBit)
+    SetLogicPrio                             0x00002875   Thumb Code    26  logic.o(i.SetLogicPrio)
+    Spi_GetStatus                            0x00002899   Thumb Code    18  spi.o(i.Spi_GetStatus)
+    Spi_Init                                 0x000028ab   Thumb Code    32  spi.o(i.Spi_Init)
+    Spi_SendData                             0x000028cb   Thumb Code     8  spi.o(i.Spi_SendData)
+    Spi_SetCS                                0x000028d3   Thumb Code     4  spi.o(i.Spi_SetCS)
+    SysClockInit                             0x000028d7   Thumb Code    44  init.o(i.SysClockInit)
+    SysParameterInit                         0x00002905   Thumb Code    42  init.o(i.SysParameterInit)
+    SysTick_Handler                          0x00002935   Thumb Code     8  interrupts_hc32l13x.o(i.SysTick_Handler)
+    Sysctrl_ClkInit                          0x0000293d   Thumb Code   106  sysctrl.o(i.Sysctrl_ClkInit)
+    Sysctrl_ClkSourceEnable                  0x000029a9   Thumb Code   352  sysctrl.o(i.Sysctrl_ClkSourceEnable)
+    Sysctrl_GetHClkFreq                      0x00002b15   Thumb Code   354  sysctrl.o(i.Sysctrl_GetHClkFreq)
+    Sysctrl_GetPClkFreq                      0x00002c89   Thumb Code    28  sysctrl.o(i.Sysctrl_GetPClkFreq)
+    Sysctrl_SetHCLKDiv                       0x00002ca9   Thumb Code    36  sysctrl.o(i.Sysctrl_SetHCLKDiv)
+    Sysctrl_SetPCLKDiv                       0x00002cd1   Thumb Code    36  sysctrl.o(i.Sysctrl_SetPCLKDiv)
+    Sysctrl_SetPLLStableTime                 0x00002cf9   Thumb Code    32  sysctrl.o(i.Sysctrl_SetPLLStableTime)
+    Sysctrl_SetPeripheralGate                0x00002d1d   Thumb Code    20  sysctrl.o(i.Sysctrl_SetPeripheralGate)
+    Sysctrl_SetRCHTrim                       0x00002d35   Thumb Code    32  sysctrl.o(i.Sysctrl_SetRCHTrim)
+    Sysctrl_SetRCLStableTime                 0x00002d5d   Thumb Code    32  sysctrl.o(i.Sysctrl_SetRCLStableTime)
+    Sysctrl_SetRTCAdjustClkFreq              0x00002d81   Thumb Code    36  sysctrl.o(i.Sysctrl_SetRTCAdjustClkFreq)
+    Sysctrl_SetXTHStableTime                 0x00002da9   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTHStableTime)
+    Sysctrl_SetXTLStableTime                 0x00002dc9   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTLStableTime)
+    Sysctrl_SysClkSwitch                     0x00002de9   Thumb Code    40  sysctrl.o(i.Sysctrl_SysClkSwitch)
+    Sysctrl_XTHDriverCfg                     0x00002e15   Thumb Code    24  sysctrl.o(i.Sysctrl_XTHDriverCfg)
+    Sysctrl_XTLDriverCfg                     0x00002e31   Thumb Code    46  sysctrl.o(i.Sysctrl_XTLDriverCfg)
+    SystemCoreClockUpdate                    0x00002e65   Thumb Code    12  system_hc32l13x.o(i.SystemCoreClockUpdate)
+    SystemInit                               0x00002e75   Thumb Code    56  system_hc32l13x.o(i.SystemInit)
+    TIM0_IRQHandler                          0x00002eb5   Thumb Code     2  interrupts_hc32l13x.o(i.TIM0_IRQHandler)
+    TIM1_IRQHandler                          0x00002eb7   Thumb Code     2  interrupts_hc32l13x.o(i.TIM1_IRQHandler)
+    TIM2_IRQHandler                          0x00002eb9   Thumb Code     2  interrupts_hc32l13x.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x00002ebd   Thumb Code    32  interrupts_hc32l13x.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x00002ee1   Thumb Code     2  interrupts_hc32l13x.o(i.TIM4_IRQHandler)
+    TIM5_IRQHandler                          0x00002ee3   Thumb Code     2  interrupts_hc32l13x.o(i.TIM5_IRQHandler)
+    TIM6_IRQHandler                          0x00002ee5   Thumb Code     2  interrupts_hc32l13x.o(i.TIM6_IRQHandler)
+    TaskKey                                  0x00002ee9   Thumb Code   306  scankey.o(i.TaskKey)
+    ThreadScheduler                          0x0000302d   Thumb Code   118  framework.o(i.ThreadScheduler)
+    Tim3_ClearIntFlag                        0x000030b1   Thumb Code    16  timer3.o(i.Tim3_ClearIntFlag)
+    Tim3_GetIntFlag                          0x000030c5   Thumb Code    18  timer3.o(i.Tim3_GetIntFlag)
+    Tim3_M0_ARRSet                           0x000030dd   Thumb Code    22  timer3.o(i.Tim3_M0_ARRSet)
+    Tim3_M0_Cnt16Set                         0x000030f9   Thumb Code    22  timer3.o(i.Tim3_M0_Cnt16Set)
+    Tim3_M0_Run                              0x00003115   Thumb Code    18  timer3.o(i.Tim3_M0_Run)
+    Tim3_Mode0_EnableIrq                     0x0000312d   Thumb Code    20  timer3.o(i.Tim3_Mode0_EnableIrq)
+    Tim3_Mode0_Init                          0x00003145   Thumb Code   168  timer3.o(i.Tim3_Mode0_Init)
+    Timer3Init                               0x000031f1   Thumb Code    88  init.o(i.Timer3Init)
+    TimerFunction                            0x0000324d   Thumb Code    88  rtcfun.o(i.TimerFunction)
+    UART0_IRQHandler                         0x000032a9   Thumb Code     2  interrupts_hc32l13x.o(i.UART0_IRQHandler)
+    UART1_IRQHandler                         0x000032ab   Thumb Code     2  interrupts_hc32l13x.o(i.UART1_IRQHandler)
+    VC0_IRQHandler                           0x000032ad   Thumb Code     2  interrupts_hc32l13x.o(i.VC0_IRQHandler)
+    VC1_IRQHandler                           0x000032af   Thumb Code     2  interrupts_hc32l13x.o(i.VC1_IRQHandler)
+    WDT_IRQHandler                           0x000032b1   Thumb Code     2  interrupts_hc32l13x.o(i.WDT_IRQHandler)
+    Wdt_Feed                                 0x000032b5   Thumb Code    12  wdt.o(i.Wdt_Feed)
+    WorkStateTran                            0x000032c5   Thumb Code     6  logic.o(i.WorkStateTran)
+    __ARM_common_switch8                     0x00003305   Thumb Code    28  sysctrl.o(i.__ARM_common_switch8)
+    _sys_exit                                0x00003399   Thumb Code     4  ddl.o(i._sys_exit)
+    ddl_memclr                               0x0000339d   Thumb Code    32  ddl.o(i.ddl_memclr)
+    delay10us                                0x000033bd   Thumb Code    74  ddl.o(i.delay10us)
+    delay1ms                                 0x00003419   Thumb Code    76  ddl.o(i.delay1ms)
+    fputc                                    0x00003471   Thumb Code    32  init.o(i.fputc)
+    $Super$$main                             0x00003495   Thumb Code    68  main.o(i.main)
+    __aeabi_fadd                             0x00003501   Thumb Code     0  faddsub.o(x$fpl$fadd)
+    _fadd                                    0x00003501   Thumb Code   134  faddsub.o(x$fpl$fadd)
+    __aeabi_fsub                             0x0000358d   Thumb Code     0  faddsub.o(x$fpl$fsub)
+    _fsub                                    0x0000358d   Thumb Code   204  faddsub.o(x$fpl$fsub)
+    __I$use$fp                               0x0000365c   Number         0  usenofp.o(x$fpl$usenofp)
+    pu32PcgTimer4M                           0x0000365c   Data          32  flash.o(.constdata)
+    PRIORITY_TABLE                           0x000036a0   Data          16  framework.o(.constdata)
+    READY_CLR_AND                            0x000036b0   Data           9  framework.o(.constdata)
+    Region$$Table$$Base                      0x000036fc   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0000371c   Number         0  anon$$obj.o(Region$$Table)
     PressureValue                            0x20000000   Data           2  global_variable.o(.data)
     __stdout                                 0x20000004   Data           4  ddl.o(.data)
     SystemCoreClock                          0x20000008   Data           4  system_hc32l13x.o(.data)
@@ -1411,9 +1411,9 @@ Memory Map of the image
 
   Image Entry point : 0x000000c1
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000376c, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00003768, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003720, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000371c, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1493,182 +1493,182 @@ Memory Map of the image
     0x000006bc   0x000006bc   0x0000000e   Code   RO         2217    i.$Sub$$main        system_hc32l13x.o
     0x000006ca   0x000006ca   0x00000002   PAD
     0x000006cc   0x000006cc   0x0000003c   Code   RO            3    i.ADC_IRQHandler    interrupts_hc32l13x.o
-    0x00000708   0x00000708   0x00000038   Code   RO         2299    i.AdcCalculate      adcdriver.o
-    0x00000740   0x00000740   0x00000080   Code   RO         2300    i.AdcInit           adcdriver.o
-    0x000007c0   0x000007c0   0x000001b8   Code   RO         2036    i.Adc_CfgSqrChannel  adc.o
-    0x00000978   0x00000978   0x00000010   Code   RO         2038    i.Adc_ClrIrqStatus  adc.o
-    0x00000988   0x00000988   0x00000018   Code   RO         2042    i.Adc_EnableIrq     adc.o
-    0x000009a0   0x000009a0   0x00000010   Code   RO         2047    i.Adc_GetSqrResult  adc.o
-    0x000009b0   0x000009b0   0x0000006c   Code   RO         2048    i.Adc_Init          adc.o
-    0x00000a1c   0x00000a1c   0x0000000c   Code   RO         2055    i.Adc_SQR_Start     adc.o
-    0x00000a28   0x00000a28   0x0000000c   Code   RO         2056    i.Adc_SQR_Stop      adc.o
-    0x00000a34   0x00000a34   0x00000074   Code   RO         2059    i.Adc_SqrModeCfg    adc.o
-    0x00000aa8   0x00000aa8   0x0000001c   Code   RO         1997    i.Bgr_BgrEnable     bgr.o
-    0x00000ac4   0x00000ac4   0x00000002   Code   RO            4    i.CLKTRIM_IRQHandler  interrupts_hc32l13x.o
-    0x00000ac6   0x00000ac6   0x00000030   Code   RO         2393    i.ClrAllLcd         lcddriver.o
-    0x00000af6   0x00000af6   0x00000002   Code   RO            5    i.DMAC_IRQHandler   interrupts_hc32l13x.o
-    0x00000af8   0x00000af8   0x00000104   Code   RO         2394    i.Display2NDInterface  lcddriver.o
-    0x00000bfc   0x00000bfc   0x000002c4   Code   RO         2395    i.DisplayMainInterface  lcddriver.o
-    0x00000ec0   0x00000ec0   0x00000138   Code   RO         2397    i.Display_SubpageOfH6  lcddriver.o
-    0x00000ff8   0x00000ff8   0x00000220   Code   RO         2398    i.Display_SubpageOfHx  lcddriver.o
-    0x00001218   0x00001218   0x00000070   Code   RO            6    i.EnableNvic        interrupts_hc32l13x.o
-    0x00001288   0x00001288   0x00000002   Code   RO            7    i.FLASH_RAM_IRQHandler  interrupts_hc32l13x.o
-    0x0000128a   0x0000128a   0x00000002   PAD
-    0x0000128c   0x0000128c   0x000000cc   Code   RO          539    i.Flash_Init        flash.o
-    0x00001358   0x00001358   0x0000001c   Code   RO          540    i.Flash_LockAll     flash.o
-    0x00001374   0x00001374   0x000000b0   Code   RO          542    i.Flash_SectorErase  flash.o
-    0x00001424   0x00001424   0x00000020   Code   RO          543    i.Flash_UnlockAll   flash.o
-    0x00001444   0x00001444   0x00000034   Code   RO          544    i.Flash_WaitCycle   flash.o
-    0x00001478   0x00001478   0x000000b0   Code   RO          545    i.Flash_WriteByte   flash.o
-    0x00001528   0x00001528   0x0000045e   Code   RO          394    i.GPIO_Init         init.o
-    0x00001986   0x00001986   0x0000000c   Code   RO         1826    i.GetBit            ddl.o
-    0x00001992   0x00001992   0x00000002   PAD
-    0x00001994   0x00001994   0x0000001c   Code   RO          636    i.Gpio_ClrIO        gpio.o
-    0x000019b0   0x000019b0   0x00000018   Code   RO          641    i.Gpio_GetInputIO   gpio.o
-    0x000019c8   0x000019c8   0x00000090   Code   RO          643    i.Gpio_Init         gpio.o
-    0x00001a58   0x00001a58   0x00000014   Code   RO          645    i.Gpio_SetAfMode    gpio.o
-    0x00001a6c   0x00001a6c   0x0000001c   Code   RO          646    i.Gpio_SetAnalogMode  gpio.o
-    0x00001a88   0x00001a88   0x0000001c   Code   RO          648    i.Gpio_SetIO        gpio.o
-    0x00001aa4   0x00001aa4   0x00000010   Code   RO            8    i.HardFault_Handler  interrupts_hc32l13x.o
-    0x00001ab4   0x00001ab4   0x00000002   Code   RO            9    i.I2C0_IRQHandler   interrupts_hc32l13x.o
-    0x00001ab6   0x00001ab6   0x00000002   Code   RO           10    i.I2C1_IRQHandler   interrupts_hc32l13x.o
-    0x00001ab8   0x00001ab8   0x000000a6   Code   RO          395    i.Init_LED          init.o
-    0x00001b5e   0x00001b5e   0x00000048   Code   RO          396    i.KEY_Init          init.o
-    0x00001ba6   0x00001ba6   0x00000002   Code   RO           11    i.LCD_IRQHandler    interrupts_hc32l13x.o
-    0x00001ba8   0x00001ba8   0x00000028   Code   RO           12    i.LPTIM_IRQHandler  interrupts_hc32l13x.o
-    0x00001bd0   0x00001bd0   0x00000060   Code   RO          397    i.LPTimerInit       init.o
-    0x00001c30   0x00001c30   0x00000002   Code   RO           13    i.LPUART0_IRQHandler  interrupts_hc32l13x.o
-    0x00001c32   0x00001c32   0x00000002   Code   RO           14    i.LPUART1_IRQHandler  interrupts_hc32l13x.o
-    0x00001c34   0x00001c34   0x00000016   Code   RO          876    i.LPUart_ClrStatus  lpuart.o
-    0x00001c4a   0x00001c4a   0x00000014   Code   RO          879    i.LPUart_EnableFunc  lpuart.o
-    0x00001c5e   0x00001c5e   0x00000018   Code   RO          883    i.LPUart_GetStatus  lpuart.o
-    0x00001c76   0x00001c76   0x00000002   PAD
-    0x00001c78   0x00001c78   0x00000098   Code   RO          884    i.LPUart_Init       lpuart.o
-    0x00001d10   0x00001d10   0x0000003a   Code   RO          887    i.LPUart_SendData   lpuart.o
-    0x00001d4a   0x00001d4a   0x00000002   PAD
-    0x00001d4c   0x00001d4c   0x0000008c   Code   RO          398    i.LPuart1_Init      init.o
-    0x00001dd8   0x00001dd8   0x00000002   Code   RO           15    i.LVD_IRQHandler    interrupts_hc32l13x.o
-    0x00001dda   0x00001dda   0x00000002   PAD
-    0x00001ddc   0x00001ddc   0x0000080c   Code   RO         2331    i.Logic             logic.o
-    0x000025e8   0x000025e8   0x00000012   Code   RO          831    i.Lptim_ClrItStatus  lptim.o
-    0x000025fa   0x000025fa   0x00000014   Code   RO          832    i.Lptim_Cmd         lptim.o
-    0x0000260e   0x0000260e   0x00000014   Code   RO          833    i.Lptim_ConfIt      lptim.o
-    0x00002622   0x00002622   0x00000010   Code   RO          834    i.Lptim_GetItStatus  lptim.o
-    0x00002632   0x00002632   0x000000aa   Code   RO          835    i.Lptim_Init        lptim.o
-    0x000026dc   0x000026dc   0x0000002c   Code   RO         2260    i.MsgPost           framework.o
-    0x00002708   0x00002708   0x00000002   Code   RO           16    i.PCA_IRQHandler    interrupts_hc32l13x.o
-    0x0000270a   0x0000270a   0x00000002   Code   RO           17    i.PCNT_IRQHandler   interrupts_hc32l13x.o
-    0x0000270c   0x0000270c   0x00000002   Code   RO           18    i.PORTA_IRQHandler  interrupts_hc32l13x.o
-    0x0000270e   0x0000270e   0x00000002   Code   RO           19    i.PORTB_IRQHandler  interrupts_hc32l13x.o
-    0x00002710   0x00002710   0x00000002   Code   RO           20    i.PORTC_IRQHandler  interrupts_hc32l13x.o
-    0x00002712   0x00002712   0x00000002   Code   RO           21    i.PORTD_IRQHandler  interrupts_hc32l13x.o
-    0x00002714   0x00002714   0x00000048   Code   RO          399    i.ParaInit          init.o
-    0x0000275c   0x0000275c   0x00000002   Code   RO           22    i.RTC_IRQHandler    interrupts_hc32l13x.o
-    0x0000275e   0x0000275e   0x00000002   Code   RO           23    i.SPI0_IRQHandler   interrupts_hc32l13x.o
-    0x00002760   0x00002760   0x00000002   Code   RO           24    i.SPI1_IRQHandler   interrupts_hc32l13x.o
-    0x00002762   0x00002762   0x00000002   PAD
-    0x00002764   0x00002764   0x0000007c   Code   RO          400    i.SPI_Init          init.o
-    0x000027e0   0x000027e0   0x00000030   Code   RO          401    i.SPI_Send_Data     init.o
-    0x00002810   0x00002810   0x00000048   Code   RO         2400    i.Screen            lcddriver.o
-    0x00002858   0x00002858   0x0000001e   Code   RO         1828    i.SetBit            ddl.o
-    0x00002876   0x00002876   0x00000002   PAD
-    0x00002878   0x00002878   0x00000024   Code   RO         2332    i.SetLogicPrio      logic.o
-    0x0000289c   0x0000289c   0x00000012   Code   RO         1925    i.Spi_GetStatus     spi.o
-    0x000028ae   0x000028ae   0x00000020   Code   RO         1926    i.Spi_Init          spi.o
-    0x000028ce   0x000028ce   0x00000008   Code   RO         1930    i.Spi_SendData      spi.o
-    0x000028d6   0x000028d6   0x00000004   Code   RO         1931    i.Spi_SetCS         spi.o
-    0x000028da   0x000028da   0x0000002c   Code   RO          402    i.SysClockInit      init.o
-    0x00002906   0x00002906   0x00000002   PAD
-    0x00002908   0x00002908   0x00000030   Code   RO          403    i.SysParameterInit  init.o
-    0x00002938   0x00002938   0x00000008   Code   RO           25    i.SysTick_Handler   interrupts_hc32l13x.o
-    0x00002940   0x00002940   0x0000006a   Code   RO         1171    i.Sysctrl_ClkInit   sysctrl.o
-    0x000029aa   0x000029aa   0x00000002   PAD
-    0x000029ac   0x000029ac   0x0000016c   Code   RO         1172    i.Sysctrl_ClkSourceEnable  sysctrl.o
-    0x00002b18   0x00002b18   0x00000174   Code   RO         1173    i.Sysctrl_GetHClkFreq  sysctrl.o
-    0x00002c8c   0x00002c8c   0x00000020   Code   RO         1174    i.Sysctrl_GetPClkFreq  sysctrl.o
-    0x00002cac   0x00002cac   0x00000028   Code   RO         1177    i.Sysctrl_SetHCLKDiv  sysctrl.o
-    0x00002cd4   0x00002cd4   0x00000028   Code   RO         1178    i.Sysctrl_SetPCLKDiv  sysctrl.o
-    0x00002cfc   0x00002cfc   0x00000024   Code   RO         1180    i.Sysctrl_SetPLLStableTime  sysctrl.o
-    0x00002d20   0x00002d20   0x00000018   Code   RO         1181    i.Sysctrl_SetPeripheralGate  sysctrl.o
-    0x00002d38   0x00002d38   0x00000028   Code   RO         1182    i.Sysctrl_SetRCHTrim  sysctrl.o
-    0x00002d60   0x00002d60   0x00000024   Code   RO         1183    i.Sysctrl_SetRCLStableTime  sysctrl.o
-    0x00002d84   0x00002d84   0x00000028   Code   RO         1185    i.Sysctrl_SetRTCAdjustClkFreq  sysctrl.o
-    0x00002dac   0x00002dac   0x00000020   Code   RO         1187    i.Sysctrl_SetXTHStableTime  sysctrl.o
-    0x00002dcc   0x00002dcc   0x00000020   Code   RO         1188    i.Sysctrl_SetXTLStableTime  sysctrl.o
-    0x00002dec   0x00002dec   0x0000002c   Code   RO         1189    i.Sysctrl_SysClkSwitch  sysctrl.o
-    0x00002e18   0x00002e18   0x0000001c   Code   RO         1190    i.Sysctrl_XTHDriverCfg  sysctrl.o
-    0x00002e34   0x00002e34   0x00000034   Code   RO         1191    i.Sysctrl_XTLDriverCfg  sysctrl.o
-    0x00002e68   0x00002e68   0x00000010   Code   RO         2218    i.SystemCoreClockUpdate  system_hc32l13x.o
-    0x00002e78   0x00002e78   0x00000040   Code   RO         2219    i.SystemInit        system_hc32l13x.o
-    0x00002eb8   0x00002eb8   0x00000002   Code   RO           26    i.TIM0_IRQHandler   interrupts_hc32l13x.o
-    0x00002eba   0x00002eba   0x00000002   Code   RO           27    i.TIM1_IRQHandler   interrupts_hc32l13x.o
-    0x00002ebc   0x00002ebc   0x00000002   Code   RO           28    i.TIM2_IRQHandler   interrupts_hc32l13x.o
-    0x00002ebe   0x00002ebe   0x00000002   PAD
-    0x00002ec0   0x00002ec0   0x00000024   Code   RO           29    i.TIM3_IRQHandler   interrupts_hc32l13x.o
-    0x00002ee4   0x00002ee4   0x00000002   Code   RO           30    i.TIM4_IRQHandler   interrupts_hc32l13x.o
-    0x00002ee6   0x00002ee6   0x00000002   Code   RO           31    i.TIM5_IRQHandler   interrupts_hc32l13x.o
-    0x00002ee8   0x00002ee8   0x00000002   Code   RO           32    i.TIM6_IRQHandler   interrupts_hc32l13x.o
-    0x00002eea   0x00002eea   0x00000002   PAD
-    0x00002eec   0x00002eec   0x00000144   Code   RO         2369    i.TaskKey           scankey.o
-    0x00003030   0x00003030   0x00000084   Code   RO         2262    i.ThreadScheduler   framework.o
-    0x000030b4   0x000030b4   0x00000014   Code   RO         1325    i.Tim3_ClearIntFlag  timer3.o
-    0x000030c8   0x000030c8   0x00000018   Code   RO         1326    i.Tim3_GetIntFlag   timer3.o
-    0x000030e0   0x000030e0   0x0000001c   Code   RO         1327    i.Tim3_M0_ARRSet    timer3.o
-    0x000030fc   0x000030fc   0x0000001c   Code   RO         1329    i.Tim3_M0_Cnt16Set  timer3.o
-    0x00003118   0x00003118   0x00000018   Code   RO         1334    i.Tim3_M0_Run       timer3.o
-    0x00003130   0x00003130   0x00000018   Code   RO         1368    i.Tim3_Mode0_EnableIrq  timer3.o
-    0x00003148   0x00003148   0x000000ac   Code   RO         1369    i.Tim3_Mode0_Init   timer3.o
-    0x000031f4   0x000031f4   0x0000005c   Code   RO          404    i.Timer3Init        init.o
-    0x00003250   0x00003250   0x0000005c   Code   RO         2467    i.TimerFunction     rtcfun.o
-    0x000032ac   0x000032ac   0x00000002   Code   RO           33    i.UART0_IRQHandler  interrupts_hc32l13x.o
-    0x000032ae   0x000032ae   0x00000002   Code   RO           34    i.UART1_IRQHandler  interrupts_hc32l13x.o
-    0x000032b0   0x000032b0   0x00000002   Code   RO           35    i.VC0_IRQHandler    interrupts_hc32l13x.o
-    0x000032b2   0x000032b2   0x00000002   Code   RO           36    i.VC1_IRQHandler    interrupts_hc32l13x.o
-    0x000032b4   0x000032b4   0x00000002   Code   RO           37    i.WDT_IRQHandler    interrupts_hc32l13x.o
-    0x000032b6   0x000032b6   0x00000002   PAD
-    0x000032b8   0x000032b8   0x00000010   Code   RO         1761    i.Wdt_Feed          wdt.o
-    0x000032c8   0x000032c8   0x0000000c   Code   RO         2333    i.WorkStateTran     logic.o
-    0x000032d4   0x000032d4   0x0000001c   Code   RO         2220    i._HidePinInit      system_hc32l13x.o
-    0x000032f0   0x000032f0   0x00000018   Code   RO         1192    i._SysctrlUnlock    sysctrl.o
-    0x00003308   0x00003308   0x0000001c   Code   RO         1317    i.__ARM_common_switch8  sysctrl.o
-    0x00003324   0x00003324   0x00000078   Code   RO           38    i.__NVIC_SetPriority  interrupts_hc32l13x.o
-    0x0000339c   0x0000339c   0x00000004   Code   RO         1830    i._sys_exit         ddl.o
-    0x000033a0   0x000033a0   0x00000020   Code   RO         1832    i.ddl_memclr        ddl.o
-    0x000033c0   0x000033c0   0x0000005c   Code   RO         1834    i.delay10us         ddl.o
-    0x0000341c   0x0000341c   0x00000058   Code   RO         1835    i.delay1ms          ddl.o
-    0x00003474   0x00003474   0x00000024   Code   RO          407    i.fputc             init.o
-    0x00003498   0x00003498   0x0000006c   Code   RO          371    i.main              main.o
-    0x00003504   0x00003504   0x0000008c   Code   RO         2556    x$fpl$fadd          fz_ps.l(faddsub.o)
-    0x00003590   0x00003590   0x000000d0   Code   RO         2558    x$fpl$fsub          fz_ps.l(faddsub.o)
-    0x00003660   0x00003660   0x00000000   Code   RO         2578    x$fpl$usenofp       fz_ps.l(usenofp.o)
-    0x00003660   0x00003660   0x00000020   Data   RO          548    .constdata          flash.o
-    0x00003680   0x00003680   0x0000000c   Data   RO          892    .constdata          lpuart.o
-    0x0000368c   0x0000368c   0x00000018   Data   RO         1193    .constdata          sysctrl.o
-    0x000036a4   0x000036a4   0x00000019   Data   RO         2263    .constdata          framework.o
-    0x000036bd   0x000036bd   0x00000040   Data   RO         2563    .constdata          fz_ps.l(fdiv.o)
-    0x000036fd   0x000036fd   0x00000003   PAD
-    0x00003700   0x00003700   0x00000020   Data   RO         2741    Region$$Table       anon$$obj.o
+    0x00000708   0x00000708   0x00000034   Code   RO         2299    i.AdcCalculate      adcdriver.o
+    0x0000073c   0x0000073c   0x00000080   Code   RO         2300    i.AdcInit           adcdriver.o
+    0x000007bc   0x000007bc   0x000001b8   Code   RO         2036    i.Adc_CfgSqrChannel  adc.o
+    0x00000974   0x00000974   0x00000010   Code   RO         2038    i.Adc_ClrIrqStatus  adc.o
+    0x00000984   0x00000984   0x00000018   Code   RO         2042    i.Adc_EnableIrq     adc.o
+    0x0000099c   0x0000099c   0x00000010   Code   RO         2047    i.Adc_GetSqrResult  adc.o
+    0x000009ac   0x000009ac   0x0000006c   Code   RO         2048    i.Adc_Init          adc.o
+    0x00000a18   0x00000a18   0x0000000c   Code   RO         2055    i.Adc_SQR_Start     adc.o
+    0x00000a24   0x00000a24   0x0000000c   Code   RO         2056    i.Adc_SQR_Stop      adc.o
+    0x00000a30   0x00000a30   0x00000074   Code   RO         2059    i.Adc_SqrModeCfg    adc.o
+    0x00000aa4   0x00000aa4   0x0000001c   Code   RO         1997    i.Bgr_BgrEnable     bgr.o
+    0x00000ac0   0x00000ac0   0x00000002   Code   RO            4    i.CLKTRIM_IRQHandler  interrupts_hc32l13x.o
+    0x00000ac2   0x00000ac2   0x00000030   Code   RO         2393    i.ClrAllLcd         lcddriver.o
+    0x00000af2   0x00000af2   0x00000002   Code   RO            5    i.DMAC_IRQHandler   interrupts_hc32l13x.o
+    0x00000af4   0x00000af4   0x00000104   Code   RO         2394    i.Display2NDInterface  lcddriver.o
+    0x00000bf8   0x00000bf8   0x000002c4   Code   RO         2395    i.DisplayMainInterface  lcddriver.o
+    0x00000ebc   0x00000ebc   0x00000138   Code   RO         2397    i.Display_SubpageOfH6  lcddriver.o
+    0x00000ff4   0x00000ff4   0x00000220   Code   RO         2398    i.Display_SubpageOfHx  lcddriver.o
+    0x00001214   0x00001214   0x00000070   Code   RO            6    i.EnableNvic        interrupts_hc32l13x.o
+    0x00001284   0x00001284   0x00000002   Code   RO            7    i.FLASH_RAM_IRQHandler  interrupts_hc32l13x.o
+    0x00001286   0x00001286   0x00000002   PAD
+    0x00001288   0x00001288   0x000000cc   Code   RO          539    i.Flash_Init        flash.o
+    0x00001354   0x00001354   0x0000001c   Code   RO          540    i.Flash_LockAll     flash.o
+    0x00001370   0x00001370   0x000000b0   Code   RO          542    i.Flash_SectorErase  flash.o
+    0x00001420   0x00001420   0x00000020   Code   RO          543    i.Flash_UnlockAll   flash.o
+    0x00001440   0x00001440   0x00000034   Code   RO          544    i.Flash_WaitCycle   flash.o
+    0x00001474   0x00001474   0x000000b0   Code   RO          545    i.Flash_WriteByte   flash.o
+    0x00001524   0x00001524   0x0000045e   Code   RO          394    i.GPIO_Init         init.o
+    0x00001982   0x00001982   0x0000000c   Code   RO         1826    i.GetBit            ddl.o
+    0x0000198e   0x0000198e   0x00000002   PAD
+    0x00001990   0x00001990   0x0000001c   Code   RO          636    i.Gpio_ClrIO        gpio.o
+    0x000019ac   0x000019ac   0x00000018   Code   RO          641    i.Gpio_GetInputIO   gpio.o
+    0x000019c4   0x000019c4   0x00000090   Code   RO          643    i.Gpio_Init         gpio.o
+    0x00001a54   0x00001a54   0x00000014   Code   RO          645    i.Gpio_SetAfMode    gpio.o
+    0x00001a68   0x00001a68   0x0000001c   Code   RO          646    i.Gpio_SetAnalogMode  gpio.o
+    0x00001a84   0x00001a84   0x0000001c   Code   RO          648    i.Gpio_SetIO        gpio.o
+    0x00001aa0   0x00001aa0   0x00000010   Code   RO            8    i.HardFault_Handler  interrupts_hc32l13x.o
+    0x00001ab0   0x00001ab0   0x00000002   Code   RO            9    i.I2C0_IRQHandler   interrupts_hc32l13x.o
+    0x00001ab2   0x00001ab2   0x00000002   Code   RO           10    i.I2C1_IRQHandler   interrupts_hc32l13x.o
+    0x00001ab4   0x00001ab4   0x000000a6   Code   RO          395    i.Init_LED          init.o
+    0x00001b5a   0x00001b5a   0x00000048   Code   RO          396    i.KEY_Init          init.o
+    0x00001ba2   0x00001ba2   0x00000002   Code   RO           11    i.LCD_IRQHandler    interrupts_hc32l13x.o
+    0x00001ba4   0x00001ba4   0x00000028   Code   RO           12    i.LPTIM_IRQHandler  interrupts_hc32l13x.o
+    0x00001bcc   0x00001bcc   0x00000060   Code   RO          397    i.LPTimerInit       init.o
+    0x00001c2c   0x00001c2c   0x00000002   Code   RO           13    i.LPUART0_IRQHandler  interrupts_hc32l13x.o
+    0x00001c2e   0x00001c2e   0x00000002   Code   RO           14    i.LPUART1_IRQHandler  interrupts_hc32l13x.o
+    0x00001c30   0x00001c30   0x00000016   Code   RO          876    i.LPUart_ClrStatus  lpuart.o
+    0x00001c46   0x00001c46   0x00000014   Code   RO          879    i.LPUart_EnableFunc  lpuart.o
+    0x00001c5a   0x00001c5a   0x00000018   Code   RO          883    i.LPUart_GetStatus  lpuart.o
+    0x00001c72   0x00001c72   0x00000002   PAD
+    0x00001c74   0x00001c74   0x00000098   Code   RO          884    i.LPUart_Init       lpuart.o
+    0x00001d0c   0x00001d0c   0x0000003a   Code   RO          887    i.LPUart_SendData   lpuart.o
+    0x00001d46   0x00001d46   0x00000002   PAD
+    0x00001d48   0x00001d48   0x0000008c   Code   RO          398    i.LPuart1_Init      init.o
+    0x00001dd4   0x00001dd4   0x00000002   Code   RO           15    i.LVD_IRQHandler    interrupts_hc32l13x.o
+    0x00001dd6   0x00001dd6   0x00000002   PAD
+    0x00001dd8   0x00001dd8   0x0000080c   Code   RO         2331    i.Logic             logic.o
+    0x000025e4   0x000025e4   0x00000012   Code   RO          831    i.Lptim_ClrItStatus  lptim.o
+    0x000025f6   0x000025f6   0x00000014   Code   RO          832    i.Lptim_Cmd         lptim.o
+    0x0000260a   0x0000260a   0x00000014   Code   RO          833    i.Lptim_ConfIt      lptim.o
+    0x0000261e   0x0000261e   0x00000010   Code   RO          834    i.Lptim_GetItStatus  lptim.o
+    0x0000262e   0x0000262e   0x000000aa   Code   RO          835    i.Lptim_Init        lptim.o
+    0x000026d8   0x000026d8   0x0000002c   Code   RO         2260    i.MsgPost           framework.o
+    0x00002704   0x00002704   0x00000002   Code   RO           16    i.PCA_IRQHandler    interrupts_hc32l13x.o
+    0x00002706   0x00002706   0x00000002   Code   RO           17    i.PCNT_IRQHandler   interrupts_hc32l13x.o
+    0x00002708   0x00002708   0x00000002   Code   RO           18    i.PORTA_IRQHandler  interrupts_hc32l13x.o
+    0x0000270a   0x0000270a   0x00000002   Code   RO           19    i.PORTB_IRQHandler  interrupts_hc32l13x.o
+    0x0000270c   0x0000270c   0x00000002   Code   RO           20    i.PORTC_IRQHandler  interrupts_hc32l13x.o
+    0x0000270e   0x0000270e   0x00000002   Code   RO           21    i.PORTD_IRQHandler  interrupts_hc32l13x.o
+    0x00002710   0x00002710   0x00000048   Code   RO          399    i.ParaInit          init.o
+    0x00002758   0x00002758   0x00000002   Code   RO           22    i.RTC_IRQHandler    interrupts_hc32l13x.o
+    0x0000275a   0x0000275a   0x00000002   Code   RO           23    i.SPI0_IRQHandler   interrupts_hc32l13x.o
+    0x0000275c   0x0000275c   0x00000002   Code   RO           24    i.SPI1_IRQHandler   interrupts_hc32l13x.o
+    0x0000275e   0x0000275e   0x00000002   PAD
+    0x00002760   0x00002760   0x0000007c   Code   RO          400    i.SPI_Init          init.o
+    0x000027dc   0x000027dc   0x00000030   Code   RO          401    i.SPI_Send_Data     init.o
+    0x0000280c   0x0000280c   0x00000048   Code   RO         2400    i.Screen            lcddriver.o
+    0x00002854   0x00002854   0x0000001e   Code   RO         1828    i.SetBit            ddl.o
+    0x00002872   0x00002872   0x00000002   PAD
+    0x00002874   0x00002874   0x00000024   Code   RO         2332    i.SetLogicPrio      logic.o
+    0x00002898   0x00002898   0x00000012   Code   RO         1925    i.Spi_GetStatus     spi.o
+    0x000028aa   0x000028aa   0x00000020   Code   RO         1926    i.Spi_Init          spi.o
+    0x000028ca   0x000028ca   0x00000008   Code   RO         1930    i.Spi_SendData      spi.o
+    0x000028d2   0x000028d2   0x00000004   Code   RO         1931    i.Spi_SetCS         spi.o
+    0x000028d6   0x000028d6   0x0000002c   Code   RO          402    i.SysClockInit      init.o
+    0x00002902   0x00002902   0x00000002   PAD
+    0x00002904   0x00002904   0x00000030   Code   RO          403    i.SysParameterInit  init.o
+    0x00002934   0x00002934   0x00000008   Code   RO           25    i.SysTick_Handler   interrupts_hc32l13x.o
+    0x0000293c   0x0000293c   0x0000006a   Code   RO         1171    i.Sysctrl_ClkInit   sysctrl.o
+    0x000029a6   0x000029a6   0x00000002   PAD
+    0x000029a8   0x000029a8   0x0000016c   Code   RO         1172    i.Sysctrl_ClkSourceEnable  sysctrl.o
+    0x00002b14   0x00002b14   0x00000174   Code   RO         1173    i.Sysctrl_GetHClkFreq  sysctrl.o
+    0x00002c88   0x00002c88   0x00000020   Code   RO         1174    i.Sysctrl_GetPClkFreq  sysctrl.o
+    0x00002ca8   0x00002ca8   0x00000028   Code   RO         1177    i.Sysctrl_SetHCLKDiv  sysctrl.o
+    0x00002cd0   0x00002cd0   0x00000028   Code   RO         1178    i.Sysctrl_SetPCLKDiv  sysctrl.o
+    0x00002cf8   0x00002cf8   0x00000024   Code   RO         1180    i.Sysctrl_SetPLLStableTime  sysctrl.o
+    0x00002d1c   0x00002d1c   0x00000018   Code   RO         1181    i.Sysctrl_SetPeripheralGate  sysctrl.o
+    0x00002d34   0x00002d34   0x00000028   Code   RO         1182    i.Sysctrl_SetRCHTrim  sysctrl.o
+    0x00002d5c   0x00002d5c   0x00000024   Code   RO         1183    i.Sysctrl_SetRCLStableTime  sysctrl.o
+    0x00002d80   0x00002d80   0x00000028   Code   RO         1185    i.Sysctrl_SetRTCAdjustClkFreq  sysctrl.o
+    0x00002da8   0x00002da8   0x00000020   Code   RO         1187    i.Sysctrl_SetXTHStableTime  sysctrl.o
+    0x00002dc8   0x00002dc8   0x00000020   Code   RO         1188    i.Sysctrl_SetXTLStableTime  sysctrl.o
+    0x00002de8   0x00002de8   0x0000002c   Code   RO         1189    i.Sysctrl_SysClkSwitch  sysctrl.o
+    0x00002e14   0x00002e14   0x0000001c   Code   RO         1190    i.Sysctrl_XTHDriverCfg  sysctrl.o
+    0x00002e30   0x00002e30   0x00000034   Code   RO         1191    i.Sysctrl_XTLDriverCfg  sysctrl.o
+    0x00002e64   0x00002e64   0x00000010   Code   RO         2218    i.SystemCoreClockUpdate  system_hc32l13x.o
+    0x00002e74   0x00002e74   0x00000040   Code   RO         2219    i.SystemInit        system_hc32l13x.o
+    0x00002eb4   0x00002eb4   0x00000002   Code   RO           26    i.TIM0_IRQHandler   interrupts_hc32l13x.o
+    0x00002eb6   0x00002eb6   0x00000002   Code   RO           27    i.TIM1_IRQHandler   interrupts_hc32l13x.o
+    0x00002eb8   0x00002eb8   0x00000002   Code   RO           28    i.TIM2_IRQHandler   interrupts_hc32l13x.o
+    0x00002eba   0x00002eba   0x00000002   PAD
+    0x00002ebc   0x00002ebc   0x00000024   Code   RO           29    i.TIM3_IRQHandler   interrupts_hc32l13x.o
+    0x00002ee0   0x00002ee0   0x00000002   Code   RO           30    i.TIM4_IRQHandler   interrupts_hc32l13x.o
+    0x00002ee2   0x00002ee2   0x00000002   Code   RO           31    i.TIM5_IRQHandler   interrupts_hc32l13x.o
+    0x00002ee4   0x00002ee4   0x00000002   Code   RO           32    i.TIM6_IRQHandler   interrupts_hc32l13x.o
+    0x00002ee6   0x00002ee6   0x00000002   PAD
+    0x00002ee8   0x00002ee8   0x00000144   Code   RO         2369    i.TaskKey           scankey.o
+    0x0000302c   0x0000302c   0x00000084   Code   RO         2262    i.ThreadScheduler   framework.o
+    0x000030b0   0x000030b0   0x00000014   Code   RO         1325    i.Tim3_ClearIntFlag  timer3.o
+    0x000030c4   0x000030c4   0x00000018   Code   RO         1326    i.Tim3_GetIntFlag   timer3.o
+    0x000030dc   0x000030dc   0x0000001c   Code   RO         1327    i.Tim3_M0_ARRSet    timer3.o
+    0x000030f8   0x000030f8   0x0000001c   Code   RO         1329    i.Tim3_M0_Cnt16Set  timer3.o
+    0x00003114   0x00003114   0x00000018   Code   RO         1334    i.Tim3_M0_Run       timer3.o
+    0x0000312c   0x0000312c   0x00000018   Code   RO         1368    i.Tim3_Mode0_EnableIrq  timer3.o
+    0x00003144   0x00003144   0x000000ac   Code   RO         1369    i.Tim3_Mode0_Init   timer3.o
+    0x000031f0   0x000031f0   0x0000005c   Code   RO          404    i.Timer3Init        init.o
+    0x0000324c   0x0000324c   0x0000005c   Code   RO         2467    i.TimerFunction     rtcfun.o
+    0x000032a8   0x000032a8   0x00000002   Code   RO           33    i.UART0_IRQHandler  interrupts_hc32l13x.o
+    0x000032aa   0x000032aa   0x00000002   Code   RO           34    i.UART1_IRQHandler  interrupts_hc32l13x.o
+    0x000032ac   0x000032ac   0x00000002   Code   RO           35    i.VC0_IRQHandler    interrupts_hc32l13x.o
+    0x000032ae   0x000032ae   0x00000002   Code   RO           36    i.VC1_IRQHandler    interrupts_hc32l13x.o
+    0x000032b0   0x000032b0   0x00000002   Code   RO           37    i.WDT_IRQHandler    interrupts_hc32l13x.o
+    0x000032b2   0x000032b2   0x00000002   PAD
+    0x000032b4   0x000032b4   0x00000010   Code   RO         1761    i.Wdt_Feed          wdt.o
+    0x000032c4   0x000032c4   0x0000000c   Code   RO         2333    i.WorkStateTran     logic.o
+    0x000032d0   0x000032d0   0x0000001c   Code   RO         2220    i._HidePinInit      system_hc32l13x.o
+    0x000032ec   0x000032ec   0x00000018   Code   RO         1192    i._SysctrlUnlock    sysctrl.o
+    0x00003304   0x00003304   0x0000001c   Code   RO         1317    i.__ARM_common_switch8  sysctrl.o
+    0x00003320   0x00003320   0x00000078   Code   RO           38    i.__NVIC_SetPriority  interrupts_hc32l13x.o
+    0x00003398   0x00003398   0x00000004   Code   RO         1830    i._sys_exit         ddl.o
+    0x0000339c   0x0000339c   0x00000020   Code   RO         1832    i.ddl_memclr        ddl.o
+    0x000033bc   0x000033bc   0x0000005c   Code   RO         1834    i.delay10us         ddl.o
+    0x00003418   0x00003418   0x00000058   Code   RO         1835    i.delay1ms          ddl.o
+    0x00003470   0x00003470   0x00000024   Code   RO          407    i.fputc             init.o
+    0x00003494   0x00003494   0x0000006c   Code   RO          371    i.main              main.o
+    0x00003500   0x00003500   0x0000008c   Code   RO         2556    x$fpl$fadd          fz_ps.l(faddsub.o)
+    0x0000358c   0x0000358c   0x000000d0   Code   RO         2558    x$fpl$fsub          fz_ps.l(faddsub.o)
+    0x0000365c   0x0000365c   0x00000000   Code   RO         2578    x$fpl$usenofp       fz_ps.l(usenofp.o)
+    0x0000365c   0x0000365c   0x00000020   Data   RO          548    .constdata          flash.o
+    0x0000367c   0x0000367c   0x0000000c   Data   RO          892    .constdata          lpuart.o
+    0x00003688   0x00003688   0x00000018   Data   RO         1193    .constdata          sysctrl.o
+    0x000036a0   0x000036a0   0x00000019   Data   RO         2263    .constdata          framework.o
+    0x000036b9   0x000036b9   0x00000040   Data   RO         2563    .constdata          fz_ps.l(fdiv.o)
+    0x000036f9   0x000036f9   0x00000003   PAD
+    0x000036fc   0x000036fc   0x00000020   Data   RO         2741    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00003720, Size: 0x000004c8, Max: 0x00002000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0000371c, Size: 0x000004c8, Max: 0x00002000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00003720   0x00000002   Data   RW          493    .data               global_variable.o
-    0x20000002   0x00003722   0x00000002   PAD
-    0x20000004   0x00003724   0x00000004   Data   RW         1836    .data               ddl.o
-    0x20000008   0x00003728   0x00000004   Data   RW         2221    .data               system_hc32l13x.o
-    0x2000000c   0x0000372c   0x00000009   Data   RW         2264    .data               framework.o
-    0x20000015   0x00003735   0x00000001   PAD
-    0x20000016   0x00003736   0x00000002   Data   RW         2301    .data               adcdriver.o
-    0x20000018   0x00003738   0x00000008   Data   RW         2334    .data               logic.o
-    0x20000020   0x00003740   0x00000006   Data   RW         2370    .data               scankey.o
-    0x20000026   0x00003746   0x0000001c   Data   RW         2401    .data               lcddriver.o
-    0x20000042   0x00003762   0x00000002   PAD
-    0x20000044   0x00003764   0x00000008   Data   RW         2501    .data               save.o
+    0x20000000   0x0000371c   0x00000002   Data   RW          493    .data               global_variable.o
+    0x20000002   0x0000371e   0x00000002   PAD
+    0x20000004   0x00003720   0x00000004   Data   RW         1836    .data               ddl.o
+    0x20000008   0x00003724   0x00000004   Data   RW         2221    .data               system_hc32l13x.o
+    0x2000000c   0x00003728   0x00000009   Data   RW         2264    .data               framework.o
+    0x20000015   0x00003731   0x00000001   PAD
+    0x20000016   0x00003732   0x00000002   Data   RW         2301    .data               adcdriver.o
+    0x20000018   0x00003734   0x00000008   Data   RW         2334    .data               logic.o
+    0x20000020   0x0000373c   0x00000006   Data   RW         2370    .data               scankey.o
+    0x20000026   0x00003742   0x0000001c   Data   RW         2401    .data               lcddriver.o
+    0x20000042   0x0000375e   0x00000002   PAD
+    0x20000044   0x00003760   0x00000008   Data   RW         2501    .data               save.o
     0x2000004c        -       0x0000000e   Zero   RW          492    .bss                global_variable.o
     0x2000005a        -       0x0000000b   Zero   RW         2468    .bss                rtcfun.o
-    0x20000065   0x0000376c   0x00000003   PAD
+    0x20000065   0x00003768   0x00000003   PAD
     0x20000068        -       0x00000060   Zero   RW         2620    .bss                c_p.l(libspace.o)
     0x200000c8        -       0x00000200   Zero   RW         2209    HEAP                startup_hc32l13x.o
     0x200002c8        -       0x00000200   Zero   RW         2208    STACK               startup_hc32l13x.o
@@ -1681,33 +1681,33 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       744         56          0          0          0       4201   adc.o
-       184         18          0          2          0       1166   adcdriver.o
-        28          6          0          0          0        416   bgr.o
-       258         30          0          4          0       4732   ddl.o
-       668         92         32          0          0       4632   flash.o
-       176         34         25          9          0       2183   framework.o
-         0          0          0          2         14       1657   global_variable.o
-       272         42          0          0          0       3630   gpio.o
-      2056         48          0          0          0       6272   init.o
-       450         40          0          0          0     166412   interrupts_hc32l13x.o
-      1944         92          0         28          0       4361   lcddriver.o
-      2108        102          0          8          0       3138   logic.o
-       244          0          0          0          0       2932   lptim.o
-       276          4         12          0          0       3362   lpuart.o
-       108         40          0          0          0        455   main.o
-        92          4          0          0         11       1010   rtcfun.o
-        54          0          0          8          0       1669   save.o
-       324         18          0          6          0        893   scankey.o
-        62          0          0          0          0       2362   spi.o
-        88         40        192          0       1024        592   startup_hc32l13x.o
-      1370        124         24          0          0      10658   sysctrl.o
-       122         16          0          4          0       1928   system_hc32l13x.o
-       320         36          0          0          0       3801   timer3.o
-        16          4          0          0          0        383   wdt.o
+       744         56          0          0          0       4417   adc.o
+       180         14          0          2          0       1238   adcdriver.o
+        28          6          0          0          0        440   bgr.o
+       258         30          0          4          0       4924   ddl.o
+       668         92         32          0          0       4824   flash.o
+       176         34         25          9          0       2303   framework.o
+         0          0          0          2         14       1705   global_variable.o
+       272         42          0          0          0       3798   gpio.o
+      2056         48          0          0          0       6560   init.o
+       450         40          0          0          0     167560   interrupts_hc32l13x.o
+      1944         92          0         28          0       4553   lcddriver.o
+      2108        102          0          8          0       3258   logic.o
+       244          0          0          0          0       3076   lptim.o
+       276          4         12          0          0       3506   lpuart.o
+       108         40          0          0          0        479   main.o
+        92          4          0          0         11       1082   rtcfun.o
+        54          0          0          8          0       1765   save.o
+       324         18          0          6          0        941   scankey.o
+        62          0          0          0          0       2482   spi.o
+        88         40        192          0       1024        616   startup_hc32l13x.o
+      1370        124         24          0          0      11090   sysctrl.o
+       122         16          0          4          0       2048   system_hc32l13x.o
+       320         36          0          0          0       3993   timer3.o
+        16          4          0          0          0        407   wdt.o
 
     ----------------------------------------------------------------------
-     11992        846        317         76       1052     232845   Object Totals
+     11988        842        317         76       1052     237065   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         28          0          0          5          3          0   (incl. Padding)
 
@@ -1769,15 +1769,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     13728        894        384         76       1148     227941   Grand Totals
-     13728        894        384         76       1148     227941   ELF Image Totals
-     13728        894        384         76          0          0   ROM Totals
+     13724        890        384         76       1148     232161   Grand Totals
+     13724        890        384         76       1148     232161   ELF Image Totals
+     13724        890        384         76          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                14112 (  13.78kB)
+    Total RO  Size (Code + RO Data)                14108 (  13.78kB)
     Total RW  Size (RW Data + ZI Data)              1224 (   1.20kB)
-    Total ROM Size (Code + RO Data + RW Data)      14188 (  13.86kB)
+    Total ROM Size (Code + RO Data + RW Data)      14184 (  13.85kB)
 
 ==============================================================================
 
