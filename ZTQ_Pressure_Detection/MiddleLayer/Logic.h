@@ -35,7 +35,7 @@ extern EditData_t  EditData;
 #define LOGIC_UP_SHORT_PRESS     0x20        // 
 #define LOGIC_ENTER_MAIN         0x10        // 
 #define LOGIC_DOWN_SHORT_PRESS   0x08        // 
-#define LOGIC_DOWN_LONG_PRESS    0x04        //  
+#define LOGIC_CALCULATE_ADC      0x04        //  
 #define LOGIC_ENTER_SHORT_PRESS  0x02        // 
 #define	LOGIC_ENTER_LONG_PRESS   0x01        // 
 

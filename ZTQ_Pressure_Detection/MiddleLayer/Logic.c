@@ -56,10 +56,10 @@ void  Logic(void)
         Msg[LOGIC_PRIO - 1] &= 0xF7;
         sig = LOGIC_DOWN_SHORT_PRESS;
     } 
-	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_DOWN_LONG_PRESS)
+	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_CALCULATE_ADC)
 	{
         Msg[LOGIC_PRIO - 1] &= 0xFB;
-        sig = LOGIC_DOWN_LONG_PRESS;
+        sig = LOGIC_CALCULATE_ADC;
     } 
 	else if (Msg[LOGIC_PRIO - 1] & LOGIC_ENTER_SHORT_PRESS) 
     {
@@ -94,7 +94,41 @@ void  Logic(void)
 								Start2_120Sec();
 								gGui_2nd_Num++;
 								if(gGui_2nd_Num>6)gGui_2nd_Num=1;
-							
+								switch(gGui_2nd_Num)
+								{
+									case 1:
+										EditData.uint=SysParameter.Range%10;
+										EditData.decade=(SysParameter.Range/10)%10;
+										EditData.hundred=(SysParameter.Range/100)%10;
+										EditData.thousand=(SysParameter.Range/1000)%10;
+									
+									break;	
+									case 2:
+										EditData.uint=SysParameter.OverPreaaureWarn%10;
+										EditData.decade=(SysParameter.OverPreaaureWarn/10)%10;
+										EditData.hundred=(SysParameter.OverPreaaureWarn/100)%10;
+										EditData.thousand=(SysParameter.OverPreaaureWarn/1000)%10;
+									break;	
+									case 3:
+										EditData.uint=SysParameter.OverPreaaureAlarm%10;
+										EditData.decade=(SysParameter.OverPreaaureAlarm/10)%10;
+										EditData.hundred=(SysParameter.OverPreaaureAlarm/100)%10;
+										EditData.thousand=(SysParameter.OverPreaaureAlarm/1000)%10;
+									break;	
+									case 4:
+										EditData.uint=SysParameter.UnderPreaaureWarn%10;
+										EditData.decade=(SysParameter.UnderPreaaureWarn/10)%10;
+										EditData.hundred=(SysParameter.UnderPreaaureWarn/100)%10;
+										EditData.thousand=(SysParameter.UnderPreaaureWarn/1000)%10;
+									break;	
+									case 5:
+										EditData.uint=SysParameter.UnderPreaaureAlarm%10;
+										EditData.decade=(SysParameter.UnderPreaaureAlarm/10)%10;
+										EditData.hundred=(SysParameter.UnderPreaaureAlarm/100)%10;
+										EditData.thousand=(SysParameter.UnderPreaaureAlarm/1000)%10;
+									break;		
+									default:break;	
+								}
 							case GUI_3RD: 
 								Start2_120Sec();
 								g_edit_area++;
@@ -115,6 +149,11 @@ void  Logic(void)
 								Start2_120Sec();
 								gGui_State = GUI_2ND;
 								gGui_2nd_Num = 1;
+								
+								EditData.uint=SysParameter.Range%10;
+								EditData.decade=(SysParameter.Range/10)%10;
+								EditData.hundred=(SysParameter.Range/100)%10;
+								EditData.thousand=(SysParameter.Range/1000)%10;
 							}break;
 							
 							case GUI_2ND:
@@ -245,41 +284,6 @@ void  Logic(void)
 							case GUI_2ND:
 								gGui_State=GUI_3RD;
 								g_edit_area=0;	
-								switch(gGui_2nd_Num)
-								{
-									case 1:
-										EditData.uint=SysParameter.Range%10;
-										EditData.decade=(SysParameter.Range/10)%10;
-										EditData.hundred=(SysParameter.Range/100)%10;
-										EditData.thousand=(SysParameter.Range/1000)%10;
-									
-									break;	
-									case 2:
-										EditData.uint=SysParameter.OverPreaaureWarn%10;
-										EditData.decade=(SysParameter.OverPreaaureWarn/10)%10;
-										EditData.hundred=(SysParameter.OverPreaaureWarn/100)%10;
-										EditData.thousand=(SysParameter.OverPreaaureWarn/1000)%10;
-									break;	
-									case 3:
-										EditData.uint=SysParameter.OverPreaaureAlarm%10;
-										EditData.decade=(SysParameter.OverPreaaureAlarm/10)%10;
-										EditData.hundred=(SysParameter.OverPreaaureAlarm/100)%10;
-										EditData.thousand=(SysParameter.OverPreaaureAlarm/1000)%10;
-									break;	
-									case 4:
-										EditData.uint=SysParameter.UnderPreaaureWarn%10;
-										EditData.decade=(SysParameter.UnderPreaaureWarn/10)%10;
-										EditData.hundred=(SysParameter.UnderPreaaureWarn/100)%10;
-										EditData.thousand=(SysParameter.UnderPreaaureWarn/1000)%10;
-									break;	
-									case 5:
-										EditData.uint=SysParameter.UnderPreaaureAlarm%10;
-										EditData.decade=(SysParameter.UnderPreaaureAlarm/10)%10;
-										EditData.hundred=(SysParameter.UnderPreaaureAlarm/100)%10;
-										EditData.thousand=(SysParameter.UnderPreaaureAlarm/1000)%10;
-									break;		
-									default:break;	
-								}
 							break;
 							
 							case GUI_3RD:  
@@ -335,6 +339,12 @@ void  Logic(void)
 								g_edit_area = 0;
 								gGui_2nd_Num =1;
 								Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
+					}break;  
+					
+					
+ 					case LOGIC_CALCULATE_ADC:
+					{
+						 AdcCalculate();
 					}break;  
 					default:
                         WorkStateTran(MODE_NORMAL_ST);break;

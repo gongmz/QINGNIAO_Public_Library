@@ -60,6 +60,7 @@
 #include "FrameWork.h"
 #include "global_variable.h"
 #include "adc.h"
+#include  "ADCDriver.h"
 /*******************************************************************************
  *                       IRQ WEAK DEFINE
  ******************************************************************************/
@@ -492,9 +493,10 @@ void ADC_IRQHandler(void)
 	  Adc_ClrIrqStatus(AdcMskIrqSqr);       ///< 清除中断标志位
 	
 	 if(SysParameter.DetectionMode == VoltageDetection)
-			PressureValue = Adc_GetSqrResult(AdcSQRCH0MUX);
+			curADC = Adc_GetSqrResult(AdcSQRCH0MUX);
 	 else
-			PressureValue = Adc_GetSqrResult(AdcSQRCH1MUX);
+			curADC = Adc_GetSqrResult(AdcSQRCH1MUX);
+	 MsgPost(LOGIC_PRIO, LOGIC_CALCULATE_ADC);
 	 Adc_SQR_Stop();    
 }
 

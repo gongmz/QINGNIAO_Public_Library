@@ -15,7 +15,9 @@
 #define _ADC_h
 
 #include "includes.h"
+extern uint16_t curADC;//
 
 extern void AdcInit(void);
+extern void AdcCalculate(void);
 #endif
 //======================================================================================
