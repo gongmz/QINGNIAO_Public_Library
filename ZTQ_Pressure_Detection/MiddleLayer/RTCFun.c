@@ -52,7 +52,7 @@ void TimerFunction(void)
 						{
 								Start1_1Sec();
 								///< 启动单次转换采样
-								Adc_SQR_Start();   
+								Adc_SQR_Start();  
 						}break;
 						
 						case 2://2分钟自动回主窗口
@@ -63,6 +63,43 @@ void TimerFunction(void)
 						case 3:
 						{
 							;
+						}break;
+						
+						case 4:
+						{
+							MsgPost(LORAFUN_PRIO,LORA_MSG_TMOUT1);
+						}break;
+						
+						case 5:
+						{
+
+						}break;
+						
+						case 6:
+						{
+							 LoRaWorkStateTran(LORA_ST_POWERON);
+						}break;
+						
+						case 7:
+						{
+							if(EnterShortKeyNum>=3) MsgPost(LORAFUN_PRIO,LORA_MSG_NSJOIN);
+							EnterShortKeyNum = 0;
+						}break;
+						
+						case 8:
+						{
+							
+						}break;
+						
+						case 9:
+						{
+							;
+						}break;
+						
+						case 10:
+						{
+							TmrSecStart(10,120);
+							RTCMinFunction();
 						}break;
 
 						default:break;
@@ -85,28 +122,30 @@ static void  RTCMinFunction(void)
             if ((--TmrMinTab[i]) == 0) {
                 switch (i) {
 								case 0:
-									{
-										
+								{
+									Start0_60min();
+									MsgPost(LORAFUN_PRIO,LORA_MSG_SEND_EVENT);
 								}break;
 
 								case 1:
 								{
+									MsgPost(LORAFUN_PRIO,LORA_MSG_TMOUT2);
 								}break;
 
-                case 2:
-                {
+								case 2:
+								{
 
-                }break;
-                
-                case 3:
-                {
+								}break;
+								
+								case 3:
+								{
 
-                }break;
+								}break;
 
-                case 4:
-                {
+								case 4:
+								{
 
-                }break;
+								}break;
                 
                 default:break;
                 }

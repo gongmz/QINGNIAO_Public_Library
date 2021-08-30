@@ -18,6 +18,6 @@
 extern uint16_t curADC;//
 
 extern void AdcInit(void);
-extern void AdcCalculate(void);
+extern void AdcCalculate(uint16_t *data);
 #endif
 //======================================================================================

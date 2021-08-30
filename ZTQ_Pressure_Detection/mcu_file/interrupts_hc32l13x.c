@@ -263,6 +263,13 @@ void UART1_IRQHandler(void)
 #if (INT_CALLBACK_ON == INT_CALLBACK_UART1)    
     Uart1_IRQHandler();
 #endif
+    if(Uart_GetStatus(M0P_UART1, UartRC))         //UART1数据接收
+    {
+        Uart_ClrStatus(M0P_UART1, UartRC);        //清中断状态位
+		UsartRxData.UartIntFlag=1;
+		UsartRxData.UartRxCnt=0;
+        UsartRxData.RxBuffer[UsartRxData.RxLength++] = Uart_ReceiveData(M0P_UART1);   //接收数据字节
+    }
 }
 
 /**

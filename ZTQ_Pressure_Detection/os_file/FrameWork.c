@@ -44,7 +44,16 @@ void ThreadScheduler(void)
 					case 8://最高优先级
 										//执行线程
 					      Screen();//LED刷新程序
-						    TaskKey();
+						   TaskKey();
+							if(UsartRxData.UartIntFlag)
+							{
+								if(++UsartRxData.UartRxCnt>20)
+								{
+									UsartRxData.UartRxCnt=0;
+									UsartRxData.UartIntFlag=0;
+									MsgPost(UART_PRIO, LORA_MSG_ENTRY);
+								}
+							}
 								break;
 					case 7:
 										//执行线程
@@ -56,17 +65,16 @@ void ThreadScheduler(void)
 
 								break;
 					case 5:
-										//执行线程  
+							TaskLoRa();			//执行线程  
 								break;
 					case 4:{
-
+						TaskUart();
 						}break;
 					case 3:
 			 
 								break;
 					case 2:
 										//执行线程
-		//				RTCMinFunction();   // RTC minute
 								break;
 					case 1:
 										{ 

@@ -36,4 +36,6 @@
 #include    "adc.h"
 #include    "bgr.h"
 #include    <math.h>
+#include    "LoRaFun.h"
+#include    "uart_driver.h"
 #endif

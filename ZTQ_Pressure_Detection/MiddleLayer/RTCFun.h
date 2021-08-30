@@ -44,32 +44,30 @@ extern uint8_t TmrMinTab[TMR_MIN_MAX_TMR];
 
 #define Start3_3Sec()                 TmrSecStart(3,3) 
  
-#define Start4_1Sec()                 TmrSecStart(4,1) 
-#define Start4_3Sec()                 TmrSecStart(4,3) 
+#define Start4_1Sec()                 TmrSecStart(4,2) 
+#define Start4_3Sec()                 TmrSecStart(4,6) 
 #define Stop4_Sec_Timer()             TmrSecStop(4)
 
 #define Start5_1Sec()                 TmrSecStart(5,1) 
 #define Stop5_Sec_Timer()             TmrSecStop(5)
 
-#define Start6_1Sec()                 TmrSecStart(6,1) 
+#define Start6_1Sec()                 TmrSecStart(6,2) 
 #define Stop6_Sec_Timer()             TmrSecStop(6)
 
-#define Start7_10Sec()                TmrSecStart(7,10) 
-#define Start7_8Sec()                 TmrSecStart(7,8) 
+#define Start7_2Sec()                TmrSecStart(7,4) 
 
 #define Start8_1Sec()                 TmrSecStart(8,1)
 
 #define Start9_3Sec()                 TmrSecStart(9,3)
 
-#define Start_min_timer()             TmrSecStart(10,60) 
+#define Start_min_timer()             TmrSecStart(10,120) 
 
 
 //====================================================================================================
 #define Start0_60min()                TmrMinStart(0,60) 
-#define Start0_240min()               TmrMinStart(0,240) 
 #define Stop0_min_timer()             TmrMinStop(0)
 
-#define Start1_6min()                 TmrMinStart(1,6) 
+#define Start1_7min()                 TmrMinStart(1,7) 
 #define Stop1_min_timer()             TmrMinStop(1)
 
 //====================================================================================================

@@ -56,9 +56,15 @@ void AdcInit(void)
 *ADC计算
 *
 **************************************************************/
-void AdcCalculate(void)
+void AdcCalculate(uint16_t *data)
 {
 	float temp;
-	temp=(curADC*250*2)/4095;
-	PressureValue=temp;
+	
+	if(SysParameter.DetectionMode == VoltageDetection)
+		temp=(curADC*555)/4095;
+	else
+		temp=((curADC-752)*500)/2534;
+	
+	*data=temp;
 }
+

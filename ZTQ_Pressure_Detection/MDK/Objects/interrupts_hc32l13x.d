@@ -8,10 +8,10 @@
 .\objects\interrupts_hc32l13x.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 .\objects\interrupts_hc32l13x.o: ..\mcu_file\board_stkhc32l13x.h
 .\objects\interrupts_hc32l13x.o: ..\mcu_file\hc32l13x.h
-.\objects\interrupts_hc32l13x.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h
-.\objects\interrupts_hc32l13x.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h
-.\objects\interrupts_hc32l13x.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
-.\objects\interrupts_hc32l13x.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\interrupts_hc32l13x.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\interrupts_hc32l13x.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\interrupts_hc32l13x.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\interrupts_hc32l13x.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\interrupts_hc32l13x.o: ..\mcu_file\system_hc32l13x.h
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\sysctrl.h
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\ddl.h
@@ -45,3 +45,5 @@
 .\objects\interrupts_hc32l13x.o: ..\MiddleLayer\ScanKEY.h
 .\objects\interrupts_hc32l13x.o: ..\MiddleLayer\ADCDriver.h
 .\objects\interrupts_hc32l13x.o: ..\driver_file\inc\bgr.h
+.\objects\interrupts_hc32l13x.o: ..\MiddleLayer\LoRaFun.h
+.\objects\interrupts_hc32l13x.o: ..\MiddleLayer\uart_driver.h

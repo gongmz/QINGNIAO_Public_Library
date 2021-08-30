@@ -17,7 +17,6 @@
 /**********************************宏定义声明**********************************/
 /**********************************结构体声明**********************************/
 /**********************************变量声明************************************/
-static uint8_t gDispState = 1;
 EditData_t  EditData;
 uint8_t WorkState; 
 uint16_t gErrorBuf;
@@ -167,7 +166,6 @@ void  Logic(void)
                                                
 					case LOGIC_UP_SHORT_PRESS:
 					{
-						Start2_120Sec();
 						switch(gGui_State)
 						{
 							case GUI_MAIN:
@@ -177,6 +175,7 @@ void  Logic(void)
 							break;
 							
 							case GUI_3RD: 
+								Start2_120Sec();
 								if(gGui_2nd_Num==6)
 								{
 									 if(SysParameter.DetectionMode == VoltageDetection)
@@ -217,7 +216,7 @@ void  Logic(void)
                        
 					case LOGIC_DOWN_SHORT_PRESS:
 					{
-						Start2_120Sec();
+						
 						switch(gGui_State)
 						{
 							case GUI_MAIN:
@@ -227,6 +226,7 @@ void  Logic(void)
 							break;
 							
 							case GUI_3RD: 
+								Start2_120Sec();
 								if(gGui_2nd_Num==6)
 								{
 									 if(SysParameter.DetectionMode == VoltageDetection)
@@ -279,14 +279,18 @@ void  Logic(void)
 						switch(gGui_State)
 						{
 							case GUI_MAIN:
+								EnterShortKeyNum++;
+								Start7_2Sec();//2秒之内按3次，那么发送注册指令
 							break;
 							
 							case GUI_2ND:
+								Start2_120Sec();
 								gGui_State=GUI_3RD;
 								g_edit_area=0;	
 							break;
 							
 							case GUI_3RD:  
+								Start2_120Sec();
 								gGui_State=GUI_2ND;
 								switch(gGui_2nd_Num)
 								{
@@ -313,38 +317,59 @@ void  Logic(void)
 						}	
 					}break;  
 
-					
+					case LOGIC_ENTER_LONG_PRESS:
+					{
+						switch(gGui_State)
+						{
+							case GUI_MAIN:
+								LoRaWorkStateTran(LORA_ST_SELFCHECK);
+							break;
+							
+							case GUI_2ND:
+							break;
+							
+							case GUI_3RD:  
+							break;
+							
+							default:{gGui_State = GUI_MAIN;}break;
+						}	
+					}break;  
  					case LOGIC_ENTER_MAIN:
 					{
-							switch(gGui_2nd_Num)
+							Stop2_Sec_Timer();
+							if(gGui_State!=GUI_MAIN)
 							{
-								case 1:
-									SysParameter.Range=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-								break;	
-								case 2:
-									SysParameter.OverPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-								break;	
-								case 3:
-									SysParameter.OverPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-								break;	
-								case 4:
-									SysParameter.UnderPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-								break;	
-								case 5:
-									SysParameter.UnderPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-								break;		
-								default:break;	
-							}
+								switch(gGui_2nd_Num)
+								{
+									case 1:
+										SysParameter.Range=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+									break;	
+									case 2:
+										SysParameter.OverPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+									break;	
+									case 3:
+										SysParameter.OverPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+									break;	
+									case 4:
+										SysParameter.UnderPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+									break;	
+									case 5:
+										SysParameter.UnderPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+									break;		
+									default:break;	
+								}
 								gGui_State = GUI_MAIN;
 								g_edit_area = 0;
 								gGui_2nd_Num =1;
 								Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
+							}
 					}break;  
 					
 					
  					case LOGIC_CALCULATE_ADC:
 					{
-						 AdcCalculate();
+						 AdcCalculate(&PressureValue);
+						 g_bar_tube_num=DigitalCalculate(&PressureValue);
 					}break;  
 					default:
                         WorkStateTran(MODE_NORMAL_ST);break;

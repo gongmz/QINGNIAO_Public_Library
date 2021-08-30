@@ -1,7 +1,7 @@
 /********************************************************************************************************
 * Filename   : FrameWork.h
 * Programmer : 
-* 描述：　基于优先级的多线程 头文件。
+* 描述：　基于优先级的多线程头文件。
 *********************************************************************************************************
 */
 #ifdef  FRAMEWORK_GLOBALS
@@ -22,8 +22,8 @@
 #define LED_PRIO                8
 #define RTC_PRIO                7
 #define LOGIC_PRIO              6
-#define MEASURE_PRIO            5
-#define NB_PRIO                 4
+#define LORAFUN_PRIO            5
+#define UART_PRIO               4
 #define STORAGE_PRIO            3
 #define RTCMIN_PRIO             2
 #define COMM_PRIO               1

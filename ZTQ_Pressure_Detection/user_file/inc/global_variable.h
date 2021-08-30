@@ -15,9 +15,47 @@
 #include "rtc.h"
 /**********************************DEBUG开关**********************************/
 // Log 打印
-#define Printf_Enable
+//#define Printf_Enable
 /**********************************宏定义声明**********************************/
 #define BUFFERSIZE  128
+
+//设备基本信息
+#define DEVICE_CPSN		    0
+#define DEVICE_CLASS        0x31  //无线独立式电子感温警报器：0x31
+#define DEVICE_TYPE	        0         
+#define DEVICE_HV           0    //硬件版本号
+#define DEVICE_SV		    0    //软件版本号
+#define DEVICE_NET	    	1    //接受窗口类型，CLASS A：0   CLASS C:1
+
+
+/*上传设备状态（DeviceState）标志位代码*/
+#define DS_UNDERVOLTAGE         0x01
+#define DS_POLLUTE              0x02 
+#define DS_SEPARATE             0x04
+#define DS_FIRE                 0x10
+
+/*上传事件标志位代码*/
+#define FIREALARM_EVENT         0x03   //火警
+#define FIREALARMCANCLE_EVENT   0x39   //火警取消
+
+#define SEPARATEERR_EVENT       0x58   //分离故障
+#define SEPARATECANCLE_EVENT    0x6C   //撤销分离故障
+
+#define LOWVOLTAGE_EVENT        0x55   //欠压故障
+#define NORMALVLITAGE_EVENT     0x69   //电压正常
+
+#define SELFCHECK_EVENT         0x7B   //自检事件
+
+/*模组传过来的消息类型   +NSSTATE  MSG*/
+#define NET_MSG_NULL            0  // 空消息
+#define NET_MSG_ALIVE_NAK       1  // Unconfirm 心跳 
+#define NET_MSG_ALIVE           2  // Confirm 心跳 
+#define NET_MSG_VERBOSE         3  // 长心跳 
+#define NET_MSG_EVENT_RES_NAK   4  // 非应答事件
+#define NET_MSG_EVENT           5  // 事件
+#define NET_MSG_JOIN            6  // 入网
+#define NET_MSG_JOIN_ACCEPT_ACK 7  // 入网确认 
+
 /**********************************帧固定字符定义******************************/
 /**********************************结构体声明**********************************/
 typedef enum
@@ -25,15 +63,7 @@ typedef enum
     VoltageDetection,   //电压检测
     CurrentDetection    //电流检测
 }Type_t;
-struct _uart
-{
-	uint8_t Buffer[BUFFERSIZE];
-	uint16_t TimeCounter;//定时器定时时间*TimeCounter未收到数据判定为一帧
-	uint16_t Length;//数据帧长度
-	uint8_t RxFlag;	//主程序中是否进行数据处理的标志位
-	uint8_t RxProcess;//表征此串口正在接收数据
-	uint8_t  CheckSum;//校验和
-};
+
 //系统参数
 typedef struct 
 {
@@ -83,4 +113,5 @@ extern SysParameter_t  SysParameter;
 /**********************************变量声明************************************/
 extern uint16_t ErrorCode;
 extern uint16_t PressureValue;
+extern uint8_t  DeviceState;
 #endif

@@ -399,7 +399,7 @@ void Timer3Init(void )
     
     stcTim3BaseCfg.enWorkMode = Tim3WorkMode0;              //定时器模式
     stcTim3BaseCfg.enCT       = Tim3Timer;                  //定时器功能，计数时钟为内部PCLK
-    stcTim3BaseCfg.enPRS      = Tim3PCLKDiv32;              //PCLK/64
+    stcTim3BaseCfg.enPRS      = Tim3PCLKDiv64;              //PCLK/64
     stcTim3BaseCfg.enCntMode  = Tim316bitArrMode;           //自动重载16位计数器/定时器
     stcTim3BaseCfg.bEnTog     = FALSE;
     stcTim3BaseCfg.bEnGate    = FALSE;
@@ -407,11 +407,11 @@ void Timer3Init(void )
     
     Tim3_Mode0_Init(&stcTim3BaseCfg);                       //TIM3 的模式0功能初始化
         
-    u16ArrValue = 0xF159;//10MS
+    u16ArrValue = 0xFE88;//1MS
     
     Tim3_M0_ARRSet(u16ArrValue);                            //设置重载值(ARR = 0x10000 - 周期)
     
-    u16CntValue = 0xF159;
+    u16CntValue = 0xFE88;//1MS
     
     Tim3_M0_Cnt16Set(u16CntValue);                          //设置计数初值
     
@@ -422,7 +422,7 @@ void Timer3Init(void )
 		Tim3_M0_Run(); 
 }
 
-void Uart0_Init( void )
+void Uart1_Init( void )
 {
 	  //引脚配置
 	  stc_gpio_cfg_t stcGpioCfg;
@@ -433,26 +433,32 @@ void Uart0_Init( void )
     Sysctrl_SetPeripheralGate(SysctrlPeripheralGpio,TRUE); //使能GPIO模块时钟
     ///<TX
     stcGpioCfg.enDir = GpioDirOut;
-    Gpio_Init(GpioPortA, GpioPin9, &stcGpioCfg);
-    Gpio_SetAfMode(GpioPortA, GpioPin9, GpioAf1);          //配置PA09 端口为URART0_TX
+    Gpio_Init(GpioPortA, GpioPin2, &stcGpioCfg);
+    Gpio_SetAfMode(GpioPortA, GpioPin2, GpioAf1);          //配置PA02 端口为URART1_TX
     ///<RX
     stcGpioCfg.enDir = GpioDirIn;
-    Gpio_Init(GpioPortA, GpioPin10, &stcGpioCfg);
-    Gpio_SetAfMode(GpioPortA, GpioPin10, GpioAf1);          //配置PA010 端口为URART0_RX
+    Gpio_Init(GpioPortA, GpioPin3, &stcGpioCfg);
+    Gpio_SetAfMode(GpioPortA, GpioPin3, GpioAf1);          //配置PA03 端口为URART1_RX
 	
 	
 	  //串口配置
     ///< 开启外设时钟
-    Sysctrl_SetPeripheralGate(SysctrlPeripheralUart0,TRUE);///<使能uart0模块时钟
+    Sysctrl_SetPeripheralGate(SysctrlPeripheralUart1,TRUE);///<使能uart1模块时钟
 
     ///<UART Init
     stcCfg.enRunMode        = UartMskMode1;          ///<模式1
     stcCfg.enStopBit        = UartMsk1bit;           ///<1bit停止位
     stcCfg.enMmdorCk        = UartMskEven;           ///<偶检验
-    stcCfg.stcBaud.u32Baud  = 115200;                ///<波特率115200
+    stcCfg.stcBaud.u32Baud  = 9600;                ///<波特率9600
     stcCfg.stcBaud.enClkDiv = UartMsk8Or16Div;       ///<通道采样分频配置
     stcCfg.stcBaud.u32Pclk  = Sysctrl_GetPClkFreq(); ///<获得外设时钟（PCLK）频率值
-    Uart_Init(M0P_UART0, &stcCfg);                   ///<串口初始化
+    Uart_Init(M0P_UART1, &stcCfg);                   ///<串口初始化
+	
+	    ///<UART中断使能
+    Uart_ClrStatus(M0P_UART1,UartRC);                ///<清接收请求
+    Uart_ClrStatus(M0P_UART1,UartTC);                ///<清接收请求
+    Uart_EnableIrq(M0P_UART1,UartRxIrq);             ///<使能串口接收中断
+    EnableNvic(UART1_IRQn, IrqLevel3, TRUE);       ///<系统中断使能
 }
 
 #ifdef Printf_Enable
