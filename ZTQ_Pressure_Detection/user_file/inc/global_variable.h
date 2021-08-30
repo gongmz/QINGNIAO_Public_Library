@@ -21,7 +21,7 @@
 
 //设备基本信息
 #define DEVICE_CPSN		    0
-#define DEVICE_CLASS        0x31  //无线独立式电子感温警报器：0x31
+#define DEVICE_CLASS        0x3C  //无线气体压力传感器
 #define DEVICE_TYPE	        0         
 #define DEVICE_HV           0    //硬件版本号
 #define DEVICE_SV		    0    //软件版本号
