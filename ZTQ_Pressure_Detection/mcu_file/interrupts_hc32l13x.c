@@ -260,6 +260,7 @@ void UART0_IRQHandler(void)
  ******************************************************************************/
 void UART1_IRQHandler(void)
 {
+	static uint8_t u8TxCnt;
 #if (INT_CALLBACK_ON == INT_CALLBACK_UART1)    
     Uart1_IRQHandler();
 #endif
@@ -269,6 +270,19 @@ void UART1_IRQHandler(void)
 		UsartRxData.UartIntFlag=1;
 		UsartRxData.UartRxCnt=0;
         UsartRxData.RxBuffer[UsartRxData.RxLength++] = Uart_ReceiveData(M0P_UART1);   //接收数据字节
+    }
+	
+	if(Uart_GetStatus(M0P_UART1, UartTC))
+    {
+        Uart_ClrStatus(M0P_UART1, UartTC);              //清除中断状态位
+        
+        if(u8TxCnt>TXDATA_BUF_MAX||DataTxBuff[u8TxCnt]==0x00)                                   //如果已发送两个字节
+        {
+            u8TxCnt = 0;
+            Uart_DisableIrq(M0P_UART1,UartTxIrq);       //禁止发送中断
+        }
+		else
+			Uart_SendDataIt(M0P_UART1, DataTxBuff[u8TxCnt++]);//发送数据
     }
 }
 
@@ -499,11 +513,10 @@ void ADC_IRQHandler(void)
 #endif
 	  Adc_ClrIrqStatus(AdcMskIrqSqr);       ///< 清除中断标志位
 	
-	 if(SysParameter.DetectionMode == VoltageDetection)
-			curADC = Adc_GetSqrResult(AdcSQRCH0MUX);
-	 else
-			curADC = Adc_GetSqrResult(AdcSQRCH1MUX);
-	 MsgPost(LOGIC_PRIO, LOGIC_CALCULATE_ADC);
+
+	 curADC = Adc_GetSqrResult(AdcSQRCH1MUX);
+	
+	 MsgPost(ADC_PRIO, ADC_MSG_ENTRY);
 	 Adc_SQR_Stop();    
 }
 

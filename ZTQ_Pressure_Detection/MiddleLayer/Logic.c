@@ -45,20 +45,20 @@ void  Logic(void)
         Msg[LOGIC_PRIO - 1] &= 0xDF;
         sig = LOGIC_UP_SHORT_PRESS;
     } 
-	else if (Msg[LOGIC_PRIO - 1] & LOGIC_ENTER_MAIN) 
+	else if (Msg[LOGIC_PRIO - 1] & LOGIC_NORMAL_MSG) 
     {
         Msg[LOGIC_PRIO - 1] &= 0xEF;
-        sig = LOGIC_ENTER_MAIN;
+        sig = LOGIC_NORMAL_MSG;
     } 
 	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_DOWN_SHORT_PRESS)
 	{
         Msg[LOGIC_PRIO - 1] &= 0xF7;
         sig = LOGIC_DOWN_SHORT_PRESS;
     } 
-	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_CALCULATE_ADC)
+	else if (Msg[LOGIC_PRIO - 1] & 	LOGIC_ALARM_MSG)
 	{
         Msg[LOGIC_PRIO - 1] &= 0xFB;
-        sig = LOGIC_CALCULATE_ADC;
+        sig = LOGIC_ALARM_MSG;
     } 
 	else if (Msg[LOGIC_PRIO - 1] & LOGIC_ENTER_SHORT_PRESS) 
     {
@@ -81,6 +81,11 @@ void  Logic(void)
 			case MODE_NORMAL_ST:
                 switch (sig) 
 				{
+ 					case LOGIC_ENTRY_MSG:
+					{
+	 
+					}break;  
+					
 					case LOGIC_MENU_SHORT_PRESS:
 					{
 						
@@ -159,7 +164,45 @@ void  Logic(void)
 							case GUI_3RD:  
 							default:
 							{
-								MsgPost(LOGIC_PRIO, LOGIC_ENTER_MAIN);
+								Stop2_Sec_Timer();
+								if(gGui_State!=GUI_MAIN)
+								{
+									switch(gGui_2nd_Num)
+									{
+										case 1:
+											SysParameter.Range=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+										break;	
+										case 2:
+											SysParameter.OverPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+										break;	
+										case 3:
+											SysParameter.OverPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+										break;	
+										case 4:
+											SysParameter.UnderPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+										break;	
+										case 5:
+											SysParameter.UnderPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+										break;		
+										default:break;	
+									}
+									gGui_State = GUI_MAIN;
+									g_edit_area = 0;
+									gGui_2nd_Num =1;
+									
+									if(SysParameter.DetectionMode==VoltageDetection)
+									{
+										DeviceState &= ~DS_DETECTION_MODE;	
+										Gpio_ClrIO(SETI_PORT, SETI_PIN);
+									}
+									else
+									{
+										DeviceState |= DS_DETECTION_MODE;
+										Gpio_SetIO(SETI_PORT, SETI_PIN);
+									}
+									
+									Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
+								}
 							}break;
 						}
 					}break;
@@ -333,47 +376,19 @@ void  Logic(void)
 							
 							default:{gGui_State = GUI_MAIN;}break;
 						}	
-					}break;  
- 					case LOGIC_ENTER_MAIN:
-					{
-							Stop2_Sec_Timer();
-							if(gGui_State!=GUI_MAIN)
-							{
-								switch(gGui_2nd_Num)
-								{
-									case 1:
-										SysParameter.Range=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;	
-									case 2:
-										SysParameter.OverPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;	
-									case 3:
-										SysParameter.OverPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;	
-									case 4:
-										SysParameter.UnderPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;	
-									case 5:
-										SysParameter.UnderPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;		
-									default:break;	
-								}
-								gGui_State = GUI_MAIN;
-								g_edit_area = 0;
-								gGui_2nd_Num =1;
-								Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
-							}
-					}break;  
-					
-					
- 					case LOGIC_CALCULATE_ADC:
-					{
-						 AdcCalculate(&PressureValue);
-						 g_bar_tube_num=DigitalCalculate(&PressureValue);
-					}break;  
+					}break;
+
 					default:
                         WorkStateTran(MODE_NORMAL_ST);break;
                 }break;
+			
+			case MODE_ALARM_ST:
+                switch (sig) 
+				{
+					case LOGIC_ENTRY_MSG:
+					{
+					}
+				}break;
 
             //--------------------------------------------------------------------------------------------------------------------
 
@@ -400,6 +415,6 @@ void  SetLogicPrio(void)
 void  WorkStateTran(uint8_t state)
 {
     WorkState = state;
-/*    MsgPost(LOGIC_PRIO, LOGIC_ENTRY_MSG);*/
+    MsgPost(LOGIC_PRIO, LOGIC_ENTRY_MSG);
 }
 

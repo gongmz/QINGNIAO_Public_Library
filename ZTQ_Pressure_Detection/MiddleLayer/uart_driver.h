@@ -16,7 +16,9 @@
 #include "stdint.h"
 
 #define RXDATA_BUF_MAX		    100
-#define TXDATA_BUF_MAX          50
+#define TXDATA_BUF_MAX          100
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#define UART_MSG_ENTRY            0x80    
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 struct _UsartRxData
 {
@@ -28,10 +30,10 @@ struct _UsartRxData
 
 extern struct _UsartRxData UsartRxData;
 
-extern uint8_t    DataTxBuff[TXDATA_BUF_MAX];
+extern char   DataTxBuff[TXDATA_BUF_MAX];
 
 extern void FUN_USART_SENDPACKET(uint8_t *RF_TRAN_P,uint8_t LEN);
-extern void UartPackageTx(char *ptr);
+extern void StartUartPackageTx(void);
 extern void UartBytePackageTx(char str);
 extern void TaskUart(void);
 extern uint8_t CheckRevData(void);

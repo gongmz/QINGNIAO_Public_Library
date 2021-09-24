@@ -50,14 +50,14 @@ void TimerFunction(void)
 						
 						case 1:
 						{
-								Start1_1Sec();
-								///< 启动单次转换采样
-								Adc_SQR_Start();  
+							Start1_1Sec();
+							///< 启动单次转换采样
+							Adc_SQR_Start();  
 						}break;
 						
 						case 2://2分钟自动回主窗口
 						{
-							MsgPost(LOGIC_PRIO, LOGIC_ENTER_MAIN);
+							MsgPost(LOGIC_PRIO, LOGIC_RETURN_MAIN);
 						}break;
 						
 						case 3:

@@ -28,11 +28,15 @@
 #define DEVICE_NET	    	1    //接受窗口类型，CLASS A：0   CLASS C:1
 
 
-/*上传设备状态（DeviceState）标志位代码*/
-#define DS_UNDERVOLTAGE         0x01
-#define DS_POLLUTE              0x02 
-#define DS_SEPARATE             0x04
-#define DS_FIRE                 0x10
+/*ZTQ-D2001 上传设备状态（DeviceState）标志位代码*/
+#define DS_FAULT                0x02//故障状态
+#define DS_OUTRANGE             0x04//超量程
+#define DS_SENSOR_ERROR         0x08//传感器故障
+#define DS_UNDER_PRESSURE       0x10//欠压报警
+#define DS_ONLINE		        0x20//在线状态
+#define DS_OVER_PRESSURE		0x40//过压报警
+#define DS_RELAY_OUTPUT         0x80//继电器输出
+#define DS_DETECTION_MODE       0x200//检测模式
 
 /*上传事件标志位代码*/
 #define FIREALARM_EVENT         0x03   //火警
@@ -110,8 +114,21 @@ extern SysParameter_t  SysParameter;
 #define SEG3_PIN    GpioPin14
 #define SEG4_PORT   GpioPortB
 #define SEG4_PIN    GpioPin15
+//无线开关
+#define RF_EN_PORT   GpioPortA
+#define RF_EN_PIN    GpioPin15
+//电压电流检测切换开关
+#define SETI_PORT   GpioPortD
+#define SETI_PIN    GpioPin6
+//24V电源供电
+#define SENSOR_EN_PORT   GpioPortD
+#define SENSOR_EN_PIN    GpioPin7
+//24V电源供电
+#define SETKEY_PORT   GpioPortB//控制开关量的检测
+#define SETKEY_PIN    GpioPin2
 /**********************************变量声明************************************/
 extern uint16_t ErrorCode;
 extern uint16_t PressureValue;
-extern uint8_t  DeviceState;
+extern uint16_t DeviceState;
+extern uint8_t DeviceEvent;
 #endif

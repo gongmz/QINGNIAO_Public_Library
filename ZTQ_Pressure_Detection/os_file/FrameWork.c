@@ -51,7 +51,7 @@ void ThreadScheduler(void)
 								{
 									UsartRxData.UartRxCnt=0;
 									UsartRxData.UartIntFlag=0;
-									MsgPost(UART_PRIO, LORA_MSG_ENTRY);
+									MsgPost(UART_PRIO, UART_MSG_ENTRY);
 								}
 							}
 								break;
@@ -65,13 +65,13 @@ void ThreadScheduler(void)
 
 								break;
 					case 5:
-							TaskLoRa();			//执行线程  
+							TaskAdc();			//执行线程  
 								break;
 					case 4:{
 						TaskUart();
 						}break;
 					case 3:
-			 
+								TaskLoRa();
 								break;
 					case 2:
 										//执行线程
@@ -188,8 +188,7 @@ void  ThreadScheduler(void)
 /***********************************************************************
 函数原型：void MsgPost(uint8_t prio, uint8_t msg)
 功能说明：消息发送到当前消息变量,线程中调用
-***********************************************************************
-*/
+************************************************************************/
 void  MsgPost(uint8_t prio, uint8_t msg)
 {
     OS_ENTER_CRITICAL();

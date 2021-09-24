@@ -23,8 +23,8 @@
 #define RTC_PRIO                7
 #define LOGIC_PRIO              6
 #define LORAFUN_PRIO            5
-#define UART_PRIO               4
-#define STORAGE_PRIO            3
+#define ADC_PRIO                4
+#define UART_PRIO               3
 #define RTCMIN_PRIO             2
 #define COMM_PRIO               1
 

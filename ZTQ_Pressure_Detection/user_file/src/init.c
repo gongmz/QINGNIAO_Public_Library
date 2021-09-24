@@ -170,7 +170,7 @@ void GPIO_Init(void)
     Gpio_ClrIO(GpioPortD, GpioPin1);
     Gpio_ClrIO(GpioPortD, GpioPin2);
     Gpio_ClrIO(GpioPortD, GpioPin3);//MODE (PD03)为高电平进入在线编程模式，通过上位机可以进行在线编程。 MODE (PD03)为低电平为工作模式
-	  Gpio_ClrIO(GpioPortD, GpioPin4);
+	Gpio_ClrIO(GpioPortD, GpioPin4);
     Gpio_ClrIO(GpioPortD, GpioPin5);
     Gpio_ClrIO(GpioPortD, GpioPin6);
     Gpio_ClrIO(GpioPortD, GpioPin7);
@@ -182,6 +182,22 @@ void GPIO_Init(void)
     Gpio_ClrIO(GpioPortD, GpioPin13);
     Gpio_ClrIO(GpioPortD, GpioPin14);
     Gpio_ClrIO(GpioPortD, GpioPin15);
+	
+	///< 端口方向配置->输出(其它参数与以上（输入）配置参数一致)
+    pstcGpioCfg.enDir = GpioDirOut;
+    ///< 端口上下拉配置->下拉
+    pstcGpioCfg.enPu = GpioPuDisable;
+    pstcGpioCfg.enPd = GpioPdDisable;
+    
+
+    Gpio_Init(RF_EN_PORT, RF_EN_PIN, &pstcGpioCfg);
+    Gpio_Init(SETI_PORT, SETI_PIN, &pstcGpioCfg);
+    Gpio_Init(SENSOR_EN_PORT, SENSOR_EN_PIN, &pstcGpioCfg);
+    Gpio_Init(SETKEY_PORT, SETKEY_PIN, &pstcGpioCfg);
+	
+	Gpio_SetIO(RF_EN_PORT, RF_EN_PIN);
+	Gpio_SetIO(SENSOR_EN_PORT, SENSOR_EN_PIN);
+	Gpio_ClrIO(SETKEY_PORT, SETKEY_PIN);
 
 }
 /**************************************************************
@@ -362,6 +378,11 @@ void  ParaInit(void)
 		SysParameterInit();
 		Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
 	}
+	
+	if(SysParameter.DetectionMode==VoltageDetection)
+		Gpio_ClrIO(SETI_PORT, SETI_PIN);
+	else
+		Gpio_SetIO(SETI_PORT, SETI_PIN);
 	
 	
 }

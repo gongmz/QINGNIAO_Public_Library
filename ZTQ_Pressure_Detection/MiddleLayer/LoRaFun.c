@@ -20,7 +20,6 @@
 /**********************************变量声明************************************/
 uint8_t  LoRaState = LORA_ST_POWERON;
 uint8_t EnterShortKeyNum;
-t_send_data send_data;
 static uint8_t    send_times = 0;//底板与模组回复的重发次数
 static uint8_t    send_times_2 = 0;//底板超时未收到网关指令的重发次数
 static uint8_t    send_times_3 = 0;//底板收到网关发送事件错误指令的重发次数
@@ -39,8 +38,8 @@ void  LoRaWorkStateTran(uint8_t state);
 ******************************************************************************/
 void TaskLoRa(void)
 {
-    uint8_t sig;
-
+    uint8_t sig,i=0;
+	float temp;
     if (Msg[LORAFUN_PRIO - 1] & LORA_MSG_ENTRY) 
 	{
         Msg[LORAFUN_PRIO - 1] &= 0x7F;
@@ -100,7 +99,8 @@ void TaskLoRa(void)
                         break;
 
                         case 1:
-                            UartPackageTx("00\r\nAT+CCLK\r\n");//获取时间
+                            strcpy(DataTxBuff,"00\r\nAT+CCLK\r\n");//获取时间
+							StartUartPackageTx();
                             Start4_3Sec();
                         break;
                         default:break;
@@ -145,12 +145,14 @@ void TaskLoRa(void)
                     switch(LoRaStep)
                     {
                         case 0:
-                            UartPackageTx("00\r\nAT+NSSTATUS=0x7B,00\r\n");
+                            strcpy(DataTxBuff,"00\r\nAT+NSSTATUS=0x7B,00\r\n");//设置自检指令
+							StartUartPackageTx();
                             Start4_3Sec();
                         break;
 
                         case 1:
-                            UartPackageTx("00\r\nAT+NSEVENT\r\n");
+                            strcpy(DataTxBuff,"00\r\nAT+NSEVENT\r\n");//发送事件
+							StartUartPackageTx();
                             Start4_3Sec();
                         break;
                         default:break;
@@ -196,7 +198,8 @@ void TaskLoRa(void)
                 break;
 
                 case LORA_MSG_NSJOIN:
-                    UartPackageTx("00\r\nAT+NSJOIN\r\n");//发送事件
+					strcpy(DataTxBuff,"00\r\nAT+NSJOIN\r\n");
+					StartUartPackageTx();	
                 break;
 
                 case LORA_MSG_SEND_EVENT:
@@ -218,33 +221,66 @@ void TaskLoRa(void)
                         break;
 
                         case 1:
-                            DataTxBuff[0] = 'A';
-                            DataTxBuff[1] = 'T';
-                            DataTxBuff[2] = '+';
-                            DataTxBuff[3] = 'N';
-                            DataTxBuff[4] = 'S';
-                            DataTxBuff[5] = 'S';
-                            DataTxBuff[6] = 'T';
-                            DataTxBuff[7] = 'A';
-                            DataTxBuff[8] = 'T';
-                            DataTxBuff[9] = 'U';
-                            DataTxBuff[10] = 'S';
-                            DataTxBuff[11] = '=';
-                            DataTxBuff[12] = '0';
-                            DataTxBuff[13] = 'x';
+                            DataTxBuff[i++] = '0';
+                            DataTxBuff[i++] = '0';
+                            DataTxBuff[i++] = '\r';
+                            DataTxBuff[i++] = '\n';
+                            DataTxBuff[i++] = 'A';
+                            DataTxBuff[i++] = 'T';
+                            DataTxBuff[i++] = '+';
+                            DataTxBuff[i++] = 'N';
+                            DataTxBuff[i++] = 'S';
+                            DataTxBuff[i++] = 'S';
+                            DataTxBuff[i++] = 'T';
+                            DataTxBuff[i++] = 'A';
+                            DataTxBuff[i++] = 'T';
+                            DataTxBuff[i++] = 'U';
+                            DataTxBuff[i++] = 'S';
+                            DataTxBuff[i++] = '=';
+                            DataTxBuff[i++] = '0';
+                            DataTxBuff[i++] = 'x';
 
-                            HexsTochars(&DataTxBuff[14],&send_data.event,1);
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&DeviceEvent,1);
+							i+=2;
 
-                            DataTxBuff[16] = ',';
+                            DataTxBuff[i++] = ',';
 
-                            HexsTochars(&DataTxBuff[17],&send_data.state,1);
-						
-                            HexsTochars(&DataTxBuff[19],(uint8_t *)&PressureValue,2);
-               
-                            DataTxBuff[23] = '\r';
-                            DataTxBuff[24] = '\n';
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&DeviceState,1);
+							i+=2;
+							
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&DeviceState+1,1);
+							i+=2;
+							
+							temp=((float)PressureValue)/100;
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
+							i+=8;
+							
+							
+							temp=((float)SysParameter.UnderPreaaureWarn)/100;
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
+							i+=8;
+							
+							temp=((float)SysParameter.UnderPreaaureAlarm)/100;
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
+							i+=8;
+							
+							temp=((float)SysParameter.OverPreaaureWarn)/100;
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
+							i+=8;
+							
+							temp=((float)SysParameter.OverPreaaureAlarm)/100;
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);	
+							i+=8;							
+
+							temp=((float)SysParameter.Range)/100;
+                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);	
+							i+=8;
+							
+                            DataTxBuff[i++] = '\r';
+                            DataTxBuff[i++] = '\n';
+                            DataTxBuff[i++] = '\0';
                             
-                            FUN_USART_SENDPACKET(&DataTxBuff[0],25);//发送事件
+                            StartUartPackageTx();
                             Start4_3Sec();
                         break;
 
@@ -286,7 +322,8 @@ void TaskLoRa(void)
             switch(sig)
             {
                 case LORA_MSG_ENTRY:
-                    UartPackageTx("00\r\nAT+NSEVENT\r\n");//发送事件
+					strcpy(DataTxBuff,"00\r\nAT+NSEVENT\r\n");
+					StartUartPackageTx();	
                     Start4_3Sec();
                 break;
 
@@ -297,7 +334,7 @@ void TaskLoRa(void)
                 break;
 
                 case LORA_MSG_SEND_OK://网关回复发送成功指令
-					send_data.event=0;
+					DeviceEvent=0;
                     send_times_2=0;
                     send_times_3=0;
 	                LoRaWorkStateTran(LORA_ST_IDLE);
@@ -318,7 +355,8 @@ void TaskLoRa(void)
                 break;
 
                 case LORA_MSG_NSJOIN:
-                    UartPackageTx("00\r\nAT+NSJOIN\r\n");//发送事件
+					strcpy(DataTxBuff,"00\r\nAT+NSJOIN\r\n");//发送事件
+					StartUartPackageTx();	
                 break;
                 
                 case LORA_MSG_SEND_ERROR:
@@ -368,31 +406,36 @@ void TaskLoRa(void)
 ******************************************************************************/
 void Send_Device_Type(void)
 {
-        DataTxBuff[0] = 'A';
-        DataTxBuff[1] = 'T';
-        DataTxBuff[2] = '+';
-        DataTxBuff[3] = 'N';
-        DataTxBuff[4] = 'S';
-        DataTxBuff[5] = 'C';
-        DataTxBuff[6] = 'S';
-        DataTxBuff[7] = 'T';
-        DataTxBuff[8] = '=';
-        DataTxBuff[9] = DEVICE_CPSN + 0x30;
-        DataTxBuff[10] = ',';
-        DataTxBuff[11] = DEVICE_CLASS/10 + 0x30;
-        DataTxBuff[12] = DEVICE_CLASS%10 + 0x30;
-        DataTxBuff[13] = ',';
-        DataTxBuff[14] = DEVICE_TYPE + 0x30;
-        DataTxBuff[15] = ',';
-        DataTxBuff[16] = DEVICE_HV + 0x30;
-        DataTxBuff[17] = ',';     
-        DataTxBuff[18] = DEVICE_SV + 0x30;        
-        DataTxBuff[19] = ',';     
-        DataTxBuff[20] = DEVICE_NET + 0x30;      
-        DataTxBuff[21] = '\r';
-        DataTxBuff[22] = '\n';
-
-        FUN_USART_SENDPACKET(&DataTxBuff[0],23);//设置设备类型
+		DataTxBuff[0] = '0';
+		DataTxBuff[1] = '0';
+		DataTxBuff[2] = '\r';
+		DataTxBuff[3] = '\n';
+        DataTxBuff[4] = 'A';
+        DataTxBuff[5] = 'T';
+        DataTxBuff[6] = '+';
+        DataTxBuff[7] = 'N';
+        DataTxBuff[8] = 'S';
+        DataTxBuff[9] = 'C';
+        DataTxBuff[10] = 'S';
+        DataTxBuff[11] = 'T';
+        DataTxBuff[12] = '=';
+        DataTxBuff[13] = DEVICE_CPSN + 0x30;
+        DataTxBuff[14] = ',';
+        DataTxBuff[15] = DEVICE_CLASS/10 + 0x30;
+        DataTxBuff[16] = DEVICE_CLASS%10 + 0x30;
+        DataTxBuff[17] = ',';
+        DataTxBuff[18] = DEVICE_TYPE + 0x30;
+        DataTxBuff[19] = ',';
+        DataTxBuff[20] = DEVICE_HV + 0x30;
+        DataTxBuff[21] = ',';     
+        DataTxBuff[22] = DEVICE_SV + 0x30;        
+        DataTxBuff[23] = ',';     
+        DataTxBuff[24] = DEVICE_NET + 0x30;      
+        DataTxBuff[25] = '\r';
+        DataTxBuff[26] = '\n';
+        DataTxBuff[27] = '\0';
+		
+        StartUartPackageTx();
 }
 /****************************************************************************** 
 * 函数名称：Reset_Wm121

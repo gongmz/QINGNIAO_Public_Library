@@ -12,7 +12,9 @@
 ****************************************************************************************/
 #include "Includes.h"
 
-uint8_t    DataTxBuff[TXDATA_BUF_MAX];
+#define SLAVEADDR   0x30
+
+char   DataTxBuff[TXDATA_BUF_MAX];
 struct _UsartRxData UsartRxData;//接收数据缓冲区
 static void ClearRxBuffer(void);
 
@@ -81,19 +83,17 @@ void TaskUart(void)
 }
 
 /****************************************************************************** 
-* 函数名称：UartPackageTx
-* 函数功能：发送数据
-* 输入参数：数据指针
+* 函数名称：StartUartPackageTx
+* 函数功能：开始串口发送数据（中断方式）
+* 输入参数：
 * 输出参数：无
 * 函数返回：无
 * 使用说明： 
 ******************************************************************************/
-void UartPackageTx(char *ptr)
+void StartUartPackageTx(void)
 {
-    while(*ptr != '\0'){
-		Uart_SendDataPoll(M0P_UART1,*ptr);
-        ptr ++;
-    }
+    M0P_UART1->SBUF = (1<<8)|SLAVEADDR;//发送地址触发中断
+    Uart_EnableIrq(M0P_UART1,UartTxIrq);             ///<使能串口发送中断
 }
 
 
@@ -128,34 +128,5 @@ static void ClearRxBuffer(void)
 void UartBytePackageTx(char str)
 {
     Uart_SendDataPoll(M0P_UART1,str);
-}
-
-/****************************************************************************** 
-* 函数名称：FUN_USART_SENDPACKET
-* 函数功能：发送指定长度的帧数据
-* 输入参数：RF_TRAN_P：起始地址，LEN：字节数目
-* 输出参数：无
-* 函数返回：无
-* 使用说明： 
-******************************************************************************/
-void FUN_USART_SENDPACKET(uint8_t *RF_TRAN_P,uint8_t LEN)
-{
-	uint8_t i=0;
-	uint8_t temp[4];
-
-	temp[0] = '0';
-	temp[1] = '0';
-	temp[2] = '\r';
-	temp[3] = '\n';
-
-  	for(i=0;i<4;i++)
-  	{
-		Uart_SendDataPoll(M0P_UART1,temp[i]);
-  	}
-
-  	for(i=0;i<LEN;i++)
-  	{
-		Uart_SendDataPoll(M0P_UART1,RF_TRAN_P[i]);
-  	}
 }
 

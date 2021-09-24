@@ -6,4 +6,6 @@
 
 uint16_t PressureValue;
 SysParameter_t  SysParameter;//系统参数
-uint8_t    DeviceState=0;//设备当前状态
+uint16_t    DeviceState=0;//设备当前状态
+uint8_t 	DeviceEvent=0;//事件
+

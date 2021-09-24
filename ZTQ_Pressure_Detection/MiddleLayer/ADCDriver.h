@@ -15,9 +15,14 @@
 #define _ADC_h
 
 #include "includes.h"
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#define ADC_MSG_ENTRY            0x80    
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 extern uint16_t curADC;//
 
 extern void AdcInit(void);
 extern void AdcCalculate(uint16_t *data);
+extern void TaskAdc(void);
 #endif
 //======================================================================================
