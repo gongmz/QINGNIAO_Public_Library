@@ -77,7 +77,6 @@ void AdcCalculate(uint16_t *data)
 void TaskAdc(void)
 {
 	 AdcCalculate(&PressureValue);
-	 g_bar_tube_num=DigitalCalculate(&PressureValue);
 	
 	 if( PressureValue>=SysParameter.OverPreaaureAlarm )
 		DeviceState |=DS_OVER_PRESSURE;

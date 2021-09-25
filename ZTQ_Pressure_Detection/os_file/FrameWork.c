@@ -32,18 +32,19 @@ void ThreadScheduler(void)
 							prionum = PRIORITY_TABLE[ready];
 				}
 					
-					ready = READY_CLR_AND[prionum];
-					OS_ENTER_CRITICAL();
-					ThreadReadyList &= ready;//执行完成，清就绪位
-					OS_EXIT_CRITICAL();
+				ready = READY_CLR_AND[prionum];
+				OS_ENTER_CRITICAL();
+				ThreadReadyList &= ready;//执行完成，清就绪位
+				OS_EXIT_CRITICAL();
 
-					if(prionum) ResetWatchDog();
+				if(prionum) ResetWatchDog();
 					
 				switch (prionum) 
 			  {
+					
 					case 8://最高优先级
 										//执行线程
-					      Screen();//LED刷新程序
+					     Screen();//LED刷新程序
 						   TaskKey();
 							if(UsartRxData.UartIntFlag)
 							{
@@ -55,32 +56,36 @@ void ThreadScheduler(void)
 								}
 							}
 								break;
+							
 					case 7:
-										//执行线程
-										TimerFunction();// RTC
+								TimerFunction();// RTC
 								break;
+					
 					case 6:
-										//执行线程
-		                Logic();
-
+		            Logic();
 								break;
-					case 5:
-							TaskAdc();			//执行线程  
+					
+					case 5://1秒调用1次
+								TaskAdc();			//执行线程  
+						    g_bar_tube_num=DigitalCalculate(&PressureValue);
 								break;
-					case 4:{
-						TaskUart();
-						}break;
+					
+					case 4:
+								TaskUart();
+								break;
+					
 					case 3:
 								TaskLoRa();
 								break;
+					
 					case 2:
-										//执行线程
 								break;
+					
 					case 1:
-										{ 
 		//			        CommHandle();
 		//                    CommReset();
-						}break;
+						    break;
+					
 					default:break;
 				}
 			}

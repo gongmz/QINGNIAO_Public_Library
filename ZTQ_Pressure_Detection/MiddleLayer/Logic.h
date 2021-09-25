@@ -30,8 +30,8 @@ typedef struct
 
 extern EditData_t  EditData;
 // ===== message define =====
-#define LOGIC_MENU_SHORT_PRESS   0x80        // 
-#define LOGIC_MENU_LONG_PRESS    0x40        // 
+#define LOGIC_ENTRY_MSG          0x80        // 
+#define LOGIC_RETURN_MAIN        0x40        // 
 #define LOGIC_UP_SHORT_PRESS     0x20        // 
 #define LOGIC_NORMAL_MSG         0x10        // 
 #define LOGIC_DOWN_SHORT_PRESS   0x08        // 
