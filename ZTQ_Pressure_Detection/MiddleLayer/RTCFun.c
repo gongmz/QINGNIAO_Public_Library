@@ -78,6 +78,7 @@ void TimerFunction(void)
 						case 6:
 						{
 							 LoRaWorkStateTran(LORA_ST_POWERON);
+							 WorkStateTran(MODE_NORMAL_ST);
 						}break;
 						
 						case 7:

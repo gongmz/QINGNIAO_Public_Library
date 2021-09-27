@@ -54,7 +54,7 @@ extern uint8_t TmrMinTab[TMR_MIN_MAX_TMR];
 #define Start6_1Sec()                 TmrSecStart(6,2) 
 #define Stop6_Sec_Timer()             TmrSecStop(6)
 
-#define Start7_2Sec()                TmrSecStart(7,4) 
+#define Start7_2Sec()                 TmrSecStart(7,4) 
 
 #define Start8_1Sec()                 TmrSecStart(8,1)
 

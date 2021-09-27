@@ -83,7 +83,8 @@ void  Logic(void)
 				{
  					case LOGIC_ENTRY_MSG:
 					{
-	 
+						DeviceState &= ~DS_RELAY_OUTPUT;
+						Gpio_ClrIO(FIRE4_PORT, FIRE4_PIN);//继电器输出
 					}break;  
 
  					case LOGIC_ALARM_MSG:
@@ -92,63 +93,32 @@ void  Logic(void)
 					}break;  					
 					case LOGIC_RETURN_MAIN:
 					{
-							Stop2_Sec_Timer();
-							if(gGui_State!=GUI_MAIN)
-							{
-								switch(gGui_2nd_Num)
-								{
-									case 1:
-										SysParameter.Range=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;	
-									case 2:
-										SysParameter.OverPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;	
-									case 3:
-										SysParameter.OverPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;	
-									case 4:
-										SysParameter.UnderPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;	
-									case 5:
-										SysParameter.UnderPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
-									break;		
-									default:break;	
-								}
-								gGui_State = GUI_MAIN;
-								g_edit_area = 0;
-								gGui_2nd_Num =1;
-								
-								if(SysParameter.DetectionMode==VoltageDetection)
-								{
-									DeviceState &= ~DS_DETECTION_MODE;	
-									Gpio_ClrIO(SETI_PORT, SETI_PIN);
-								}
-								else
-								{
-									DeviceState |= DS_DETECTION_MODE;
-									Gpio_SetIO(SETI_PORT, SETI_PIN);
-								}
-								
-								Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
-							}
+						LcdReturnMain();
 					}break;
                                                
 					default:
-             WorkStateTran(MODE_NORMAL_ST);break;
+					WorkStateTran(MODE_NORMAL_ST);break;
                 }break;
 			
 			case MODE_ALARM_ST:
         switch (sig) 
 				{
-					
 					case LOGIC_ENTRY_MSG:
 					{
-						  MsgPost(LORAFUN_PRIO,LORA_MSG_SEND_EVENT);//报警上传信息
+						DeviceState |= DS_RELAY_OUTPUT;
+						Gpio_SetIO(FIRE4_PORT, FIRE4_PIN);//继电器输出
+						MsgPost(LORAFUN_PRIO,LORA_MSG_SEND_EVENT);//报警上传信息
+					}break;
+					
+					case LOGIC_RETURN_MAIN:
+					{
+						LcdReturnMain();
 					}break;
 					
 					case LOGIC_NORMAL_MSG:
 					{
-						  MsgPost(LORAFUN_PRIO,LORA_MSG_SEND_EVENT);//报警上传信息
+						MsgPost(LORAFUN_PRIO,LORA_MSG_SEND_EVENT);//上传报警消除信息
+						WorkStateTran(MODE_NORMAL_ST);
 					}break;
 					default:break;
 				}break;
@@ -164,6 +134,7 @@ void  Logic(void)
 
         SetLogicPrio();
 }
+
 
 void  SetLogicPrio(void)
 {

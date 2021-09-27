@@ -1,7 +1,7 @@
 /**********************************头文件**************************************/
 #include   "LCDDriver.h"
 /**********************************宏定义声明**********************************/
-#define LEDFLASHPERIOD  50   
+#define LEDFLASHPERIOD  100   
 #define DIGITALFLASHPERIOD   40
 /**********************************结构体声明**********************************/
 /**********************************变量声明************************************/
@@ -58,20 +58,21 @@ void Screen()
 void DisplayMainInterface(void)
 {
 	static uint16_t LEDFlashCnt;
-    switch (SegSelect) 
+    switch(SegSelect) 
 	{
 		case 0://
 			SET_SEG1;
 			RESET_SEG2;
 			RESET_SEG3;
 			RESET_SEG4;
-		
-			if(PressureValue>=SysParameter.OverPreaaureAlarm) //超压报警
+
+			//报警预警灯
+			if(DeviceState&DS_OVER_PRESSURE) //超压报警
 				SET_LED3;
 			else
 				RESET_LED3;
 		
-			if(PressureValue<=SysParameter.UnderPreaaureAlarm ) //欠压报警
+			if(DeviceState&DS_UNDER_PRESSURE) //欠压报警
 				SET_LED4;
 			else
 				RESET_LED4;
@@ -106,13 +107,14 @@ void DisplayMainInterface(void)
 			SET_SEG2;
 			RESET_SEG3;
 			RESET_SEG4;
-		
-			if(PressureValue>=SysParameter.OverPreaaureWarn&&PressureValue<SysParameter.OverPreaaureAlarm) //超压预警
+
+			//报警预警灯
+			if(DeviceState&DS_OVER_PRESSURE_WARN) //超压预警
 				SET_LED3;
 			else
 				RESET_LED3;
 			
-			if(PressureValue>SysParameter.UnderPreaaureAlarm&&PressureValue<=SysParameter.UnderPreaaureWarn) //欠压预警
+			if(DeviceState&DS_UNDER_PRESSURE_WARN) //欠压预警
 				SET_LED4;
 			else
 				RESET_LED4;
@@ -148,12 +150,22 @@ void DisplayMainInterface(void)
 			SET_SEG3;
 			RESET_SEG4;
 		
-			LEDFlashCnt++;
-		    if(LEDFlashCnt>=LEDFLASHPERIOD*2)LEDFlashCnt=0;
-			if(LEDFlashCnt<LEDFLASHPERIOD)
+			//故障灯
+			if(DeviceState&DS_FAULT)
+			{
+				SET_LED3;
 				SET_LED4;
+			}
 			else
-				RESET_LED4;
+			{
+				RESET_LED3;
+				LEDFlashCnt++;
+				if(LEDFlashCnt>=LEDFLASHPERIOD*2)LEDFlashCnt=0;
+				if(LEDFlashCnt<LEDFLASHPERIOD)
+					SET_LED4;
+				else
+					RESET_LED4;
+			}
 			
 			//光柱数码管
 			if(g_bar_tube_num<8)
@@ -221,13 +233,14 @@ void Display2NDInterface(void)
 			RESET_SEG2;
 			RESET_SEG3;
 			RESET_SEG4;
-		
-			if(PressureValue>=SysParameter.OverPreaaureAlarm) //超压报警
+
+			//报警预警灯
+			if(DeviceState&DS_OVER_PRESSURE) //超压报警
 				SET_LED3;
 			else
 				RESET_LED3;
-		
-			if(PressureValue<=SysParameter.UnderPreaaureAlarm ) //欠压报警
+
+			if(DeviceState&DS_UNDER_PRESSURE) //欠压报警
 				SET_LED4;
 			else
 				RESET_LED4;
@@ -259,13 +272,14 @@ void Display2NDInterface(void)
 			SET_SEG2;
 			RESET_SEG3;
 			RESET_SEG4;
-		
-			if(PressureValue>=SysParameter.OverPreaaureWarn&&PressureValue<SysParameter.OverPreaaureAlarm) //超压预警
+
+			//报警预警灯
+			if(DeviceState&DS_OVER_PRESSURE_WARN) //超压预警
 				SET_LED3;
 			else
 				RESET_LED3;
-			
-			if(PressureValue>SysParameter.UnderPreaaureAlarm&&PressureValue<=SysParameter.UnderPreaaureWarn) //欠压预警
+
+			if(DeviceState&DS_UNDER_PRESSURE_WARN) //欠压预警
 				SET_LED4;
 			else
 				RESET_LED4;
@@ -296,12 +310,22 @@ void Display2NDInterface(void)
 			SET_SEG3;
 			RESET_SEG4;
 		
-			LEDFlashCnt++;
-		    if(LEDFlashCnt>=LEDFLASHPERIOD*2)LEDFlashCnt=0;
-			if(LEDFlashCnt<LEDFLASHPERIOD)
+			//故障灯
+			if(DeviceState&DS_FAULT)
+			{
+				SET_LED3;
 				SET_LED4;
+			}
 			else
-				RESET_LED4;
+			{
+				RESET_LED3;
+				LEDFlashCnt++;
+				if(LEDFlashCnt>=LEDFLASHPERIOD*2)LEDFlashCnt=0;
+				if(LEDFlashCnt<LEDFLASHPERIOD)
+					SET_LED4;
+				else
+					RESET_LED4;
+			}
 			
 			//光柱数码管
 			if(g_bar_tube_num<8)
@@ -379,23 +403,16 @@ void Display_SubpageOfHx(void)
 			RESET_SEG3;
 			RESET_SEG4;
 		
-			if(PressureValue>=SysParameter.OverPreaaureAlarm) //超压报警
-			{
+			//报警预警灯
+			if(DeviceState&DS_OVER_PRESSURE) //超压报警
 				SET_LED3;
-			}
-			else 
-			{
-				RESET_LED3;
-			}
-		
-			if(PressureValue<=SysParameter.UnderPreaaureAlarm ) //欠压报警
-			{
-				SET_LED4;
-			}
 			else
-			{
+				RESET_LED3;
+
+			if(DeviceState&DS_UNDER_PRESSURE) //欠压报警
+				SET_LED4;
+			else
 				RESET_LED4;
-			}
 			
 			//光柱数码管
 			if(g_bar_tube_num<20)
@@ -438,23 +455,16 @@ void Display_SubpageOfHx(void)
 			RESET_SEG3;
 			RESET_SEG4;
 		
-			if(PressureValue>=SysParameter.OverPreaaureWarn&&PressureValue<SysParameter.OverPreaaureAlarm) //超压预警
-			{
+			//报警预警灯
+			if(DeviceState&DS_OVER_PRESSURE_WARN) //超压预警
 				SET_LED3;
-			}
 			else
-			{
 				RESET_LED3;
-			}
-			
-			if(PressureValue>SysParameter.UnderPreaaureAlarm&&PressureValue<=SysParameter.UnderPreaaureWarn) //欠压预警
-			{
+
+			if(DeviceState&DS_UNDER_PRESSURE_WARN) //欠压预警
 				SET_LED4;
-			}
 			else
-			{
 				RESET_LED4;
-			}
 		
 			//光柱数码管
 			if(g_bar_tube_num<10)
@@ -497,15 +507,21 @@ void Display_SubpageOfHx(void)
 			SET_SEG3;
 			RESET_SEG4;
 		
-			LEDFlashCnt++;
-		    if(LEDFlashCnt>=LEDFLASHPERIOD*2)LEDFlashCnt=0;
-			if(LEDFlashCnt<LEDFLASHPERIOD)
+			//故障灯
+			if(DeviceState&DS_FAULT)
 			{
+				SET_LED3;
 				SET_LED4;
 			}
 			else
 			{
-				RESET_LED4;
+				RESET_LED3;
+				LEDFlashCnt++;
+				if(LEDFlashCnt>=LEDFLASHPERIOD*2)LEDFlashCnt=0;
+				if(LEDFlashCnt<LEDFLASHPERIOD)
+					SET_LED4;
+				else
+					RESET_LED4;
 			}
 			
 			//光柱数码管
@@ -602,23 +618,16 @@ void Display_SubpageOfH6(void)
 			RESET_SEG3;
 			RESET_SEG4;
 		
-			if(PressureValue>=SysParameter.OverPreaaureAlarm) //超压报警
-			{
+			//报警预警灯
+			if(DeviceState&DS_OVER_PRESSURE) //超压报警
 				SET_LED3;
-			}
-			else 
-			{
-				RESET_LED3;
-			}
-		
-			if(PressureValue<=SysParameter.UnderPreaaureAlarm ) //欠压报警
-			{
-				SET_LED4;
-			}
 			else
-			{
+				RESET_LED3;
+
+			if(DeviceState&DS_UNDER_PRESSURE) //欠压报警
+				SET_LED4;
+			else
 				RESET_LED4;
-			}
 			
 			//光柱数码管
 			if(g_bar_tube_num<20)
@@ -645,24 +654,17 @@ void Display_SubpageOfH6(void)
 			SET_SEG2;
 			RESET_SEG3;
 			RESET_SEG4;
-		
-			if(PressureValue>=SysParameter.OverPreaaureWarn&&PressureValue<SysParameter.OverPreaaureAlarm) //超压预警
-			{
-				SET_LED3;
-			}
-			else
-			{
-				RESET_LED3;
-			}
 			
-			if(PressureValue>SysParameter.UnderPreaaureAlarm&&PressureValue<=SysParameter.UnderPreaaureWarn) //欠压预警
-			{
-				SET_LED4;
-			}
+			//报警预警灯
+			if(DeviceState&DS_OVER_PRESSURE_WARN) //超压预警
+				SET_LED3;
 			else
-			{
+				RESET_LED3;
+
+			if(DeviceState&DS_UNDER_PRESSURE_WARN) //欠压预警
+				SET_LED4;
+			else
 				RESET_LED4;
-			}
 		
 			//光柱数码管
 			if(g_bar_tube_num<10)
@@ -691,16 +693,22 @@ void Display_SubpageOfH6(void)
 			SET_SEG3;
 			RESET_SEG4;
 		
-			LEDFlashCnt++;
-		    if(LEDFlashCnt>=LEDFLASHPERIOD*2)LEDFlashCnt=0;
-			if(LEDFlashCnt<LEDFLASHPERIOD)
+			//故障灯
+			if(DeviceState&DS_FAULT)
 			{
+				SET_LED3;
 				SET_LED4;
 			}
 			else
 			{
-				RESET_LED4;
-			}
+				RESET_LED3;
+				LEDFlashCnt++;
+				if(LEDFlashCnt>=LEDFLASHPERIOD*2)LEDFlashCnt=0;
+				if(LEDFlashCnt<LEDFLASHPERIOD)
+					SET_LED4;
+				else
+					RESET_LED4;
+			}		
 			
 			//光柱数码管
 			if(g_bar_tube_num<8)
@@ -776,6 +784,52 @@ uint8_t DigitalCalculate(const uint16_t *data)
 		return (*data-246)/13+21;
 	else
 		return 40;
+}
+//******************************************************************************
+//返回主界面
+//******************************************************************************
+void  LcdReturnMain(void)
+{
+	Stop2_Sec_Timer();
+	if(gGui_State!=GUI_MAIN)
+	{
+		switch(gGui_2nd_Num)
+		{
+			case 1:
+				SysParameter.Range=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+			break;	
+			case 2:
+				SysParameter.OverPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+			break;	
+			case 3:
+				SysParameter.OverPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+			break;	
+			case 4:
+				SysParameter.UnderPreaaureWarn=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+			break;	
+			case 5:
+				SysParameter.UnderPreaaureAlarm=1000*EditData.thousand+100*EditData.hundred+10*EditData.decade+EditData.uint;
+			break;		
+			default:break;	
+		}
+		gGui_State = GUI_MAIN;
+		g_edit_area = 0;
+		gGui_2nd_Num =1;
+		
+		if(SysParameter.DetectionMode==VoltageDetection)
+		{
+			DeviceState |= DS_DETECTION_MODE;			
+			Gpio_ClrIO(SETI_PORT, SETI_PIN);
+		}
+		else
+		{
+			DeviceState &= ~DS_DETECTION_MODE;
+
+			Gpio_SetIO(SETI_PORT, SETI_PIN);
+		}
+		
+		Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
+	}
 }
 /*==================================================================
 * Function	: charsToHex

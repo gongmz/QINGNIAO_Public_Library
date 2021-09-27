@@ -60,9 +60,9 @@ void AdcCalculate(uint16_t *data)
 	float temp;
 	
 	if(SysParameter.DetectionMode == VoltageDetection)
-		temp=(curADC*555)/4095;
+		temp=((curADC-85)*790)/4095;
 	else
-		temp=((curADC-752)*500)/2534;
+		temp=((curADC-500)*764)/2534;
 	
 	*data=temp;
 }
@@ -78,24 +78,57 @@ void TaskAdc(void)
 {
 	 AdcCalculate(&PressureValue);
 	
+	
 	 if( PressureValue>=SysParameter.OverPreaaureAlarm )
+	 {
 		DeviceState |=DS_OVER_PRESSURE;
-	 else
+		 
+		DeviceState &= ~DS_OVER_PRESSURE_WARN;
+		DeviceState &= ~DS_UNDER_PRESSURE_WARN;
+		DeviceState &= ~DS_UNDER_PRESSURE;
+	 }
+	 else if(PressureValue>=SysParameter.OverPreaaureWarn&&PressureValue<SysParameter.OverPreaaureAlarm)
+	 {
+		DeviceState |=DS_OVER_PRESSURE_WARN;
+		 
 		DeviceState &= ~DS_OVER_PRESSURE;
-
-	 if( PressureValue<=SysParameter.UnderPreaaureAlarm )
+		DeviceState &= ~DS_UNDER_PRESSURE_WARN;
+		DeviceState &= ~DS_UNDER_PRESSURE;
+	 }
+	 else if(PressureValue>SysParameter.UnderPreaaureAlarm&&PressureValue<=SysParameter.UnderPreaaureWarn)
+	 {
+		DeviceState |=DS_UNDER_PRESSURE_WARN;
+		 
+		DeviceState &= ~DS_OVER_PRESSURE;
+		DeviceState &= ~DS_OVER_PRESSURE_WARN;
+		DeviceState &= ~DS_UNDER_PRESSURE;
+	 }
+	 else if(PressureValue<=SysParameter.UnderPreaaureAlarm)
+	 {
 		DeviceState |=DS_UNDER_PRESSURE;
+		 
+		DeviceState &= ~DS_OVER_PRESSURE;
+		DeviceState &= ~DS_OVER_PRESSURE_WARN;
+		DeviceState &= ~DS_UNDER_PRESSURE_WARN;
+	 }
 	 else
-		DeviceState &= ~DS_UNDER_PRESSURE;	
-
-	 if( PressureValue>SysParameter.Range )
-		DeviceState |=DS_OUTRANGE;
-	 else
-		DeviceState &= ~DS_OUTRANGE;
+	 {
+		DeviceState &= ~DS_OVER_PRESSURE;
+		DeviceState &= ~DS_OVER_PRESSURE_WARN;
+		DeviceState &= ~DS_UNDER_PRESSURE_WARN;
+		DeviceState &= ~DS_UNDER_PRESSURE;
+	 }
 	 
-	 if((DeviceState&DS_OVER_PRESSURE)||(DeviceState&DS_UNDER_PRESSURE))
+	 if( PressureValue>SysParameter.Range )
+        DeviceState |=DS_OUTRANGE;
+     else
+        DeviceState &= ~DS_OUTRANGE;
+
+	 
+	 //报警条件
+	 if(((DeviceState&DS_OVER_PRESSURE)||(DeviceState&DS_UNDER_PRESSURE))&&(WorkState==MODE_NORMAL_ST))
 		 MsgPost(LOGIC_PRIO, LOGIC_ALARM_MSG);
-	 else 
+	 else if(((DeviceState&DS_OVER_PRESSURE)==0)&&((DeviceState&DS_UNDER_PRESSURE)==0)&&(WorkState==MODE_ALARM_ST))
 		 MsgPost(LOGIC_PRIO, LOGIC_NORMAL_MSG);
 }
 

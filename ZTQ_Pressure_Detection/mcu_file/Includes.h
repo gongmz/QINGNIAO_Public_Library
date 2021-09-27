@@ -38,4 +38,5 @@
 #include    <math.h>
 #include    "LoRaFun.h"
 #include    "uart_driver.h"
+#include    "LCDDriver.h"
 #endif

@@ -28,6 +28,7 @@ static uint8_t    LoRaStep = 0;
 void  SetLoRaPrio(void);
 void  Send_Device_Type(void);
 void  LoRaWorkStateTran(uint8_t state);
+void Send_Device_Data(uint8_t Event,uint16_t State);
 /****************************************************************************** 
 * 函数名称：TaskLoRa
 * 函数功能：通信任务
@@ -38,8 +39,7 @@ void  LoRaWorkStateTran(uint8_t state);
 ******************************************************************************/
 void TaskLoRa(void)
 {
-    uint8_t sig,i=0;
-	float temp;
+    uint8_t sig;
     if (Msg[LORAFUN_PRIO - 1] & LORA_MSG_ENTRY) 
 	{
         Msg[LORAFUN_PRIO - 1] &= 0x7F;
@@ -145,8 +145,7 @@ void TaskLoRa(void)
                     switch(LoRaStep)
                     {
                         case 0:
-                            strcpy(DataTxBuff,"00\r\nAT+NSSTATUS=0x7B,00\r\n");//设置自检指令
-							StartUartPackageTx();
+							Send_Device_Data(0x7B,DeviceState);
                             Start4_3Sec();
                         break;
 
@@ -221,66 +220,7 @@ void TaskLoRa(void)
                         break;
 
                         case 1:
-                            DataTxBuff[i++] = '0';
-                            DataTxBuff[i++] = '0';
-                            DataTxBuff[i++] = '\r';
-                            DataTxBuff[i++] = '\n';
-                            DataTxBuff[i++] = 'A';
-                            DataTxBuff[i++] = 'T';
-                            DataTxBuff[i++] = '+';
-                            DataTxBuff[i++] = 'N';
-                            DataTxBuff[i++] = 'S';
-                            DataTxBuff[i++] = 'S';
-                            DataTxBuff[i++] = 'T';
-                            DataTxBuff[i++] = 'A';
-                            DataTxBuff[i++] = 'T';
-                            DataTxBuff[i++] = 'U';
-                            DataTxBuff[i++] = 'S';
-                            DataTxBuff[i++] = '=';
-                            DataTxBuff[i++] = '0';
-                            DataTxBuff[i++] = 'x';
-
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&DeviceEvent,1);
-							i+=2;
-
-                            DataTxBuff[i++] = ',';
-
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&DeviceState,1);
-							i+=2;
-							
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&DeviceState+1,1);
-							i+=2;
-							
-							temp=((float)PressureValue)/100;
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
-							i+=8;
-							
-							
-							temp=((float)SysParameter.UnderPreaaureWarn)/100;
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
-							i+=8;
-							
-							temp=((float)SysParameter.UnderPreaaureAlarm)/100;
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
-							i+=8;
-							
-							temp=((float)SysParameter.OverPreaaureWarn)/100;
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
-							i+=8;
-							
-							temp=((float)SysParameter.OverPreaaureAlarm)/100;
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);	
-							i+=8;							
-
-							temp=((float)SysParameter.Range)/100;
-                            HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);	
-							i+=8;
-							
-                            DataTxBuff[i++] = '\r';
-                            DataTxBuff[i++] = '\n';
-                            DataTxBuff[i++] = '\0';
-                            
-                            StartUartPackageTx();
+                            Send_Device_Data(DeviceEvent,DeviceState);
                             Start4_3Sec();
                         break;
 
@@ -396,6 +336,81 @@ void TaskLoRa(void)
 
     SetLoRaPrio();
 }   
+/****************************************************************************** 
+* 函数名称：Send_Device_Data
+* 函数功能：发送数据
+* 输入参数：无
+* 输出参数：无
+* 函数返回：无
+* 使用说明：
+******************************************************************************/
+void Send_Device_Data(uint8_t Event,uint16_t State)
+{
+		uint8_t i=0;
+		float temp;
+
+		DataTxBuff[i++] = '0';
+		DataTxBuff[i++] = '0';
+		DataTxBuff[i++] = '\r';
+		DataTxBuff[i++] = '\n';
+		DataTxBuff[i++] = 'A';
+		DataTxBuff[i++] = 'T';
+		DataTxBuff[i++] = '+';
+		DataTxBuff[i++] = 'N';
+		DataTxBuff[i++] = 'S';
+		DataTxBuff[i++] = 'S';
+		DataTxBuff[i++] = 'T';
+		DataTxBuff[i++] = 'A';
+		DataTxBuff[i++] = 'T';
+		DataTxBuff[i++] = 'U';
+		DataTxBuff[i++] = 'S';
+		DataTxBuff[i++] = '=';
+		DataTxBuff[i++] = '0';
+		DataTxBuff[i++] = 'x';
+
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&Event,1);
+		i+=2;
+
+		DataTxBuff[i++] = ',';
+
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&State,1);
+		i+=2;
+
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&State+1,1);
+		i+=2;
+
+		temp=((float)PressureValue)/100;
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
+		i+=8;
+
+
+		temp=((float)SysParameter.UnderPreaaureWarn)/100;
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
+		i+=8;
+
+		temp=((float)SysParameter.UnderPreaaureAlarm)/100;
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
+		i+=8;
+
+		temp=((float)SysParameter.OverPreaaureWarn)/100;
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);
+		i+=8;
+
+		temp=((float)SysParameter.OverPreaaureAlarm)/100;
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);	
+		i+=8;							
+
+		temp=((float)SysParameter.Range)/100;
+		HexsTochars((uint8_t *)&DataTxBuff[i],(uint8_t *)&temp,4);	
+		i+=8;
+
+		DataTxBuff[i++] = '\r';
+		DataTxBuff[i++] = '\n';
+		DataTxBuff[i++] = '\0';
+
+		StartUartPackageTx();
+
+}
 /****************************************************************************** 
 * 函数名称：Send_Device_Type
 * 函数功能：设置模组设备类型

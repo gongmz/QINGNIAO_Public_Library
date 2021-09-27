@@ -29,14 +29,17 @@
 
 
 /*ZTQ-D2001 上传设备状态（DeviceState）标志位代码*/
-#define DS_FAULT                0x02//故障状态
-#define DS_OUTRANGE             0x04//超量程
-#define DS_SENSOR_ERROR         0x08//传感器故障
-#define DS_UNDER_PRESSURE       0x10//欠压报警
-#define DS_ONLINE		        0x20//在线状态
-#define DS_OVER_PRESSURE		0x40//过压报警
-#define DS_RELAY_OUTPUT         0x80//继电器输出
-#define DS_DETECTION_MODE       0x200//检测模式
+#define DS_FAULT                0x02 //故障状态
+#define DS_OUTRANGE             0x04 //超量程
+#define DS_SENSOR_ERROR         0x08 //传感器故障
+#define DS_UNDER_PRESSURE       0x10 //欠压报警
+#define DS_ONLINE		        0x20 //在线状态
+#define DS_OVER_PRESSURE		0x40 //过压报警
+#define DS_RELAY_OUTPUT         0x80 //继电器输出
+#define DS_TEMP_FAULT	        0x100 //温度故障
+#define DS_DETECTION_MODE       0x200 //检测模式
+#define DS_UNDER_PRESSURE_WARN  0x400 //欠压预警
+#define DS_OVER_PRESSURE_WARN   0x800 //超压预警
 
 /*上传事件标志位代码*/
 #define FIREALARM_EVENT         0x03   //火警
@@ -114,6 +117,15 @@ extern SysParameter_t  SysParameter;
 #define SEG3_PIN    GpioPin14
 #define SEG4_PORT   GpioPortB
 #define SEG4_PIN    GpioPin15
+//FIRE外部输出
+#define FIRE1_PORT   GpioPortA
+#define FIRE1_PIN    GpioPin8
+#define FIRE2_PORT   GpioPortA
+#define FIRE2_PIN    GpioPin9
+#define FIRE3_PORT   GpioPortA
+#define FIRE3_PIN    GpioPin10
+#define FIRE4_PORT   GpioPortA
+#define FIRE4_PIN    GpioPin11
 //无线开关
 #define RF_EN_PORT   GpioPortA
 #define RF_EN_PIN    GpioPin15

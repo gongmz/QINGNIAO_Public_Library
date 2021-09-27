@@ -431,11 +431,11 @@ ARM Macro Assembler    Page 7
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=.\objects\startup_hc32l13x.d -o.\objects\startup_hc32l13x.o -I..\
 driver_file\src -I..\MDK -I..\driver_file\inc -I..\mcu_file -I..\MDK -I..\user_
-file\inc -I.\RTE\_ZTQ -IC:\Users\±©Á¦Äñ\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0
-\CMSIS\Core\Include -IC:\Users\±©Á¦Äñ\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0
-.1\Device\Include --predefine="__UVISION_VERSION SETA 530" --predefine="_RTE_ S
-ETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\startup_hc32l13x.lst startu
-p_hc32l13x.s
+file\inc -I.\RTE\_ZTQ -IC:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\
+CMSIS\Core\Include -IC:\Users\mengz\AppData\Local\Arm\Packs\HDSC\HC32L130\1.0.1
+\Device\Include --predefine="__UVISION_VERSION SETA 530" --predefine="_RTE_ SET
+A 1" --predefine="_RTE_ SETA 1" --list=.\listings\startup_hc32l13x.lst startup_
+hc32l13x.s
 
 
 

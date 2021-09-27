@@ -67,7 +67,7 @@ void ThreadScheduler(void)
 					
 					case 5://1秒调用1次
 								TaskAdc();			//执行线程  
-						    g_bar_tube_num=DigitalCalculate(&PressureValue);
+								g_bar_tube_num=DigitalCalculate(&PressureValue);
 								break;
 					
 					case 4:

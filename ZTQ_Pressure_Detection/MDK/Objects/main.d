@@ -10,10 +10,10 @@
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 .\objects\main.o: ..\mcu_file\board_stkhc32l13x.h
 .\objects\main.o: ..\mcu_file\hc32l13x.h
-.\objects\main.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0plus.h
-.\objects\main.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h
-.\objects\main.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
-.\objects\main.o: C:\Users\暴力鸟\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\main.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0plus.h
+.\objects\main.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\main.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\main.o: C:\Users\mengz\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\main.o: ..\mcu_file\system_hc32l13x.h
 .\objects\main.o: ..\driver_file\inc\sysctrl.h
 .\objects\main.o: ..\driver_file\inc\ddl.h

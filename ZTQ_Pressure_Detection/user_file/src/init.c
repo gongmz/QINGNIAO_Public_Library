@@ -1,5 +1,6 @@
 /**********************************头文件**************************************/
 #include "init.h"
+#include "Logic.h"
 /**********************************宏定义声明**********************************/
 /**********************************结构体声明**********************************/
 /**********************************变量声明************************************/
@@ -194,6 +195,7 @@ void GPIO_Init(void)
     Gpio_Init(SETI_PORT, SETI_PIN, &pstcGpioCfg);
     Gpio_Init(SENSOR_EN_PORT, SENSOR_EN_PIN, &pstcGpioCfg);
     Gpio_Init(SETKEY_PORT, SETKEY_PIN, &pstcGpioCfg);
+    Gpio_Init(FIRE4_PORT, FIRE4_PIN, &pstcGpioCfg);
 	
 	Gpio_SetIO(RF_EN_PORT, RF_EN_PIN);
 	Gpio_SetIO(SENSOR_EN_PORT, SENSOR_EN_PIN);
@@ -202,7 +204,7 @@ void GPIO_Init(void)
 }
 /**************************************************************
 *
-*
+*看门狗初始化
 *
 **************************************************************/
 void Wdt_Interface_Init(void)
@@ -212,8 +214,8 @@ void Wdt_Interface_Init(void)
     Wdt_Start();
 }
 /**************************************************************
-* 按键初始化
-*
+* 
+*按键初始化
 *
 **************************************************************/
 void KEY_Init(void)
@@ -370,7 +372,6 @@ void SPI_Send_Data(uint8_t data)
 **************************************************************/
 void  ParaInit(void)
 {
- //    Flash_Read(flashInformationAddress,SysParameter,128);
 	while(Ok!=Flash_Init(6,TRUE));//falsh初始化,时钟24M
 	Flash_Read(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
 	if(SysParameter.FrameHead!=0xAB || SysParameter.FrameEnd!=0xBA)
@@ -379,12 +380,16 @@ void  ParaInit(void)
 		Flash_Write(flashInformationAddress,(uint8_t *)&SysParameter,sizeof(SysParameter));
 	}
 	
-	if(SysParameter.DetectionMode==VoltageDetection)
-		Gpio_ClrIO(SETI_PORT, SETI_PIN);
-	else
-		Gpio_SetIO(SETI_PORT, SETI_PIN);
-	
-	
+		if(SysParameter.DetectionMode==VoltageDetection)
+		{
+			DeviceState |= DS_DETECTION_MODE;			
+			Gpio_ClrIO(SETI_PORT, SETI_PIN);
+		}
+		else
+		{
+			DeviceState &= ~DS_DETECTION_MODE;
+			Gpio_SetIO(SETI_PORT, SETI_PIN);
+		}
 }
 /**************************************************************
 *
@@ -481,7 +486,6 @@ void Uart1_Init( void )
     Uart_EnableIrq(M0P_UART1,UartRxIrq);             ///<使能串口接收中断
     EnableNvic(UART1_IRQn, IrqLevel3, TRUE);       ///<系统中断使能
 }
-
 #ifdef Printf_Enable
 void LPuart1_Init( void )
 {

@@ -79,5 +79,6 @@ extern uint16_t BCD2HEX(uint16_t bcd_data);//BCD转为HEX子程序
 extern uint16_t  HexsTochars(uint8_t *ascs,uint8_t *hexs,uint16_t length);
 extern uint8_t charsToHex(uint8_t *asc);
 extern uint8_t DigitalCalculate(const uint16_t *data);
+extern void  LcdReturnMain(void);
 #endif
 //======================================================================================

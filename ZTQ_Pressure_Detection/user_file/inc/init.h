@@ -35,5 +35,4 @@ extern void Init_LED(void);
 extern void SPI_Send_Data(uint8_t data);
 extern void  ParaInit(void);
 extern void Uart1_Init( void );
-
 #endif
