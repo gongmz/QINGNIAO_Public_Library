@@ -24,5 +24,6 @@ extern uint16_t curADC;//
 extern void AdcInit(void);
 extern void AdcCalculate(uint16_t *data);
 extern void TaskAdc(void);
+extern void AdcCalibration(void);
 #endif
 //======================================================================================

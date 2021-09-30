@@ -5,6 +5,10 @@
 /**********************************结构体声明**********************************/
 /**********************************变量声明************************************/
 uint16_t curADC;//
+float VoltageGain=0.19413919;
+float VoltageOffset=-16.39804639;
+float CurrentGain=0.30149960;
+float CurrentOffset=-150.74980268;
 /**********************************函数声明************************************/
 
 /**************************************************************
@@ -60,11 +64,23 @@ void AdcCalculate(uint16_t *data)
 	float temp;
 	
 	if(SysParameter.DetectionMode == VoltageDetection)
-		temp=((curADC-85)*790)/4095;
+		temp=curADC*VoltageGain+VoltageOffset;
 	else
-		temp=((curADC-500)*764)/2534;
+		temp=curADC*CurrentGain+CurrentOffset;
 	
 	*data=temp;
+}
+/**************************************************************
+*
+*ADC校正
+*
+**************************************************************/
+void AdcCalibration(void)
+{
+	if(SysParameter.DetectionMode == VoltageDetection)
+		VoltageOffset=0-curADC*VoltageGain;
+	else
+		CurrentOffset=0-curADC*CurrentGain;
 }
 /****************************************************************************** 
 * 函数名称：TaskAdc
@@ -77,7 +93,6 @@ void AdcCalculate(uint16_t *data)
 void TaskAdc(void)
 {
 	 AdcCalculate(&PressureValue);
-	
 	
 	 if( PressureValue>=SysParameter.OverPreaaureAlarm )
 	 {

@@ -51,6 +51,7 @@ void Screen()
 		
 		default:break;
 	}
+	
 }
 //******************************************************************************
 //主界面显示
@@ -94,7 +95,6 @@ void DisplayMainInterface(void)
 				SET_LED2;
 			}
 			
-			
 			if( PressureValue > 999)
 				SPI_Send_Data(table[PressureValue/1000]);
 			else
@@ -135,13 +135,12 @@ void DisplayMainInterface(void)
 				SET_LED1;
 				SET_LED2;
 			}
-
 				
 			if( PressureValue > 99 )
 				SPI_Send_Data(table[(PressureValue/100)%10]|0x80);
 			else
 				SPI_Send_Data(table[0]|0x80);//显示0
-				
+			
 		break;
 		
 		case 2:
@@ -187,6 +186,7 @@ void DisplayMainInterface(void)
 				SPI_Send_Data(table[(PressureValue/10)%10]);
 			else
 				SPI_Send_Data(table[0]);//显示0
+			
 		break;
 		
 		case 3:
@@ -213,6 +213,7 @@ void DisplayMainInterface(void)
 			}
 			
 			SPI_Send_Data(table[PressureValue%10]);
+			
 		break;
 		
 		default:break;
@@ -381,6 +382,10 @@ void Display2NDInterface(void)
 //******************************************************************************
 void   ClrAllLcd(void)
 {
+	RESET_SEG1;
+	RESET_SEG2;
+	RESET_SEG3;
+	RESET_SEG4;
     SPI_Send_Data(0);
 	SPI_Send_Data(0);
 	RESET_LED1;

@@ -175,7 +175,7 @@ void TaskKey(void)//1ms调用一次
 		if(++downkeycnt>TIME_CNT_LONG_PRESS)downkeycnt=TIME_CNT_LONG_PRESS+1;
 		if(downkeycnt == TIME_CNT_LONG_PRESS)//长按
         {
-			__NOP();
+			AdcCalibration();
         }
 
 	}
